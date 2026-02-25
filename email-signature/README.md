@@ -7,15 +7,15 @@ Assets and HTML for the Kimber Sykes email signature, hosted at **assets.kimbers
 After deployment, assets are served from:
 
 - **Base**: `https://assets.kimbersykes.com/email-signature/`
-- **Logo**: `https://assets.kimbersykes.com/email-signature/logo.png`
-- **Icons**: `https://assets.kimbersykes.com/email-signature/icons/` (phone.png, email.png, web.png, linkedin.png)
+- **Logo**: `https://assets.kimbersykes.com/email-signature/assets/logo.png`
+- **Icons**: `https://assets.kimbersykes.com/email-signature/assets/icons/` (phone.png, email.png, web.png, linkedin.png)
 
 ## Deploying to Cloudflare
 
 1. Connect this repo (or the `email-signature` folder) to **Cloudflare Pages**.
 2. Set the build output to the directory that contains `signature.html` and the `assets` folder (e.g. project root if the whole site is this folder, or `email-signature` if the repo root is `KS_Website`).
 3. In Cloudflare DNS, add a **CNAME** record: `assets` → your Cloudflare Pages URL (e.g. `your-project.pages.dev`).
-4. Ensure `https://assets.kimbersykes.com/email-signature/logo.png` and `https://assets.kimbersykes.com/email-signature/icons/*.png` are reachable after deploy.
+4. Ensure `https://assets.kimbersykes.com/email-signature/assets/logo.png` and `https://assets.kimbersykes.com/email-signature/assets/icons/*.png` are reachable after deploy.
 
 ## Logo (before first deploy)
 

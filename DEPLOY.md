@@ -75,8 +75,8 @@ After DNS propagates (usually a few minutes, sometimes up to 24 hours), the site
 
 Open in a browser:
 
-- `https://assets.kimbersykes.com/email-signature/logo.png`  
-- `https://assets.kimbersykes.com/email-signature/icons/phone.png`  
+- `https://assets.kimbersykes.com/email-signature/assets/logo.png`  
+- `https://assets.kimbersykes.com/email-signature/assets/icons/phone.png`  
 
 If these load, the email signature (using `signature-email.html`) will work in sent emails.
 
