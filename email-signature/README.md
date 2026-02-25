@@ -2,44 +2,58 @@
 
 Assets and HTML for the Kimber Sykes email signature, hosted at **assets.kimbersykes.com**.
 
+## Current signature (no logo)
+
+- Name: Kimber Sykes  
+- Title: Executive Producer  
+- (UK) +44 755 367 3133 · (US) +1 323 536 2611  
+- kimber@kimbersykes.com · www.kimbersykes.com · LinkedIn  
+- Font: Trebuchet MS · Color: #2b2b2b · Icons: 16×16px (64×64 source PNGs)
+
 ## Where assets are hosted
 
 After deployment, assets are served from:
 
-- **Base**: `https://assets.kimbersykes.com/email-signature/`
-- **Logo**: `https://assets.kimbersykes.com/email-signature/assets/logo.png`
-- **Icons**: `https://assets.kimbersykes.com/email-signature/assets/icons/` (phone.png, email.png, web.png, linkedin.png)
+- **Base:** `https://assets.kimbersykes.com/email-signature/`
+- **Icons:** `https://assets.kimbersykes.com/email-signature/assets/icons/` (phone.png, email.png, web.png, linkedin.png)
+- **Logo (optional):** `https://assets.kimbersykes.com/email-signature/assets/logo.png` — not used in current signature; kept for future use.
+
+**Important:** Image URLs in the signature use the path `.../email-signature/assets/...` (repo structure is `email-signature/assets/`), so the live URLs must include `assets/` after `email-signature/`.
+
+## Files in this folder
+
+| File | Purpose |
+|------|--------|
+| `signature.html` | Local preview; relative paths so images load from disk. |
+| `signature-email.html` | Copy/paste into Gmail, Outlook, etc.; absolute URLs for sent emails. |
+| `signature-thunderbird.html` | Same content as `signature-email.html`; use as “signature from file” in Thunderbird. |
 
 ## Deploying to Cloudflare
 
-1. Connect this repo (or the `email-signature` folder) to **Cloudflare Pages**.
-2. Set the build output to the directory that contains `signature.html` and the `assets` folder (e.g. project root if the whole site is this folder, or `email-signature` if the repo root is `KS_Website`).
-3. In Cloudflare DNS, add a **CNAME** record: `assets` → your Cloudflare Pages URL (e.g. `your-project.pages.dev`).
-4. Ensure `https://assets.kimbersykes.com/email-signature/assets/logo.png` and `https://assets.kimbersykes.com/email-signature/assets/icons/*.png` are reachable after deploy.
+See **[../DEPLOY.md](../DEPLOY.md)** for full steps. Summary:
 
-## Logo (before first deploy)
+1. Repo: **kimber_sykes_website** (GitHub: kimbersykes87-source/kimber_sykes_website).  
+2. Cloudflare Pages: connect repo, Framework **None**, Build command empty, Output **/** , Root directory **empty**.  
+3. Custom domain: **assets.kimbersykes.com** (CNAME to `<project>.pages.dev`).  
+4. After deploy, verify: `https://assets.kimbersykes.com/email-signature/assets/icons/phone.png` loads.
 
-The signature uses a **PNG** logo for email client compatibility. Use the PNG export of `Email_Sig_2026.ai` from your LOGO folder:
+## Installing the signature in email clients
 
-- If you already have a PNG (e.g. exported from the .ai), copy it to `assets/logo.png` in this folder.
-- Otherwise: open `Email_Sig_2026.ai` in Illustrator → **File → Export → Export As** → format **PNG**, height ~80–120px (e.g. 100px), transparent or white background → save as `assets/logo.png`.
+See **[../SETUP.md](../SETUP.md)** for Gmail (web), Thunderbird, and phone.
+
+### Thunderbird (quick reference)
+
+- **Signature file:** Use `signature-thunderbird.html`. Copy to a stable path (e.g. `C:\Users\<you>\Dropbox\...\LOGO\signature-thunderbird.html`) and point Thunderbird to it: Account Settings → Default Identity → **Attach the signature from a file** → Choose that file.  
+- **Required:** Check **“Use HTML”** in the signature section so icons and links render; otherwise you’ll see broken image placeholders.
 
 ## Icons (PNG)
 
-Email clients often don’t support SVG images, so the signature uses **PNG** icons (16×16px). The repo includes both the source SVGs (in `assets/icons/`, with fill/stroke #2b2b2b) and the generated PNGs. To regenerate the PNGs after editing the SVGs, run:
+Icons are 64×64 PNGs (displayed at 16×16 in the signature). Source SVGs are in `assets/icons/` (fill/stroke #2b2b2b). To regenerate PNGs after editing SVGs:
 
 ```bash
 npm run build-icons
 ```
 
-## How to use the signature
+## Logo (optional)
 
-**Preview locally:** Open `signature.html` in a browser. It uses relative image paths so the logo and icons load from your machine.
-
-**Use in email (after deploying):**
-1. Deploy this folder so the assets are live at `https://assets.kimbersykes.com/email-signature/`.
-2. Open `signature-email.html` in a browser (images will load only after deploy).
-3. Select all (Ctrl+A / Cmd+A), then copy (Ctrl+C / Cmd+C).
-4. Paste into your email client’s signature settings (e.g. Gmail → Settings → Signature; Outlook → File → Options → Mail → Signatures).
-
-`signature-email.html` uses absolute image URLs so the signature displays correctly in sent emails.
+Logo is not used in the current signature. To use it again: add an `<img>` in the HTML pointing to `https://assets.kimbersykes.com/email-signature/assets/logo.png`. Logo file: `assets/logo.png` (e.g. export from `Email_Sig_2026.ai` in your LOGO folder).

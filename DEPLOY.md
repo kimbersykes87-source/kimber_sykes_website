@@ -1,87 +1,76 @@
-# Get the email signature online: GitHub + Cloudflare Pages
+# Deploy email signature: GitHub + Cloudflare Pages
 
-Steps to host the signature at **assets.kimbersykes.com** with auto-deploy from GitHub.
+Host the signature at **assets.kimbersykes.com** with auto-deploy from GitHub.
 
 ---
 
-## 1. GitHub: create repo and push (CLI)
+## Current setup (for reference)
 
-Install the [GitHub CLI](https://cli.github.com/) (`gh`) if needed, then:
+- **GitHub repo:** [kimbersykes87-source/kimber_sykes_website](https://github.com/kimbersykes87-source/kimber_sykes_website)
+- **Branch:** `master`
+- **Cloudflare Pages project:** e.g. `kimber-sykes-website` (custom domain: assets.kimbersykes.com)
+- **Site structure:** Repo root = site root. The folder `email-signature/` is at the URL path `/email-signature/`, and assets live at `/email-signature/assets/` (e.g. `.../email-signature/assets/icons/phone.png`).
+
+---
+
+## 1. GitHub: repo and push (CLI)
 
 ```powershell
 cd c:\dev\KS_Website
 
-# One-time: init and ignore node_modules
-git init
-# (.gitignore with node_modules/ already exists)
-
 git add .
-git commit -m "Initial commit: email signature and assets"
-
-# Create the repo on GitHub and push (replace with your GitHub username if needed)
-gh repo create KS_Website --public --source=. --push
+git commit -m "Your message"
+git push
 ```
 
-Use a different repo name if you prefer (e.g. `ks-email-signature`). The repo must contain the **email-signature** folder at the top level so that after deploy the URL path is `.../email-signature/logo.png`, etc.
+Repo already exists; push to `master` triggers Cloudflare deploy.
+
+**First-time setup on a new machine:** clone then push as needed:
+
+```powershell
+gh repo clone kimbersykes87-source/kimber_sykes_website c:\dev\KS_Website
+cd c:\dev\KS_Website
+# edit files, then:
+git add .
+git commit -m "Initial or update"
+git push
+```
 
 ---
 
-## 2. Cloudflare: create the **assets.kimbersykes.com** Pages site
+## 2. Cloudflare Pages (one-time)
 
-1. **Open Cloudflare**  
-   Go to [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages**.
-
-2. **Create a Pages project from Git**  
-   - Click **Create application** → **Pages** → **Connect to Git**.  
-   - Sign in with **GitHub** and authorize Cloudflare.  
-   - Select the repo you just pushed (e.g. **KS_Website**).
-
-3. **Configure the build**  
-   - **Project name:** e.g. `ks-email-signature` or `assets-kimbersykes`.  
-   - **Production branch:** `main` (or your default branch).  
-   - **Build settings:**  
-     - **Framework preset:** None  
-     - **Build command:** leave empty  
-     - **Build output directory:** `/` (or leave default)  
-   - **Root directory:** leave **empty**.  
-     The repo root is the site root, so `email-signature/` is served at `https://assets.kimbersykes.com/email-signature/`.
-
-4. **Deploy**  
-   Click **Save and Deploy**. Wait for the first build. The site will be at `https://<project-name>.pages.dev`.
+1. [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages**.
+2. **Create application** → **Pages** → **Connect to Git** → **GitHub** → select **kimber_sykes_website**.
+3. **Build settings:**
+   - **Framework preset:** None  
+   - **Build command:** (empty)  
+   - **Build output directory:** `/`  
+   - **Root directory:** (empty)
+4. **Save and Deploy.** Note the `*.pages.dev` URL.
 
 ---
 
-## 3. Cloudflare: add custom domain **assets.kimbersykes.com**
+## 3. Custom domain: assets.kimbersykes.com
 
-1. In your **Pages** project, open **Custom domains**.  
-2. Click **Set up a custom domain** (or **Add custom domain**).  
-3. Enter **assets.kimbersykes.com** and continue.
-
-4. **If kimbersykes.com is already on Cloudflare (same account):**  
-   Cloudflare can add the CNAME for you. Follow the prompts to confirm.
-
-5. **If kimbersykes.com is not on Cloudflare** (e.g. DNS at Adobe, GoDaddy, etc.):  
-   - Cloudflare will show a **CNAME** to add at your DNS provider, for example:  
-     - **Name/host:** `assets`  
-     - **Target/value:** `<your-project>.pages.dev` (e.g. `ks-email-signature.pages.dev`)  
-   - Add that CNAME where kimbersykes.com’s DNS is managed.  
-   - Back in Cloudflare, complete the domain setup (e.g. **Activate** / **Verify**).
-
-After DNS propagates (usually a few minutes, sometimes up to 24 hours), the site will be live at **https://assets.kimbersykes.com**.
+1. In the Pages project → **Custom domains** → **Set up a custom domain**.
+2. Enter **assets.kimbersykes.com**.
+3. If **kimbersykes.com** is on Cloudflare: CNAME is created for you.
+4. If not: add at your DNS provider: **CNAME** `assets` → `<project-name>.pages.dev`.
 
 ---
 
-## 4. Verify the signature assets
+## 4. Verify after deploy
 
-Open in a browser:
+Open:
 
-- `https://assets.kimbersykes.com/email-signature/assets/logo.png`  
-- `https://assets.kimbersykes.com/email-signature/assets/icons/phone.png`  
+- `https://assets.kimbersykes.com/email-signature/assets/icons/phone.png`
+- `https://assets.kimbersykes.com/email-signature/signature-email.html` (optional; copy from here for Gmail/Outlook)
 
-If these load, the email signature (using `signature-email.html`) will work in sent emails.
+If these load, the signature will work in sent emails.
 
 ---
 
 ## Auto-deploy
 
-Every push to the connected branch (e.g. `main`) will trigger a new Cloudflare Pages deployment. No extra config needed.
+Every push to **master** triggers a new Cloudflare Pages deployment. No extra config.
