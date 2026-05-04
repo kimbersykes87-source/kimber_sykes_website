@@ -7,7 +7,7 @@ Use this after the signature is deployed at **https://assets.kimbersykes.com/ema
 ## Source to use
 
 - **For Gmail / Outlook (web or desktop):** Open **https://assets.kimbersykes.com/email-signature/signature-email.html** in a browser → Select all (Ctrl+A) → Copy (Ctrl+C) → Paste into the client’s signature field.
-- **For Thunderbird:** Use the file **signature-thunderbird.html** (same content). Point Thunderbird to it, or copy the file to a fixed path and point Thunderbird there.
+- **For Thunderbird:** Use the file **signature-thunderbird.html** in this folder (same content). Point Thunderbird to it, or copy the file to a fixed path and point Thunderbird there.
 
 ---
 
@@ -28,11 +28,11 @@ If images don’t show: confirm you pasted from the URL above (absolute image UR
 1. **Account Settings** (or Settings → Account Settings) → select **kimber@kimbersykes.com**.
 2. Under **Default Identity**:
    - **Attach the signature from a file instead:** **checked**.
-   - **Choose…** → select **signature-thunderbird.html** (e.g. from this repo or from `C:\Users\kimbe\Dropbox\Kimber\Business\Edward Kimber Sykes\LOGO\signature-thunderbird.html`).
+   - **Choose…** → select **signature-thunderbird.html** (from this repo folder or from `C:\Users\kimbe\Dropbox\Kimber\Business\Edward Kimber Sykes\LOGO\signature-thunderbird.html`).
    - **Important:** Check **“Use HTML (e.g., &lt;b&gt;bold&lt;/b&gt;)”** so the signature is rendered as HTML. Without this, icons show as broken placeholders.
 3. Save. Compose a new message to confirm; remote images may show as placeholders in compose but send correctly for recipients.
 
-**Keeping the file in sync:** If you use the copy in Dropbox, update that file whenever you change the signature (or re-copy `email-signature/signature-thunderbird.html` from the repo into that path).
+**Keeping the file in sync:** If you use the copy in Dropbox, update that file whenever you change the signature (or re-copy **signature-thunderbird.html** from this folder into that path).
 
 ---
 

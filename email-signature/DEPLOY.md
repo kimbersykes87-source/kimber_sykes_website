@@ -9,11 +9,13 @@ Host the signature at **assets.kimbersykes.com** with auto-deploy from GitHub.
 - **GitHub repo:** [kimbersykes87-source/kimber_sykes_website](https://github.com/kimbersykes87-source/kimber_sykes_website)
 - **Branch:** `master`
 - **Cloudflare Pages project:** e.g. `kimber-sykes-website` (custom domain: assets.kimbersykes.com)
-- **Site structure:** Repo root = site root. The folder `email-signature/` is at the URL path `/email-signature/`, and assets live at `/email-signature/assets/` (e.g. `.../email-signature/assets/icons/phone.png`).
+- **Site structure:** Repo root = site root. This folder is served at URL path `/email-signature/`, and assets live at `/email-signature/assets/` (e.g. `.../email-signature/assets/icons/phone.png`).
 
 ---
 
 ## 1. GitHub: repo and push (CLI)
+
+From the **repository root** (parent of this folder):
 
 ```powershell
 cd c:\dev\KS_Website
@@ -25,7 +27,7 @@ git push
 
 Repo already exists; push to `master` triggers Cloudflare deploy.
 
-**First-time setup on a new machine:** clone then push as needed:
+**First-time setup on a new machine:**
 
 ```powershell
 gh repo clone kimbersykes87-source/kimber_sykes_website c:\dev\KS_Website

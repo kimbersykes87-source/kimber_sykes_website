@@ -27,10 +27,12 @@ After deployment, assets are served from:
 | `signature.html` | Local preview; relative paths so images load from disk. |
 | `signature-email.html` | Copy/paste into Gmail, Outlook, etc.; absolute URLs for sent emails. |
 | `signature-thunderbird.html` | Same content as `signature-email.html`; use as “signature from file” in Thunderbird. |
+| `DEPLOY.md` | GitHub + Cloudflare Pages deployment steps. |
+| `SETUP.md` | Install the signature in Gmail, Thunderbird, and on your phone. |
 
 ## Deploying to Cloudflare
 
-See **[../DEPLOY.md](../DEPLOY.md)** for full steps. Summary:
+See **[DEPLOY.md](DEPLOY.md)** for full steps. Summary:
 
 1. Repo: **kimber_sykes_website** (GitHub: kimbersykes87-source/kimber_sykes_website).  
 2. Cloudflare Pages: connect repo, Framework **None**, Build command empty, Output **/** , Root directory **empty**.  
@@ -39,7 +41,7 @@ See **[../DEPLOY.md](../DEPLOY.md)** for full steps. Summary:
 
 ## Installing the signature in email clients
 
-See **[../SETUP.md](../SETUP.md)** for Gmail (web), Thunderbird, and phone.
+See **[SETUP.md](SETUP.md)** for Gmail (web), Thunderbird, and phone.
 
 ### Thunderbird (quick reference)
 
@@ -53,6 +55,8 @@ Icons are 64×64 PNGs (displayed at 16×16 in the signature). Source SVGs are in
 ```bash
 npm run build-icons
 ```
+
+Run that command in **this folder** (where `package.json` lives).
 
 ## Logo (optional)
 
