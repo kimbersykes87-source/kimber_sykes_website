@@ -1,306 +1,229 @@
-# Claude brief: Rubber Armstrong weekly analytics email
+# Claude brief: kimbersykes.com weekly traffic email
 
-**Purpose:** Hand this file to Claude (or any coding assistant) before changing the weekly email. It explains what the email is, where the code lives, how visitor data is collected, and how the report pulls that data. It is **not** HTML scraping.
+**Purpose:** Hand this file to Claude before changing the weekly traffic report that lands in Kimber’s inbox. It describes the **kimbersykes.com** email (AI vs human pageviews + ranked AI crawlers), not the Rubber Armstrong GA4 Monday mail, and not this repo’s email-signature HTML.
 
-**Last verified against source:** 21 September 2026  
-**Canonical implementation:** [RA_Emails](https://github.com/kimbersykes87-source/RA_Emails)  
-**Sites that generate the traffic:** [RA_Website](https://github.com/kimbersykes87-source/RA_Website)
-
-This repo (`kimber_sykes_website`) only hosts Kimber’s personal email signature. The weekly report lives in the two repos above.
+**Last verified:** 21 September 2026, from the 20 September 2026 send plus the live site. The Next.js / Worker source that builds the mail is **not in this GitHub repo**.
 
 ---
 
-## 1. What it is
+## 1. Which email this is
 
-Every **Monday at 09:00 America/Los_Angeles**, a Google Apps Script function (`sendWeeklyAnalyticsReport`) emails a plain-text traffic report to **rubberarmstrongcamp@gmail.com**.
+Example send (Sunday 20 September 2026):
 
-Subject:
+| Field | Value |
+|--------|--------|
+| From | `kimbersykes.com traffic <kimber@kimbersykes.com>` |
+| To | `kimber@kimbersykes.com` |
+| Subject | `kimbersykes.com: Weekly Traffic Report 2026-09-20` |
+| Window printed in the body | `UTC window: 2026-09-13T08:00:14.592Z → 2026-09-20T08:00:14.592Z` |
 
-```
-RA Website Analytics - MMM dd - MMM dd
-```
+That window is a **rolling 7-day UTC slice ending at send time**, not a calendar Monday–Sunday. The `.592` milliseconds look like `new Date()` at cron fire, then minus 7 days. 20 Sep 2026 08:00 UTC is Sunday 09:00 London (BST). Treat the job as **weekly, ~08:00 UTC Sunday**.
 
-Body (plain text, not HTML):
+HTML body (dark theme, tables):
 
-```
-Rubber Armstrong Website Analytics - Weekly Report
-Period: MMM dd - MMM dd, yyyy
-============================================================
+1. **Header** — `kimbersykes.com` / `Weekly traffic report • YYYY-MM-DD` / the UTC window.
+2. **AI vs human (pageviews)** — rows `AI crawlers` and `Human visitors`; columns This week / Prior week / Change (percent).
+3. **AI crawlers (ranked)** — one row per bot, same three columns, sorted by this-week count desc.
 
-SUMMARY
-------------------------------------------------------------
-Unique Visitors: <sum of activeUsers by country>
-Total Sessions: <sum of sessions by country>
-Total Page Views: <sum of screenPageViews by country>
+Sample numbers from that send:
 
-VISITORS BY COUNTRY
-------------------------------------------------------------
-1. United States: 15 visitors
-2. United Kingdom: 8 visitors
-...
+| Traffic | This week | Prior week | Change |
+|---------|-----------|------------|--------|
+| AI crawlers | 11,399 | 19,110 | −40% |
+| Human visitors | 71,400 | 45,563 | +56% |
 
-------------------------------------------------------------
-View full analytics: https://analytics.google.com/
-```
+| # | AI crawler | This week | Prior week | Change |
+|---|------------|-----------|------------|--------|
+| 1 | ClaudeBot | 2,552 | 3,055 | −17% |
+| 2 | GPTBot | 1,911 | 3,088 | −38% |
+| 3 | OAI-SearchBot | 1,566 | 1,988 | −21% |
+| 4 | ChatGPT-User | 933 | 1,633 | −43% |
+| 5 | Amazonbot | 650 | 1,399 | −53% |
+| 6 | CCBot | 566 | 899 | −37% |
+| 7 | Bytespider | 533 | 2,322 | −77% |
+| 8 | GoogleOther | 488 | 244 | +100% |
+| 9 | PerplexityBot | 433 | 966 | −55% |
 
-If the GA4 call fails, the same recipient gets:
+(The screenshot’s doubled last letters on headers — “This weekk”, “changee” — are a webfont/render glitch, not the real copy.)
 
-```
-Subject: RA Analytics Report Error
-Body: Failed to generate analytics report: <error.message>
-```
+Do **not** confuse this with:
 
-The email is **optional** in the original setup docs. Docs still describe it as something you enable with `setupWeeklyAnalytics()`. Treat “is the trigger actually installed in the live Apps Script project?” as an operational question, not something this brief can confirm.
-
----
-
-## 2. Important: it does not scrape pages
-
-Nothing in this pipeline fetches `rubberarmstrong.com` HTML, parses DOM, or crawls Cloudflare dashboards.
-
-There are two separate stages:
-
-| Stage | What happens | Mechanism |
-|-------|----------------|-----------|
-| **Collect** | Browsers on the live sites send pageviews to Google Analytics 4 | Official `gtag.js` snippet |
-| **Report** | Apps Script asks GA4 for last week’s totals and emails them | Official **Analytics Data API v1beta** (`AnalyticsData.Properties.runReport`) |
-
-Cloudflare Web Analytics is also embedded on the sites, but the weekly email **does not read it**.
+- Rubber Armstrong `sendWeeklyAnalyticsReport` (GA4 → Apps Script → `rubberarmstrongcamp@gmail.com`).
+- RA invitation / SOI tracking pixels in **RA_Emails**.
+- This repo’s Gmail/Outlook **signature** at `assets.kimbersykes.com`.
 
 ---
 
-## 3. Where the code lives
+## 2. It does not scrape the website
 
-| File | Repo | Role |
-|------|------|------|
-| `apps-script-consolidated/Analytics.gs` | **RA_Emails** | Live report: trigger, fetch, format, send |
-| `apps-script-consolidated/Config.gs` | **RA_Emails** | `ANALYTICS_CONFIG` (property, recipient, schedule, date range) |
-| `apps-script-consolidated/appsscript.json` | **RA_Emails** | Enables advanced service `AnalyticsData` / `analyticsdata` v1beta |
-| `scripts/google-analytics-daily-report.js` | RA_Website | **Reference / stale copy** of an older standalone script. Filename still says “daily”. Do not treat this as the live project. |
-| `docs/SETUP_GUIDE.md` § Analytics Setup | RA_Website | Human setup steps |
-| `docs/APPS_SCRIPT_GUIDE.md` | RA_Website | Function list + `ANALYTICS_CONFIG` excerpt |
-| `docs/CLAUDE_PROJECT_OVERVIEW.md` | RA_Website | Project-wide Claude brief; mentions weekly reports only in passing |
+Nothing in this pipeline fetches `https://kimbersykes.com` HTML and parses the DOM.
 
-**Apps Script project:** “SOI Form Handler”, bound to the Google Sheet “RA 2026 SOI Submissions”. Deploy / edit from the RA_Emails clasp project (`apps-script-consolidated/`), not by copying the RA_Website reference script.
+AI crawlers **do not run JavaScript**. Client tags (GA4, Plausible, gtag) never see ClaudeBot / GPTBot. The live homepage has **no** gtag, GTM, Plausible, Umami, PostHog, or Cloudflare Web Analytics beacon.
 
-**Known source defect:** `Analytics.gs` (and the matching `.js`) currently contains the **same module pasted three times** in one file. Apps Script will use the last definition of each function. Clean that up if you edit the file; do not add a fourth copy.
-
-The RA_Website reference script `google-analytics-daily-report.js` also has a broken tail: `testReport()` is duplicated with leftover fragments after the first function ends.
+So the report can only come from **HTTP/CDN request logs** (or an edge worker that classifies each request as it happens). “Scrape” here means: **read request metadata (User-Agent, path, time) and aggregate pageviews**, then email the totals.
 
 ---
 
-## 4. How visitor data is collected (the “source”)
+## 3. What the live site tells us
 
-Both sites load the same GA4 web stream:
+**kimbersykes.com** is a Next.js App Router site on Cloudflare (`server: cloudflare`, `/_next/static/...`, `cache-control: public, max-age=0, must-revalidate`). Custom domain sits on Cloudflare DNS (`andronicus` / `etta`). `assets.kimbersykes.com` is a *different* Pages project (this repo).
 
-```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1GN0CT0WN9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1GN0CT0WN9');
-</script>
+There is no client analytics snippet. Collection is edge/log-side.
+
+### robots.txt is the crawler allow-list
+
+`https://kimbersykes.com/robots.txt` explicitly **Allow: /** for the same families that appear in the email:
+
+```
+GPTBot, OAI-SearchBot, ChatGPT-User,
+ClaudeBot, Claude-Web, anthropic-ai,
+PerplexityBot, Perplexity-User,
+Google-Extended, GoogleOther,
+Amazonbot, Applebot-Extended, Bytespider, CCBot,
+cohere-ai, DiffBot, FacebookBot, Meta-ExternalAgent,
+ImagesiftBot, peer39_crawler, Timpibot, YouBot
 ```
 
-| Item | Value |
-|------|--------|
-| Measurement ID (gtag) | `G-1GN0CT0WN9` |
-| GA4 Property ID | `518391310` |
-| API resource name | `properties/518391310` |
-| Sites | https://rubberarmstrong.com (all main-site HTML pages) and https://soi.rubberarmstrong.com |
+Plus a generic `User-Agent: * Allow: /`.
 
-`gtag('config', …)` records a default page_view on load. There is no custom event layer for the weekly email. Country, users, sessions, and page views are GA4’s standard dimensions/metrics, derived from IP / Geo and the measurement protocol — not from anything this codebase computes.
+The ranked table is that list (or a subset) matched against `User-Agent`. A request whose UA contains `ClaudeBot` increments the ClaudeBot bucket; anything that does not match the AI list is counted as **Human visitors**. That second bucket is therefore “not a known AI crawler” — it can include real people, Googlebot, preview bots, and any unmatched UA. That is the only way 71k “human” pageviews in a week is plausible on a portfolio site if the metric is **HTML requests** (or all requests) rather than unique people.
 
-GA4 data is not realtime for reporting. Setup docs say wait **24–48 hours** before trusting a test against a fresh property.
+### llms.txt is what those crawlers are meant to read
 
-### Cloudflare beacon (not used by the email)
+`https://kimbersykes.com/llms.txt` is a markdown briefing (services, case studies, contact). Sitemap includes `/llms.txt`. The weekly email is the feedback loop: did those allowed crawlers actually hit the site, and did human traffic move?
 
-The same HTML also has:
+### Mail path
 
-```html
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-        data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+SPF for kimbersykes.com:
+
+```
+v=spf1 include:_spf.google.com include:amazonses.com ~all
 ```
 
-The token is still a placeholder in source. Even if Cloudflare analytics is enabled in the dashboard (Pages can auto-inject), **Analytics.gs never calls Cloudflare**.
+The From address is `kimber@kimbersykes.com` with display name `kimbersykes.com traffic`. That is **Amazon SES** (not Gmail SMTP, not MailApp, not Cloudflare Email Routing). Google is on SPF for normal mailbox send; SES is for this automated mail.
 
 ---
 
-## 5. How the report pulls data (the “scrape”)
+## 4. How the data is collected (the “scrape”)
 
-`getAnalyticsData()` in `Analytics.gs` builds one GA4 runReport request:
+### Per request (continuous)
 
-```javascript
-{
-  dateRanges: [{ startDate: '7daysAgo', endDate: 'yesterday' }],
-  dimensions: [{ name: 'country' }],
-  metrics: [
-    { name: 'activeUsers' },
-    { name: 'sessions' },
-    { name: 'screenPageViews' }
-  ]
-}
-```
+On every request that counts as a pageview (almost certainly HTML / document requests for `kimbersykes.com`, not every CSS/image — confirm in source):
 
-Then:
+1. Read `User-Agent`.
+2. Match against the known AI crawler table (same names as robots.txt / the email).
+3. If match → increment that bot’s pageview count for the current UTC day/week.
+4. If no match → increment `Human visitors`.
+5. Persist the increment (see storage below).
 
-```javascript
-AnalyticsData.Properties.runReport(request, ANALYTICS_CONFIG.propertyId)
-```
+Matching is substring / starts-with on the bot token (`ClaudeBot`, `GPTBot`, …), not a full-browser parse. `ChatGPT-User` and `GPTBot` are different OpenAI products and are counted separately in the mail, so the matcher must not collapse them into one “OpenAI” bucket.
 
-`ANALYTICS_CONFIG.propertyId` is the string `'properties/518391310'`.
+Crawler hits never execute the Next.js client bundles. Confirm: those bundles contain no `ClaudeBot` / `pageview` / analytics collector strings. Do not add a browser beacon to “fix” crawler counts; it will not fire.
 
-### What each field means
+### Weekly job (~08:00 UTC Sunday)
 
-| API field | Email label | Notes |
-|-----------|-------------|--------|
-| `activeUsers` | Unique Visitors | Counted **per country row**, then summed. A user who appeared in two countries would be counted twice in the headline total. |
-| `sessions` | Total Sessions | Same: sum of country rows. |
-| `screenPageViews` | Total Page Views | GA4 “views” metric (web page views + any screen views). Sum of country rows. |
-| `country` | Visitors by country | Sorted descending by users. **All countries**, not a top-10. SETUP_GUIDE incorrectly says “top 10”. |
+1. Take `now = new Date()` (the timestamp printed as the window end).
+2. `thisWeek = [now - 7d, now)`, `priorWeek = [now - 14d, now - 7d)`.
+3. Sum AI-crawler pageviews and human pageviews in each window.
+4. For each known bot, sum this week and prior week; drop zeros or keep a top-N (the sample shows 9 rows; robots.txt has more names — either only non-zero bots are listed, or only a ranked subset).
+5. Percent change: `(this - prior) / prior`, with a defined rule when prior is 0 (the +100% GoogleOther row may be a cap, or prior was 244).
+6. Render the HTML tables.
+7. SES send: From `kimbersykes.com traffic <kimber@kimbersykes.com>` → `kimber@kimbersykes.com`, subject `kimbersykes.com: Weekly Traffic Report YYYY-MM-DD`.
 
-Empty response (`!response.rows`) yields zeros and “No visitors recorded”.
+### Where those counts most likely live
 
-### Date range: two clocks
+The site is on Cloudflare and has no first-party analytics JS. Ranked implementations, in order of likelihood:
 
-1. **API query** uses GA4 relative dates `'7daysAgo'` → `'yesterday'` (GA4 property timezone).
-2. **Email header / subject** independently compute “today − 7 days” through “today − 1 day” in `America/Los_Angeles` via `Utilities.formatDate`.
+| Mechanism | How the weekly job “scrapes” |
+|-----------|------------------------------|
+| **A. Cloudflare GraphQL Analytics API** (`httpRequestsAdaptiveGroups`) | Cron queries two datetime windows, filters `clientRequestHTTPHost = kimbersykes.com`, groups by `userAgent` (or botDetectionId). No app database. Classify UA in the script. |
+| **B. Cloudflare Worker / Pages Function on the request path** | Middleware increments Analytics Engine / KV / D1 counters (`bot=ClaudeBot\|human`, `day=YYYY-MM-DD`). Cron reads aggregates. |
+| **C. Logpush → R2/S3** | Weekly job scans access logs, greps UAs, emails SES. |
 
-Those two windows are *intended* to match but are not the same object. If you change the API range, update `formatEmailReport` / `sendEmail` or they will lie in the subject line.
+A and B are the ones to look for first (`wrangler.toml` cron, `scheduled` handler, `graphql` + `api.cloudflare.com`, `AnalyticsEngineDataset`, `SESV2`).
 
-The Apps Script **project** timezone in `appsscript.json` is `America/Denver`. The **trigger** is explicitly `America/Los_Angeles`. Monday 09:00 means Pacific, not Denver.
+This repo (`kimber_sykes_website`) has **none** of that. The Next.js app that *is* kimbersykes.com is not the `email-signature/` tree. If you only have this repo, you cannot change the report — you need the site/worker project (private or local; not under the public `kimbersykes87-source` list as of this writing).
 
 ---
 
-## 6. Runtime flow
+## 5. Metric definitions Claude should keep stable
+
+| Email label | Meaning |
+|-------------|---------|
+| Pageviews | Count of qualifying HTTP requests in the window. Confirm whether that is HTML-only (`Accept` / path not `/_next/` / not static assets) or all 200s. The “human” magnitude suggests either HTML+bots-as-human or all requests. |
+| AI crawlers (total) | Sum of pageviews whose UA matched the AI list. Should equal the sum of ranked rows if every matched bot is listed. |
+| Human visitors | Pageviews that did **not** match the AI list. **Not** unique visitors. Name is misleading. |
+| This week | `[end-7d, end)` using the printed UTC end. |
+| Prior week | The 7 days immediately before this week. |
+| Change | Week-over-week percent on that row. |
+
+Do not switch this report to GA4. GA4 would zero out the crawler table.
+
+---
+
+## 6. What to open when you have the real source
+
+Search the kimbersykes.com Next.js / Worker repo (not this one) for:
 
 ```
-Monday 09:00 PT
-    │
-    ▼
-ScriptApp time-based trigger
-    │
-    ▼
-sendWeeklyAnalyticsReport()
-    │
-    ├─ getAnalyticsData()
-    │      └─ AnalyticsData.Properties.runReport(...)
-    │             └─ parseAnalyticsResponse(response)
-    │                    • sum metrics
-    │                    • sort countries by users desc
-    │
-    ├─ formatEmailReport(data)   // plain-text body
-    │
-    └─ sendEmail(body)           // MailApp.sendEmail
-           to: rubberarmstrongcamp@gmail.com
+Weekly Traffic Report
+UTC window
+AI crawlers
+ClaudeBot
+amazonses / SES / SendEmail
+httpRequestsAdaptiveGroups
+scheduled
+cron
 ```
 
-Auth is implicit: the Apps Script runs as the deploying Google account (`executeAs: USER_DEPLOYING`) and uses that account’s access to the GA4 property. There is no service-account JSON and no scraping credentials in the repo.
+Likely files:
+
+- `wrangler.toml` — `triggers.crons` (expect something like `14 8 * * 0` or `0 8 * * 0`)
+- a `scheduled(event, env, ctx)` Worker, or `functions/scheduled.ts` / `app/api/cron/...`
+- a crawler map shared with `public/robots.txt` (keep those lists in sync)
+- SES client (AWS SDK v3 `SESv2Client` or SES API v2 over fetch)
+
+When adding a bot (e.g. a new Anthropic UA):
+
+1. Add `User-Agent: … Allow: /` in `robots.txt` (and mention in `llms.txt` if it is a product you care about).
+2. Add the same token to the classifier used by the report.
+3. Redeploy the Worker/site so both request-time counting and the weekly query see it.
 
 ---
 
-## 7. Configuration (single source of truth)
+## 7. Safe change recipes
 
-From RA_Emails `apps-script-consolidated/Config.gs`:
+**Add a row (top pages, countries, AI referrals)**  
+If the source is GraphQL, add dimensions (`clientRequestPath`, `clientCountryName`, `clientRefererHost`) and a third table. Referrals from `chatgpt.com` / `perplexity.ai` are a different signal from crawler UAs.
 
-```javascript
-const ANALYTICS_CONFIG = {
-  propertyId: 'properties/518391310',
-  emailRecipient: 'rubberarmstrongcamp@gmail.com',
-  schedule: {
-    dayOfWeek: ScriptApp.WeekDay.MONDAY,
-    hour: 9,
-    timezone: TIMEZONE.LA   // 'America/Los_Angeles'
-  },
-  dateRange: {
-    startDate: '7daysAgo',
-    endDate: 'yesterday'
-  }
-};
-```
+**Change cadence or recipient**  
+Cron expression + SES `Destination`. Subject date should stay the UTC calendar date of `window.end`.
 
-Change recipient, cadence, or property **here**. `Analytics.gs` already reads `ANALYTICS_CONFIG`; do not fork a second copy inside `Analytics.gs`.
+**Do not**
 
-The older RA_Website script inlines its own `ANALYTICS_CONFIG` and does not import Config.gs.
+- Implement this by scraping analytics.google.com or the homepage.
+- Put crawler detection only in client JS.
+- Collapse `GPTBot` / `OAI-SearchBot` / `ChatGPT-User` into one row unless the product owner asks — the current mail treats them as three crawlers.
 
 ---
 
-## 8. Functions Claude should know
-
-| Function | File | What it does |
-|----------|------|----------------|
-| `setupWeeklyAnalytics()` | Analytics.gs | Deletes existing `sendWeeklyAnalyticsReport` triggers, creates Monday 09:00 PT trigger. Run **once** from the Apps Script editor. |
-| `sendWeeklyAnalyticsReport()` | Analytics.gs | Production entry point. Trigger target. |
-| `getAnalyticsData()` | Analytics.gs | GA4 runReport + parse. |
-| `parseAnalyticsResponse(response)` | Analytics.gs | Rows → `{ totalUsers, totalSessions, totalPageViews, countries[] }`. |
-| `formatEmailReport(data)` | Analytics.gs | Plain-text body. |
-| `sendEmail(body)` | Analytics.gs | `MailApp.sendEmail`. |
-| `testAnalyticsReport()` | Analytics.gs | Live GA4 pull + real email. Use this to verify API access. |
-| `testAnalyticsReportWithSampleData()` | Analytics.gs | Fake numbers, no API call. Use this to verify mail only. |
-| `viewAnalyticsConfig()` | Analytics.gs | Alert / log of current config. |
-
-Reference-script equivalents in RA_Website: `setupWeeklyTrigger()`, `testReport()` — same idea, older names.
-
----
-
-## 9. Enabling / debugging
-
-One-time enable (from the SOI Form Handler Apps Script project):
-
-1. Services → add **Google Analytics Data API** (`AnalyticsData`). Already declared in `appsscript.json`.
-2. The Google account that owns the script must have access to GA4 property `518391310`.
-3. Run `setupWeeklyAnalytics()`.
-4. Triggers panel should show `sendWeeklyAnalyticsReport`, weekly, Monday, 09:00, `America/Los_Angeles`.
-5. Smoke tests:
-   - `testAnalyticsReportWithSampleData()` → email arrives, no API.
-   - `testAnalyticsReport()` → real numbers + email.
-6. Executions log (clock icon) for `AnalyticsData` / permission errors.
-
-Common failures:
-
-- Property ID missing the `properties/` prefix, or using the Measurement ID `G-1GN0CT0WN9` instead of `properties/518391310`.
-- Analytics Data API not enabled, or the script user is not a GA4 user.
-- Empty week (no rows) looks like “the scraper failed”; it is a valid zero report.
-- MailApp daily quota if someone loops tests.
-
----
-
-## 10. What this email is not
-
-- **Not** campaign-open / click tracking. Invitation, SOI reminder, and confirmation tracking use a Cloudflare Worker + tracking pixels and write to the `Email_Campaign_2026` / `SOI_Approved` sheet tabs. That is RA_Emails `cloudflare-worker/` + `gmail-automation.gs`. Different system.
-- **Not** SOI submission counts. Those live in Google Sheets tabs (`SOI_Staging`, `SOI_Approved`, …).
-- **Not** Cloudflare Web Analytics.
-- **Not** HTML or PDF. Plain text only via `MailApp.sendEmail({ body })`.
-- **Not** a newsletter to campers. Internal ops mail to `rubberarmstrongcamp@gmail.com`.
-
----
-
-## 11. Safe change recipes
-
-**Add a metric or dimension**  
-Edit the `request` in `getAnalyticsData()`, extend `parseAnalyticsResponse()`, then add a line in `formatEmailReport()`. Keep dimension/metric names as GA4 Data API names (`activeUsers`, `country`, `pagePath`, …).
-
-**Change schedule or recipient**  
-`ANALYTICS_CONFIG` in Config.gs, then re-run `setupWeeklyAnalytics()` so the trigger is recreated. Editing config alone does not move an existing trigger.
-
-**HTML email**  
-`sendEmail()` would need `htmlBody` (and probably keep `body` as plaintext fallback). Nothing in the current formatter emits HTML.
-
-**Do not** implement page scraping of analytics.google.com or rubberarmstrong.com to populate this report. The Data API is the supported path and already has the property wired.
-
----
-
-## 12. Quick map for Claude
+## 8. Quick map
 
 ```
-Browser
-  └─ gtag.js  G-1GN0CT0WN9
-        └─ GA4 property 518391310
-              └─ Analytics Data API v1beta
-                    └─ Apps Script Analytics.gs  (RA_Emails)
-                          └─ MailApp → rubberarmstrongcamp@gmail.com
-                                Mondays 09:00 America/Los_Angeles
+Request to kimbersykes.com
+  └─ Cloudflare edge (Next.js on CF)
+        └─ User-Agent vs robots.txt AI list
+              ├─ match  → AI crawler bucket (ClaudeBot, GPTBot, …)
+              └─ else   → "Human visitors" bucket
+                    └─ counts in CF analytics / Worker store
+
+Sunday ~08:00 UTC
+  └─ cron
+        ├─ query this week + prior week
+        ├─ HTML tables
+        └─ Amazon SES
+              From: kimbersykes.com traffic <kimber@kimbersykes.com>
+              To:   kimber@kimbersykes.com
 ```
 
-When asked to “fix the weekly email” or “change how it scrapes data”, start in **RA_Emails** `Config.gs` + `Analytics.gs`. Use RA_Website `scripts/google-analytics-daily-report.js` only as historical reference.
+This repo only stores the brief and the personal email signature. Edit the report in the **kimbersykes.com site/worker project**, then keep this file in sync.
