@@ -2,7 +2,7 @@
 
 **Purpose:** Hand this file to Claude before changing the weekly traffic report that lands in Kimber’s inbox. It describes the **kimbersykes.com** email (AI vs human pageviews + ranked AI crawlers), not the Rubber Armstrong GA4 Monday mail, and not this repo’s email-signature HTML.
 
-**Last verified:** 21 September 2026, from the 20 September 2026 send plus the live site. The Next.js / Worker source that builds the mail is **not in this GitHub repo**.
+**Last verified:** 21 September 2026, from the 20 September 2026 send, the live site, and a Cloudflare D1 quota email (100k rows written / day on the Workers Free plan). The Next.js / Worker source that builds the mail is **not in this GitHub repo**.
 
 ---
 
@@ -114,7 +114,7 @@ On every request that counts as a pageview (almost certainly HTML / document req
 2. Match against the known AI crawler table (same names as robots.txt / the email).
 3. If match → increment that bot’s pageview count for the current UTC day/week.
 4. If no match → increment `Human visitors`.
-5. Persist the increment (see storage below).
+5. Persist the increment in **Cloudflare D1** (confirmed: the account hit the D1 free-tier write cap).
 
 Matching is substring / starts-with on the bot token (`ClaudeBot`, `GPTBot`, …), not a full-browser parse. `ChatGPT-User` and `GPTBot` are different OpenAI products and are counted separately in the mail, so the matcher must not collapse them into one “OpenAI” bucket.
 
@@ -130,19 +130,44 @@ Crawler hits never execute the Next.js client bundles. Confirm: those bundles co
 6. Render the HTML tables.
 7. SES send: From `kimbersykes.com traffic <kimber@kimbersykes.com>` → `kimber@kimbersykes.com`, subject `kimbersykes.com: Weekly Traffic Report YYYY-MM-DD`.
 
-### Where those counts most likely live
+### Storage: Cloudflare D1 (confirmed)
 
-The site is on Cloudflare and has no first-party analytics JS. Ranked implementations, in order of likelihood:
+On 21 September 2026 Cloudflare emailed:
 
-| Mechanism | How the weekly job “scrapes” |
-|-----------|------------------------------|
-| **A. Cloudflare GraphQL Analytics API** (`httpRequestsAdaptiveGroups`) | Cron queries two datetime windows, filters `clientRequestHTTPHost = kimbersykes.com`, groups by `userAgent` (or botDetectionId). No app database. Classify UA in the script. |
-| **B. Cloudflare Worker / Pages Function on the request path** | Middleware increments Analytics Engine / KV / D1 counters (`bot=ClaudeBot\|human`, `day=YYYY-MM-DD`). Cron reads aggregates. |
-| **C. Logpush → R2/S3** | Weekly job scans access logs, greps UAs, emails SES. |
+> You have exceeded the daily D1 free tier limit of **100,000 rows written** on account Kimbersykes87@gmail.com's Account. D1 row write requests will return errors until **2026-09-22 00:00:00 UTC**. Stored data is not affected. Plan: **Workers Free**.
 
-A and B are the ones to look for first (`wrangler.toml` cron, `scheduled` handler, `graphql` + `api.cloudflare.com`, `AnalyticsEngineDataset`, `SESV2`).
+That settles the store: a Worker (or Pages Function) on the request path **writes D1 rows**. The Sunday job is a `SELECT`/aggregate over those rows, then SES. It is not GraphQL-only and not Logpush.
 
-This repo (`kimber_sykes_website`) has **none** of that. The Next.js app that *is* kimbersykes.com is not the `email-signature/` tree. If you only have this repo, you cannot change the report — you need the site/worker project (private or local; not under the public `kimbersykes87-source` list as of this writing).
+D1 limits are **per Cloudflare account**, not per database. Every D1 on this account (kimbersykes.com traffic plus anything else) shares the 100k writes/day Free cap. `INSERT`, `UPDATE`, and `DELETE` all count as rows written. Reads still work while writes are blocked.
+
+**While writes are blocked (until 00:00 UTC 22 Sep 2026):** new traffic is **not recorded**. The next weekly email will undercount this gap. Existing rows stay; the mail can still send from old data.
+
+None of the public `kimbersykes87-source` repos bind D1 in `wrangler.toml`. The database and writer live in the private/local **kimbersykes.com** site/worker project.
+
+### Why 100k writes/day is the wrong shape for this report
+
+The weekly mail’s own numbers are ~82k pageviews **per week** (~12k/day). Hitting **100k writes in one UTC day** means the collector is not “one write per HTML pageview”. Typical causes, look for all of them:
+
+| Cause | Why it blows the cap |
+|--------|----------------------|
+| One `INSERT` per HTTP request, including `/_next/static/*`, images, preloaded logos | Homepage preloads ~45 client SVGs plus JS/CSS. One human load can be 50+ writes. |
+| `INSERT` **and** `UPDATE` of a summary row per request | Two writes per hit. |
+| UPSERT `count = count + 1` per request | An `UPDATE` still counts as a row written. Does not save quota. |
+| Crawlers following every URL + assets | ClaudeBot/GPTBot do not execute JS but they do fetch HTML (and sometimes linked files). |
+| A write loop / retry on error | Errors after the cap can still retry and keep failing. |
+| Other D1 apps on the same account | Shared 100k/day. |
+
+Fix in the site/worker repo (do **not** “just upgrade” as the first move unless they want Paid):
+
+1. **Count HTML documents only** — skip `/_next/`, `/images/`, `/favicon`, `RSC`/data fetches, `HEAD`.
+2. **Stop per-request row logs** if the email only needs weekly totals. Keep a tiny aggregate table `(day TEXT, bot TEXT, views INTEGER)` and **buffer in memory/KV**, flushing once a minute (or once per isolate) with a batched `INSERT`. Target: tens of writes/day, not 100k.
+3. Or drop D1 for ingest and use **Workers Analytics Engine** (built for high-volume event writes); D1 stays for nothing, or only for a daily rollup.
+4. Or stop writing on the hot path entirely and pull **Cloudflare GraphQL** `httpRequestsAdaptiveGroups` in the Sunday cron (zero D1 writes).
+5. Paid plan is `$5/mo` and 50M writes/month — a backstop, not a substitute for (1)–(4).
+
+`ON CONFLICT DO UPDATE SET count = count + 1` on every request still burns one write per request. Batching is what actually drops quota use.
+
+This repo (`kimber_sykes_website`) has **none** of that. If you only have this repo, you cannot change the collector — you need the site/worker project.
 
 ---
 
@@ -171,15 +196,19 @@ UTC window
 AI crawlers
 ClaudeBot
 amazonses / SES / SendEmail
-httpRequestsAdaptiveGroups
+d1_databases
+env.DB / env.D1
+INSERT INTO
 scheduled
 cron
 ```
 
 Likely files:
 
-- `wrangler.toml` — `triggers.crons` (expect something like `14 8 * * 0` or `0 8 * * 0`)
-- a `scheduled(event, env, ctx)` Worker, or `functions/scheduled.ts` / `app/api/cron/...`
+- `wrangler.toml` — `[[d1_databases]]` plus `triggers.crons` (expect something like `0 8 * * 0` or `14 8 * * 0`)
+- a request-path Worker/middleware that `env.DB.prepare(...).run()`
+- `migrations/*.sql` — request log table vs daily aggregate table
+- a `scheduled(event, env, ctx)` handler that `SELECT`s D1 and sends SES
 - a crawler map shared with `public/robots.txt` (keep those lists in sync)
 - SES client (AWS SDK v3 `SESv2Client` or SES API v2 over fetch)
 
@@ -199,11 +228,15 @@ If the source is GraphQL, add dimensions (`clientRequestPath`, `clientCountryNam
 **Change cadence or recipient**  
 Cron expression + SES `Destination`. Subject date should stay the UTC calendar date of `window.end`.
 
+**Stop the D1 write storm (priority if quota emails keep arriving)**  
+Skip static assets; buffer and flush aggregates; or move ingest off D1. See §4.
+
 **Do not**
 
 - Implement this by scraping analytics.google.com or the homepage.
 - Put crawler detection only in client JS.
 - Collapse `GPTBot` / `OAI-SearchBot` / `ChatGPT-User` into one row unless the product owner asks — the current mail treats them as three crawlers.
+- “Fix” the quota by inserting fewer columns or using UPSERT still once per request — that still counts as a write.
 
 ---
 
@@ -215,11 +248,11 @@ Request to kimbersykes.com
         └─ User-Agent vs robots.txt AI list
               ├─ match  → AI crawler bucket (ClaudeBot, GPTBot, …)
               └─ else   → "Human visitors" bucket
-                    └─ counts in CF analytics / Worker store
+                    └─ D1 write  (Workers Free: 100k rows written / UTC day / account)
 
 Sunday ~08:00 UTC
   └─ cron
-        ├─ query this week + prior week
+        ├─ SELECT aggregates from D1 (this week + prior week)
         ├─ HTML tables
         └─ Amazon SES
               From: kimbersykes.com traffic <kimber@kimbersykes.com>
