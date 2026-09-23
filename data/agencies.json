@@ -1,0 +1,19 @@
+[
+  { "id": "wonder", "name": "Wonder", "file": "/images/logos/agencies/wonder.svg", "alt": "Wonder" },
+  { "id": "jack-morton", "name": "Jack Morton", "file": "/images/logos/agencies/jack-morton.svg", "alt": "Jack Morton" },
+  { "id": "amplify", "name": "Amplify", "file": "/images/logos/agencies/amplify.svg", "alt": "Amplify" },
+  { "id": "invnt", "name": "INVNT", "file": "/images/logos/agencies/invnt.svg", "alt": "INVNT" },
+  { "id": "imagination", "name": "Imagination", "file": "/images/logos/agencies/imagination.svg", "alt": "Imagination" },
+  { "id": "octagon", "name": "Octagon", "file": "/images/logos/agencies/octagon.svg", "alt": "Octagon" },
+  { "id": "pulse-group", "name": "Pulse Group", "file": "/images/logos/agencies/pulse-group.svg", "alt": "Pulse Group" },
+  { "id": "bmf", "name": "BMF", "file": "/images/logos/agencies/bmf.svg", "alt": "BMF" },
+  { "id": "curiious", "name": "Curiious", "file": "/images/logos/agencies/curiious.svg", "alt": "Curiious" },
+  { "id": "agb-events", "name": "AGB Events", "file": "/images/logos/agencies/agb-events.svg", "alt": "AGB Events" },
+  { "id": "yakusan", "name": "Yakusan", "file": "/images/logos/agencies/yakusan.svg", "alt": "Yakusan" },
+  { "id": "emotive", "name": "Emotive", "file": "/images/logos/agencies/emotive.svg", "alt": "Emotive" },
+  { "id": "we-are-listen", "name": "We Are Listen", "file": "/images/logos/agencies/we-are-listen.svg", "alt": "We Are Listen" },
+  { "id": "exposure", "name": "Exposure", "file": "/images/logos/agencies/exposure.svg", "alt": "EXPOSUREPR" },
+  { "id": "kk-productions", "name": "K&K Productions", "file": "/images/logos/agencies/kk-productions.svg", "alt": "K&K Productions" },
+  { "id": "bacchus", "name": "Bacchus", "file": "/images/logos/agencies/bacchus.svg", "alt": "Bacchus" },
+  { "id": "blondefish", "name": "Blondefish", "file": "/images/logos/agencies/blondefish.svg", "alt": "Blondefish" }
+]

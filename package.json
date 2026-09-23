@@ -1,0 +1,44 @@
+{
+  "name": "kimber-sykes-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "generate:llms": "node scripts/generate-llms-txt.mjs",
+    "prebuild": "npm run generate:llms",
+    "build": "next build",
+    "postbuild": "node scripts/inject-json-ld-head.mjs",
+    "start": "next start",
+    "lint": "eslint",
+    "sync:logos": "node scripts/sync-client-logos.mjs",
+    "sync:agency-logos": "node scripts/sync-agency-logos.mjs",
+    "build:agency-raster-svgs": "node scripts/embed-agency-raster-svg.mjs",
+    "strip:pages": "node scripts/strip-out-oversize-for-pages.mjs",
+    "pages:deploy": "npm run build && npm run strip:pages && wrangler pages deploy out --project-name=kimber-sykes-site --branch=main --commit-dirty=true",
+    "portfolio:upload": "wrangler r2 object put kimber-sykes-assets/portfolio/kimber-sykes-professional-portfolio-2026.pdf --file=public/Kimber Sykes - Professional Portfolio - 2026.pdf --content-type=application/pdf --remote",
+    "signature:upload": "node scripts/upload-email-signature.mjs",
+    "signature:deploy": "npm run signature:upload && npm run assets:deploy",
+    "assets:deploy": "wrangler deploy --config workers/assets/wrangler.toml"
+  },
+  "dependencies": {
+    "lucide-react": "^0.554.0",
+    "next": "^15.5.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-simple-maps": "^3.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^9",
+    "eslint-config-next": "^15.5.0",
+    "simple-icons": "^16.18.1",
+    "svg-path-bbox": "^2.1.0",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "wrangler": "^4"
+  }
+}

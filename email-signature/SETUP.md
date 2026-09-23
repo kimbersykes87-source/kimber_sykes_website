@@ -1,13 +1,13 @@
 # Install email signature: Gmail, Thunderbird, phone
 
-Use this after the signature is deployed at **https://assets.kimbersykes.com/email-signature/**.
+Use the HTML files in this folder. If production icons are deployed on `assets.kimbersykes.com`, remote images in sent mail will load for recipients; otherwise build and deploy icons first — see [DEPLOY.md](DEPLOY.md).
 
 ---
 
 ## Source to use
 
-- **For Gmail / Outlook (web or desktop):** Open **https://assets.kimbersykes.com/email-signature/signature-email.html** in a browser → Select all (Ctrl+A) → Copy (Ctrl+C) → Paste into the client’s signature field.
-- **For Thunderbird:** Use the file **signature-thunderbird.html** in this folder (same content). Point Thunderbird to it, or copy the file to a fixed path and point Thunderbird there.
+- **For Gmail / Outlook (web or desktop):** Open **`signature-email.html`** in a browser (from this folder, or from the hosted URL once deployed) → Select all (Ctrl+A) → Copy (Ctrl+C) → Paste into the client’s signature field.
+- **For Thunderbird:** Use **`signature-thunderbird.html`**. Point Thunderbird to it, or copy the file to a fixed path and point Thunderbird there.
 
 ---
 

@@ -1,0 +1,6 @@
+# Cloudflare Pages: after `npm run build`, deploy the `out` directory, e.g.:
+# npx wrangler pages deploy out --project-name=kimber-sykes-site
+
+name = "kimber-sykes-site"
+compatibility_date = "2025-05-01"
+pages_build_output_dir = "out"

@@ -1,0 +1,2 @@
+# Canonical host: www → apex (Pages; www also 301s in crawler-logger when Worker route is active)
+https://www.kimbersykes.com/* https://kimbersykes.com/:splat 301

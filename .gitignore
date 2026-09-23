@@ -1,2 +1,25 @@
 node_modules/
+.next/
+out/
+.env*.local
+.env.production
+.dev.vars
+**/.dev.vars
+*.tsbuildinfo
+.lighthouse*.json
+
+# Local / scratch files
 image.png
+tmp-*
+portrait.jpg
+email-signature/assets/icons/*.png
+
+# Wrangler local state
+workers/**/.wrangler/
+
+# Ad-hoc rendered-page snapshots (not site source; regenerate by viewing the live pages)
+cs.html
+home.html
+
+# Wrangler local state (root)
+.wrangler/

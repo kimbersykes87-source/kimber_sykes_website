@@ -1,0 +1,461 @@
+[
+  {
+    "country": "Australia",
+    "countryCode": "AU",
+    "projects": [
+      {
+        "client": "Geely Auto",
+        "agency": "INVNT",
+        "project": "EX5 Brand Launch",
+        "year": 2025
+      },
+      {
+        "client": "Aperol Spritz",
+        "agency": "Yakusan",
+        "project": "Australian Open",
+        "year": 2024
+      },
+      {
+        "client": "Johnson & Johnson",
+        "agency": "K&K Productions",
+        "project": "Mobile Laboratory",
+        "year": 2021
+      },
+      {
+        "client": "Samsung",
+        "agency": "Imagination",
+        "project": "Galaxy A5 Launch",
+        "year": 2017
+      },
+      {
+        "client": "Tourism NT",
+        "agency": "AGB Events",
+        "project": "Parrtjima Festival",
+        "year": 2021
+      },
+      {
+        "client": "Aqua Rugby Australia",
+        "agency": "Independent",
+        "project": "Darling Harbour Festival",
+        "year": 2024
+      },
+      {
+        "client": "Destination NSW",
+        "agency": "Emotive",
+        "project": "The Long Road",
+        "year": 2020
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Cricket World Cup",
+        "year": 2015
+      }
+    ]
+  },
+  {
+    "country": "Brazil",
+    "countryCode": "BR",
+    "projects": [
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sky Cargo Exhibition Stand, São Paulo",
+        "year": 2012
+      }
+    ]
+  },
+  {
+    "country": "Canada",
+    "countryCode": "CA",
+    "projects": [
+      {
+        "client": "Private Event",
+        "agency": "Independent",
+        "project": "Vancouver"
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Rogers Cup, Montreal",
+        "year": 2013
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Rogers Cup, Toronto",
+        "year": 2014
+      }
+    ]
+  },
+  {
+    "country": "China",
+    "countryCode": "CN",
+    "projects": [
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sports Sponsorship: PGA Golf (Shanghai)",
+        "year": 2015
+      }
+    ]
+  },
+  {
+    "country": "France",
+    "countryCode": "FR",
+    "projects": [
+      {
+        "client": "Netflix",
+        "agency": "Amplify",
+        "project": "Stranger Things Fan Experience",
+        "year": 2022
+      },
+      {
+        "client": "EA Sports",
+        "agency": "Amplify",
+        "project": "Battlefront II Launch, Paris Games Week (Paris)",
+        "year": 2017
+      },
+      {
+        "client": "Peugeot",
+        "agency": "Curiious",
+        "project": "Concept Car Launch",
+        "year": 2022
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sports Sponsorship: ATP Tennis (Roland Garros, Paris)",
+        "year": 2015
+      },
+      {
+        "client": "Visa",
+        "agency": "BMF",
+        "project": "Visa Everywhere Initiative",
+        "year": 2019
+      },
+      {
+        "client": "Visa",
+        "agency": "BMF",
+        "project": "FIFA Women's World Cup",
+        "year": 2019
+      }
+    ]
+  },
+  {
+    "country": "Germany",
+    "countryCode": "DE",
+    "projects": [
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Exhibition Stand, ITB Berlin",
+        "year": 2014
+      },
+      {
+        "client": "Philips",
+        "agency": "INVNT",
+        "project": "Exhibition Stand, IFA Berlin",
+        "year": 2018
+      },
+      {
+        "client": "Instagram",
+        "agency": "Amplify",
+        "project": "Activation, Berlin",
+        "year": 2017
+      }
+    ]
+  },
+  {
+    "country": "Indonesia",
+    "countryCode": "ID",
+    "projects": []
+  },
+  {
+    "country": "Italy",
+    "countryCode": "IT",
+    "projects": [
+      {
+        "client": "Mastercard",
+        "agency": "Octagon",
+        "project": "UEFA Champions League Final, Milan",
+        "year": 2016
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sports Sponsorship: ATP Tennis (Rome)",
+        "year": 2015
+      }
+    ]
+  },
+  {
+    "country": "Malaysia",
+    "countryCode": "MY",
+    "projects": [
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sports Sponsorship: PGA Golf (Kuala Lumpur)",
+        "year": 2015
+      }
+    ]
+  },
+  {
+    "country": "Netherlands",
+    "countryCode": "NL",
+    "projects": [
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sky Cargo, Utrecht",
+        "year": 2014
+      }
+    ]
+  },
+  {
+    "country": "New Zealand",
+    "countryCode": "NZ",
+    "projects": [
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Cricket World Cup",
+        "year": 2015
+      }
+    ]
+  },
+  {
+    "country": "Nigeria",
+    "countryCode": "NG",
+    "projects": [
+      {
+        "client": "Arise Fashion",
+        "agency": "Bacchus",
+        "project": "Arise Fashion Show, Lagos",
+        "year": 2018
+      }
+    ]
+  },
+  {
+    "country": "Qatar",
+    "countryCode": "QA",
+    "projects": []
+  },
+  {
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "projects": [
+      {
+        "client": "Private Event",
+        "agency": "K&K Productions",
+        "project": "Plettenburg Bay",
+        "year": 2018
+      }
+    ]
+  },
+  {
+    "country": "Spain",
+    "countryCode": "ES",
+    "projects": [
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sabadell Open, Barcelona",
+        "year": 2015
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sabadell Open, Barcelona",
+        "year": 2014
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sabadell Open, Barcelona",
+        "year": 2013
+      }
+    ]
+  },
+  {
+    "country": "United Arab Emirates",
+    "countryCode": "AE",
+    "projects": [
+      {
+        "client": "Stella McCartney",
+        "agency": "INVNT",
+        "project": "Sustainable Market at COP28",
+        "year": 2023
+      },
+      {
+        "client": "Expo 2020",
+        "agency": "Curiious",
+        "project": "UAE National Day Celebration",
+        "year": 2021
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sports Sponsorship: PGA Golf (Dubai)",
+        "year": 2015
+      },
+      {
+        "client": "Arise Fashion",
+        "agency": "Bacchus",
+        "project": "Arise Fashion Show, Dubai",
+        "year": 2022
+      }
+    ]
+  },
+  {
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "projects": [
+      {
+        "client": "Google",
+        "agency": "Wonder",
+        "project": "Google Cloud Summit 2026",
+        "year": 2026
+      },
+      {
+        "client": "Xero",
+        "agency": "INVNT",
+        "project": "Xerocon London 2026",
+        "year": 2026
+      },
+      {
+        "client": "Yoto",
+        "agency": "Akcelo",
+        "project": "Yoto PlayDate London 2026",
+        "year": 2026
+      },
+      {
+        "client": "Google",
+        "agency": "Wonder",
+        "project": "Google Cloud Summit 2025",
+        "year": 2025
+      },
+      {
+        "client": "Google",
+        "agency": "Wonder",
+        "project": "Google Cloud Summit 2024",
+        "year": 2024
+      },
+      {
+        "client": "Canva",
+        "agency": "Jack Morton",
+        "project": "Canva Studio Pop-Up",
+        "year": 2023
+      },
+      {
+        "client": "Mastercard",
+        "agency": "Octagon",
+        "project": "British Open Golf, Troon",
+        "year": 2016
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Emirates Aviation Experience",
+        "year": 2014
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Commonwealth Games, Glasgow",
+        "year": 2014
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sports Sponsorship: ATP Tennis (London)",
+        "year": 2015
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sports Sponsorship: PGA Golf (UK)",
+        "year": 2015
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sports Sponsorship Program",
+        "year": 2015
+      },
+      {
+        "client": "NTT Data",
+        "agency": "Pulse Group",
+        "project": "British Open Golf, Troon",
+        "year": 2013
+      },
+      {
+        "client": "MTV",
+        "agency": "Amplify",
+        "project": "EMA Awards After Party",
+        "year": 2017
+      },
+      {
+        "client": "Google",
+        "agency": "Amplify",
+        "project": "Google Pixel 3 Launch",
+        "year": 2018
+      },
+      {
+        "client": "Microsoft",
+        "agency": "We Are Listen",
+        "project": "Microsoft x London College of Fashion, London",
+        "year": 2019
+      },
+      {
+        "client": "SoundCloud",
+        "agency": "Amplify",
+        "project": "Activation",
+        "year": 2017
+      },
+      {
+        "client": "Gunpowder Plot",
+        "agency": "Independent",
+        "project": "Immersive Experience",
+        "year": 2020
+      },
+      {
+        "client": "Rizla",
+        "agency": "Exposure",
+        "project": "Rizlab",
+        "year": 2011
+      }
+    ]
+  },
+  {
+    "country": "United States",
+    "countryCode": "US",
+    "projects": [
+      {
+        "client": "Xero",
+        "agency": "INVNT",
+        "project": "Xerocon Denver 2026",
+        "year": 2026
+      },
+      {
+        "client": "Xero",
+        "agency": "INVNT",
+        "project": "Xerocon Nashville",
+        "year": 2024
+      },
+      {
+        "client": "Peugeot",
+        "agency": "Curiious",
+        "project": "Concept Car Launch Las Vegas",
+        "year": 2022
+      },
+      {
+        "client": "Emirates",
+        "agency": "Pulse Group",
+        "project": "Sports Sponsorship: ATP Tennis (Indian Wells and New York)",
+        "year": 2015
+      }
+    ]
+  }
+]

@@ -1,0 +1,287 @@
+[
+  {
+    "id": "google",
+    "name": "Google",
+    "file": "/images/logos/clients/google.svg",
+    "alt": "Google"
+  },
+  {
+    "id": "google-cloud",
+    "name": "Google Cloud",
+    "file": "/images/logos/clients/google-cloud.svg",
+    "alt": "Google Cloud"
+  },
+  {
+    "id": "netflix",
+    "name": "Netflix",
+    "file": "/images/logos/clients/netflix.svg",
+    "alt": "Netflix"
+  },
+  {
+    "id": "canva",
+    "name": "Canva",
+    "file": "/images/logos/clients/canva.svg",
+    "alt": "Canva"
+  },
+  {
+    "id": "geely",
+    "name": "Geely",
+    "file": "/images/logos/clients/geely.svg",
+    "alt": "Geely Auto"
+  },
+  {
+    "id": "mastercard",
+    "name": "Mastercard",
+    "file": "/images/logos/clients/mastercard.svg",
+    "alt": "Mastercard"
+  },
+  {
+    "id": "visa",
+    "name": "Visa",
+    "file": "/images/logos/clients/visa.svg",
+    "alt": "Visa"
+  },
+  {
+    "id": "emirates",
+    "name": "Emirates",
+    "file": "/images/logos/clients/emirates.svg",
+    "alt": "Emirates"
+  },
+  {
+    "id": "emirates-skycargo",
+    "name": "Emirates SkyCargo",
+    "file": "/images/logos/clients/emirates-skycargo.svg",
+    "alt": "Emirates SkyCargo"
+  },
+  {
+    "id": "samsung",
+    "name": "Samsung",
+    "file": "/images/logos/clients/samsung.svg",
+    "alt": "Samsung"
+  },
+  {
+    "id": "johnson-johnson",
+    "name": "Johnson & Johnson",
+    "file": "/images/logos/clients/johnson-johnson.svg",
+    "alt": "Johnson & Johnson"
+  },
+  {
+    "id": "stella-mccartney",
+    "name": "Stella McCartney",
+    "file": "/images/logos/clients/stella-mccartney.svg",
+    "alt": "Stella McCartney",
+    "displayScale": 1.5
+  },
+  {
+    "id": "aperol",
+    "name": "Aperol",
+    "file": "/images/logos/clients/aperol.svg",
+    "alt": "Aperol"
+  },
+  {
+    "id": "mtv",
+    "name": "MTV",
+    "file": "/images/logos/clients/mtv.svg",
+    "alt": "MTV"
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "file": "/images/logos/clients/microsoft.svg",
+    "alt": "Microsoft"
+  },
+  {
+    "id": "xero",
+    "name": "Xero",
+    "file": "/images/logos/clients/xero.svg",
+    "alt": "Xero",
+    "displayScale": 1.5
+  },
+  {
+    "id": "ntt-data",
+    "name": "NTT Data",
+    "file": "/images/logos/clients/ntt-data.svg",
+    "alt": "NTT Data"
+  },
+  {
+    "id": "ea-sports",
+    "name": "EA Sports",
+    "file": "/images/logos/clients/ea-sports.svg",
+    "alt": "EA Sports"
+  },
+  {
+    "id": "sony",
+    "name": "Sony",
+    "file": "/images/logos/clients/sony.svg",
+    "alt": "Sony"
+  },
+  {
+    "id": "diageo",
+    "name": "Diageo",
+    "file": "/images/logos/clients/diageo.svg",
+    "alt": "Diageo"
+  },
+  {
+    "id": "philips",
+    "name": "Philips",
+    "file": "/images/logos/clients/philips.svg",
+    "alt": "Philips"
+  },
+  {
+    "id": "soundcloud",
+    "name": "SoundCloud",
+    "file": "/images/logos/clients/soundcloud.svg",
+    "alt": "SoundCloud"
+  },
+  {
+    "id": "peugeot",
+    "name": "Peugeot",
+    "file": "/images/logos/clients/peugeot.svg",
+    "alt": "Peugeot"
+  },
+  {
+    "id": "infiniti",
+    "name": "Infiniti",
+    "file": "/images/logos/clients/infiniti.svg",
+    "alt": "Infiniti"
+  },
+  {
+    "id": "jaguar",
+    "name": "Jaguar",
+    "file": "/images/logos/clients/jaguar.svg",
+    "alt": "Jaguar"
+  },
+  {
+    "id": "american-express",
+    "name": "American Express",
+    "file": "/images/logos/clients/american-express.svg",
+    "alt": "American Express"
+  },
+  {
+    "id": "commonwealth-bank",
+    "name": "Commonwealth Bank",
+    "file": "/images/logos/clients/commonwealth-bank.svg",
+    "alt": "Commonwealth Bank"
+  },
+  {
+    "id": "walt-disney",
+    "name": "Walt Disney",
+    "file": "/images/logos/clients/walt-disney.svg",
+    "alt": "Walt Disney"
+  },
+  {
+    "id": "instagram",
+    "name": "Instagram",
+    "file": "/images/logos/clients/instagram.svg",
+    "alt": "Instagram"
+  },
+  {
+    "id": "lilly",
+    "name": "Lilly",
+    "file": "/images/logos/clients/lilly.svg",
+    "alt": "Lilly"
+  },
+  {
+    "id": "destination-nsw",
+    "name": "Destination NSW",
+    "file": "/images/logos/clients/destination-nsw.svg",
+    "alt": "Destination NSW"
+  },
+  {
+    "id": "cnn",
+    "name": "CNN",
+    "file": "/images/logos/clients/cnn.svg",
+    "alt": "CNN"
+  },
+  {
+    "id": "marriott",
+    "name": "Marriott Group",
+    "file": "/images/logos/clients/marriott.svg",
+    "alt": "Marriott Group"
+  },
+  {
+    "id": "tourism-nt",
+    "name": "Tourism NT",
+    "file": "/images/logos/clients/tourism-nt.svg",
+    "alt": "Tourism NT"
+  },
+  {
+    "id": "b-braun",
+    "name": "B Braun",
+    "file": "/images/logos/clients/b-braun.svg",
+    "alt": "B Braun"
+  },
+  {
+    "id": "dnata",
+    "name": "dnata",
+    "file": "/images/logos/clients/dnata.svg",
+    "alt": "dnata"
+  },
+  {
+    "id": "dp-world",
+    "name": "DP World",
+    "file": "/images/logos/clients/dp-world.svg",
+    "alt": "DP World"
+  },
+  {
+    "id": "expo-2020",
+    "name": "Expo 2020",
+    "file": "/images/logos/clients/expo-2020.svg",
+    "alt": "Expo 2020"
+  },
+  {
+    "id": "gunpowder-plot",
+    "name": "Gunpowder Plot",
+    "file": "/images/logos/clients/gunpowder-plot.svg",
+    "alt": "Gunpowder Plot"
+  },
+  {
+    "id": "intercontinental-hotels",
+    "name": "Intercontinental Hotels",
+    "file": "/images/logos/clients/intercontinental-hotels.svg",
+    "alt": "Intercontinental Hotels"
+  },
+  {
+    "id": "jumeirah-hotels",
+    "name": "Jumeirah Hotels",
+    "file": "/images/logos/clients/jumeirah-hotels.svg",
+    "alt": "Jumeirah Hotels"
+  },
+  {
+    "id": "pfizer",
+    "name": "Pfizer",
+    "file": "/images/logos/clients/pfizer.svg",
+    "alt": "Pfizer"
+  },
+  {
+    "id": "reed-elsevier",
+    "name": "Reed Elsevier",
+    "file": "/images/logos/clients/reed-elsevier.svg",
+    "alt": "Reed Elsevier"
+  },
+  {
+    "id": "rizla",
+    "name": "Rizla",
+    "file": "/images/logos/clients/rizla.svg",
+    "alt": "Rizla"
+  },
+  {
+    "id": "schwarzkopf",
+    "name": "Schwarzkopf",
+    "file": "/images/logos/clients/schwarzkopf.svg",
+    "alt": "Schwarzkopf Professional"
+  },
+  {
+    "id": "tiger",
+    "name": "Tiger",
+    "file": "/images/logos/clients/tiger.svg",
+    "alt": "Tiger"
+  },
+  {
+    "id": "yoto",
+    "name": "Yoto",
+    "file": "/images/logos/clients/yoto.png",
+    "alt": "Yoto",
+    "displayScale": 1.5
+  }
+]

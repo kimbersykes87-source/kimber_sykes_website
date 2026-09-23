@@ -1,0 +1,94 @@
+[
+  {
+    "country": "Australia",
+    "cities": [
+      "Adelaide",
+      "Alice Springs",
+      "Brisbane",
+      "Byron Bay",
+      "Gold Coast",
+      "Hamilton Island",
+      "Melbourne",
+      "Perth",
+      "Sydney",
+      "Wollongong"
+    ]
+  },
+  {
+    "country": "Brazil",
+    "cities": ["Sao Paulo"]
+  },
+  {
+    "country": "Canada",
+    "cities": ["Montreal", "Toronto", "Vancouver"]
+  },
+  {
+    "country": "China",
+    "cities": ["Shanghai"]
+  },
+  {
+    "country": "France",
+    "cities": ["Paris"]
+  },
+  {
+    "country": "Germany",
+    "cities": ["Berlin", "Cologne", "Dusseldorf", "Hamburg"]
+  },
+  {
+    "country": "Indonesia",
+    "cities": ["Bali", "Jakarta"]
+  },
+  {
+    "country": "Italy",
+    "cities": ["Milan", "Rome"]
+  },
+  {
+    "country": "Malaysia",
+    "cities": ["Kuala Lumpur"]
+  },
+  {
+    "country": "Netherlands",
+    "cities": ["Amsterdam", "Den Haag", "Utrecht"]
+  },
+  {
+    "country": "New Zealand",
+    "cities": ["Auckland", "Christchurch"]
+  },
+  {
+    "country": "Nigeria",
+    "cities": ["Lagos"]
+  },
+  {
+    "country": "Qatar",
+    "cities": ["Doha"]
+  },
+  {
+    "country": "South Africa",
+    "cities": ["Cape Town", "Plettenburg Bay"]
+  },
+  {
+    "country": "Spain",
+    "cities": ["Barcelona"]
+  },
+  {
+    "country": "UAE",
+    "cities": ["Dubai"]
+  },
+  {
+    "country": "UK",
+    "cities": ["Birmingham", "Edinburgh", "Glasgow", "Islay", "Liverpool", "London", "Manchester", "Troon"]
+  },
+  {
+    "country": "United States",
+    "cities": [
+      "Denver",
+      "Los Angeles",
+      "Nashville",
+      "New Orleans",
+      "New York",
+      "Palm Springs",
+      "Reno",
+      "San Diego"
+    ]
+  }
+]

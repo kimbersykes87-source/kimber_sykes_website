@@ -1,0 +1,11 @@
+name = "kimber-sykes-assets"
+main = "src/index.ts"
+compatibility_date = "2025-05-01"
+
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "kimber-sykes-assets"
+
+[[routes]]
+pattern = "assets.kimbersykes.com/*"
+zone_name = "kimbersykes.com"
