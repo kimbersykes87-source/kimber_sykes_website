@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import type { ReactNode } from "react";
 import type { LogoEntry } from "@/lib/types";
 
-const tileClass = "flex items-center justify-center rounded-lg border border-white/10 bg-black/20 p-4 sm:p-6";
+const tileClass = "flex items-center justify-center rounded-lg border border-white/10 bg-black/20 p-3 sm:p-4 lg:p-6";
 
 function LogoTile({ entry, children }: { entry: LogoEntry; children: ReactNode }) {
   if (!entry.url) {
