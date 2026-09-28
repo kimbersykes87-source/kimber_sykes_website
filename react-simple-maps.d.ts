@@ -33,6 +33,8 @@ declare module "react-simple-maps" {
     children?: ReactNode;
     projection?: string;
     projectionConfig?: { scale?: number; center?: [number, number] };
+    width?: number;
+    height?: number;
     className?: string;
   };
 

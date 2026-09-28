@@ -12,13 +12,51 @@ import type { MapCountry } from "@/lib/types";
 import { getLogoEntryForClient } from "@/lib/clientLogo";
 import { getDeliveryCitiesForMapCountry } from "@/lib/deliveryLocations";
 import { atlasNameIsHighlighted, resolveCountriesForAtlasName } from "@/lib/mapGeo";
+import { deliveryLocations } from "@/lib/data";
+import { CITY_COORDS } from "@/lib/cityCoords";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-const fillDefault = "#1a1a1a";
-const fillDefaultStroke = "#2d2d2d";
-const fillHi = "#38bdf8";
-const fillHover = "#7dd3fc";
+/*
+ * Styled to match the "Delivered around the world" page of the Professional Portfolio PDF:
+ * flat (equirectangular, vertically stretched) projection, no Antarctica, charcoal land,
+ * muted navy for delivery countries and glowing cyan dots for each delivery city.
+ */
+const MAP_W = 1000;
+const LAT_TOP = 84;
+const LAT_BOTTOM = -57;
+const Y_STRETCH = 1.234;
+const PX_PER_DEG = MAP_W / 360;
+const MAP_H = Math.round((LAT_TOP - LAT_BOTTOM) * PX_PER_DEG * Y_STRETCH);
+const CENTER_LAT = (LAT_TOP + LAT_BOTTOM) / 2;
+
+const fillDefault = "#1f1f1f";
+const strokeDefault = "#0d0d0d";
+const fillHi = "#253847";
+const fillHover = "#31506a";
+const dotColor = "#38bdf8";
+
+/** delivery-locations.json country label → map.json country name */
+const DELIVERY_TO_MAP_COUNTRY: Record<string, string> = {
+  UK: "United Kingdom",
+  UAE: "United Arab Emirates",
+};
+
+function projectPoint(lat: number, lng: number): [number, number] {
+  return [
+    MAP_W / 2 + lng * PX_PER_DEG,
+    MAP_H / 2 - (lat - CENTER_LAT) * PX_PER_DEG * Y_STRETCH,
+  ];
+}
+
+const cityDots = deliveryLocations.flatMap((row) =>
+  row.cities.flatMap((city) => {
+    const c = CITY_COORDS[city];
+    if (!c) return [];
+    const [x, y] = projectPoint(c[0], c[1]);
+    return [{ city, country: DELIVERY_TO_MAP_COUNTRY[row.country] ?? row.country, x, y }];
+  }),
+);
 
 type Props = {
   className?: string;
@@ -45,65 +83,88 @@ export function WorldMap({ className = "" }: Props) {
 
   return (
     <div className={`relative w-full ${className}`}>
-      <div className="aspect-[2/1] min-h-[280px] w-full max-w-full overflow-hidden rounded-lg border border-white/10 bg-black/40 sm:min-h-[360px] md:min-h-[420px]">
+      <div className="w-full max-w-full overflow-hidden">
         <ComposableMap
-          projection="geoMercator"
+          projection="geoEquirectangular"
+          width={MAP_W}
+          height={MAP_H}
           projectionConfig={{
-            scale: 110,
-            center: [0, 35],
+            scale: MAP_W / (2 * Math.PI),
+            center: [0, CENTER_LAT],
           }}
-          className="size-full [&_svg]:block [&_svg]:h-full [&_svg]:w-full max-h-[70vh]"
+          className="block h-auto w-full"
         >
-          <Geographies geography={geoUrl}>
-            {({ geographies }) =>
-              geographies.map((geo) => {
-                const name = String(geo.properties.name ?? "");
-                const highlighted = atlasNameIsHighlighted(name);
-                return (
-                  <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    onClick={() => highlighted && openPanel(name)}
-                    onKeyDown={(e) => {
-                      if (!highlighted) return;
-                      if (e.key === "Enter" || e.key === " ") {
-                        e.preventDefault();
-                        openPanel(name);
-                      }
-                    }}
-                    tabIndex={highlighted ? 0 : -1}
-                    aria-label={highlighted ? `${name}, view projects` : name}
-                    style={{
-                      default: {
-                        fill: highlighted ? fillHi : fillDefault,
-                        stroke: fillDefaultStroke,
-                        strokeWidth: 0.35,
-                        outline: "none",
-                        cursor: highlighted ? "pointer" : "default",
-                        opacity: highlighted ? 0.92 : 0.85,
-                      },
-                      hover: {
-                        fill: highlighted ? fillHover : fillDefault,
-                        stroke: highlighted ? fillHover : fillDefaultStroke,
-                        strokeWidth: 0.5,
-                        outline: "none",
-                        opacity: 1,
-                      },
-                      pressed: {
-                        fill: highlighted ? fillHi : fillDefault,
-                        outline: "none",
-                      },
-                    }}
-                  />
-                );
-              })
-            }
-          </Geographies>
+          <g transform={`translate(0 ${MAP_H / 2}) scale(1 ${Y_STRETCH}) translate(0 ${-MAP_H / 2})`}>
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies
+                  .filter((geo) => String(geo.properties.name ?? "") !== "Antarctica")
+                  .map((geo) => {
+                    const name = String(geo.properties.name ?? "");
+                    const highlighted = atlasNameIsHighlighted(name);
+                    return (
+                      <Geography
+                        key={geo.rsmKey}
+                        geography={geo}
+                        onClick={() => highlighted && openPanel(name)}
+                        onKeyDown={(e) => {
+                          if (!highlighted) return;
+                          if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            openPanel(name);
+                          }
+                        }}
+                        tabIndex={highlighted ? 0 : -1}
+                        aria-label={highlighted ? `${name}, view projects` : name}
+                        style={{
+                          default: {
+                            fill: highlighted ? fillHi : fillDefault,
+                            stroke: strokeDefault,
+                            strokeWidth: 0.5,
+                            vectorEffect: "non-scaling-stroke",
+                            outline: "none",
+                            cursor: highlighted ? "pointer" : "default",
+                          },
+                          hover: {
+                            fill: highlighted ? fillHover : fillDefault,
+                            stroke: strokeDefault,
+                            strokeWidth: 0.5,
+                            vectorEffect: "non-scaling-stroke",
+                            outline: "none",
+                            cursor: highlighted ? "pointer" : "default",
+                          },
+                          pressed: {
+                            fill: highlighted ? fillHover : fillDefault,
+                            stroke: strokeDefault,
+                            outline: "none",
+                          },
+                        }}
+                      />
+                    );
+                  })
+              }
+            </Geographies>
+          </g>
+          <g aria-hidden="true">
+            {cityDots.map((d) => (
+              <g
+                key={`${d.country}-${d.city}`}
+                transform={`translate(${d.x} ${d.y})`}
+                onClick={() => openPanel(d.country)}
+                style={{ cursor: "pointer" }}
+              >
+                <title>{d.city}</title>
+                <circle r={6} fill={dotColor} opacity={0.18} />
+                <circle r={4} fill={dotColor} opacity={0.35} />
+                <circle r={2.4} fill={dotColor} />
+              </g>
+            ))}
+          </g>
         </ComposableMap>
       </div>
 
       <p className="mt-3 text-sm text-[var(--color-muted)]">
-        Highlighted countries have on-site deliveries. Click a highlighted country for project details.
+        Highlighted countries and city markers show on-site deliveries. Click a country or marker for project details.
       </p>
 
       {open ? (
