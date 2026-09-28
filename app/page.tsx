@@ -24,7 +24,29 @@ export default function HomePage() {
 
   return (
     <>
-      <Section className="pb-12 pt-8 sm:pb-16 sm:pt-12">
+      <Section className="relative isolate overflow-hidden pb-12 pt-8 sm:pb-16 sm:pt-12">
+        {/* Decorative hero image: sits behind the text, full-bleed to the right edge */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-[65%] opacity-50 [mask-image:linear-gradient(to_right,transparent_0%,black_45%),linear-gradient(to_bottom,transparent_0%,black_12%,black_85%,transparent_100%)] [mask-composite:intersect] sm:opacity-60 lg:w-[62%] lg:opacity-100 lg:[mask-image:linear-gradient(to_right,transparent_0%,black_30%),linear-gradient(to_bottom,transparent_0%,black_10%,black_88%,transparent_100%)]"
+        >
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="/images/home/ks_home-1200.webp 1200w, /images/home/ks_home.webp 2400w"
+              sizes="(min-width: 1024px) 62vw, 65vw"
+            />
+            <img
+              src="/images/home/ks_home.jpg"
+              srcSet="/images/home/ks_home-1200.jpg 1200w, /images/home/ks_home.jpg 2400w"
+              sizes="(min-width: 1024px) 62vw, 65vw"
+              alt=""
+              fetchPriority="high"
+              decoding="async"
+              className="h-full w-full object-cover object-[27%_50%] sm:object-left lg:object-center"
+            />
+          </picture>
+        </div>
         <Container>
           <h1 className="font-display max-w-4xl text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Freelance

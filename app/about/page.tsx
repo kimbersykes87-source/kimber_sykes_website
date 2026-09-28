@@ -71,7 +71,7 @@ export default function AboutPage() {
                   Manager, Technical Director, Project Lead, Production Director
                 </li>
                 <li>
-                  <strong className="text-[var(--color-foreground)]">Specialisms:</strong> Consumer Brand Activations,
+                  <strong className="text-[var(--color-foreground)]">Specialisations:</strong> Consumer Brand Activations,
                   Sports Sponsorship Activations, B2B Conferences, Major Tournament Delivery, Experiential Events, AV
                   Technical Delivery, Exhibition Floor Management, Show Flow, Live Event Production, Touring Global
                   Programmes

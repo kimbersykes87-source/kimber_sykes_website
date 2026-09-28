@@ -59,3 +59,64 @@ body {
 .logo-on-dark:hover {
   opacity: 1;
 }
+
+/* ---- Uniform logo sizing (see lib/logoDisplay.ts logoFit) ----
+   Equal visual area per logo: width = k * sqrt(aspect), clamped to the slot. */
+.logo-fit {
+  --logo-scale: 1;
+  display: block;
+  aspect-ratio: var(--ar);
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  width: min(var(--logo-max-w), calc(var(--logo-max-h) * var(--ar)));
+  width: min(
+    var(--logo-max-w),
+    calc(var(--logo-max-h) * var(--ar)),
+    calc(var(--logo-k) * var(--logo-scale) * sqrt(var(--ar)))
+  );
+}
+
+/* Home Brands banner: fixed-width cells (keeps the marquee loop exact). */
+.logo-band {
+  --cell-w: 12rem;
+  --cell-h: 5.25rem;
+  --logo-k: 3.75rem;
+  --logo-max-w: 10rem;
+  --logo-max-h: 5.25rem;
+}
+.logo-band-cell {
+  width: var(--cell-w);
+  height: var(--cell-h);
+}
+@media (min-width: 640px) {
+  .logo-band {
+    --cell-w: 14rem;
+    --cell-h: 6rem;
+    --logo-k: 4.25rem;
+    --logo-max-w: 11.75rem;
+    --logo-max-h: 6rem;
+  }
+}
+@media (min-width: 1024px) {
+  .logo-band {
+    --cell-w: 15.75rem;
+    --cell-h: 6.5rem;
+    --logo-k: 4.75rem;
+    --logo-max-w: 13rem;
+    --logo-max-h: 6.5rem;
+  }
+}
+
+/* Clients page tiles: same proportions at every column count, via container units. */
+.logo-tile-box {
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --logo-k: 33cqw;
+  --logo-max-w: 90cqw;
+  --logo-max-h: 46cqw;
+}

@@ -8,7 +8,7 @@ export type GeoRow = {
   prevWeek: number;
 };
 
-export type PathRow = { path: string; c: number };
+export type PathRow = { path: string; c: number; activeSeconds?: number };
 
 const PASTEL_UP = { bg: "#d4edda", text: "#1e4620" };
 const PASTEL_DOWN = { bg: "#f8d7da", text: "#721c24" };
@@ -158,10 +158,19 @@ export function buildGeoTable(rows: GeoRow[], countryLabel: (code: string) => st
   `);
 }
 
+function formatDuration(seconds: number): string {
+  if (!seconds) return "—";
+  if (seconds < 60) return `${seconds}s`;
+  const m = Math.floor(seconds / 60);
+  const rem = seconds % 60;
+  return rem ? `${m}m ${rem}s` : `${m}m`;
+}
+
 export function buildPathTable(title: string, paths: PathRow[]): string {
   if (!paths.length) {
     return "";
   }
+  const showTime = paths.some((p) => p.activeSeconds !== undefined);
   const body = paths
     .map((r, i) => {
       const stripe = i % 2 === 0 ? "#fafafa" : "#ffffff";
@@ -169,6 +178,7 @@ export function buildPathTable(title: string, paths: PathRow[]): string {
         ${rankCell(i + 1)}
         ${td(`<code style="font-size:12px;">${esc(r.path)}</code>`)}
         ${td(String(r.c), "right")}
+        ${showTime ? td(esc(formatDuration(r.activeSeconds ?? 0)), "right") : ""}
       </tr>`;
     })
     .join("");
@@ -178,8 +188,9 @@ export function buildPathTable(title: string, paths: PathRow[]): string {
     ${tableWrap(`
       <thead><tr>
         ${th("#", "center")}
-        ${th("Path")}
+        ${th("Path / network")}
         ${th("Views", "right")}
+        ${showTime ? th("Avg active time", "right") : ""}
       </tr></thead>
       <tbody>${body}</tbody>
     `)}
@@ -202,6 +213,9 @@ export function buildHtmlReport(opts: {
   humanPaths: PathRow[];
   aiPaths: PathRow[];
   filtered: CountRow[];
+  networks: PathRow[];
+  timing: CountRow[];
+  verified: boolean;
   countryLabel: (code: string) => string;
 }): string {
   const date = opts.windowEnd.slice(0, 10);
@@ -215,14 +229,18 @@ export function buildHtmlReport(opts: {
     <p style="margin:0 0 16px;font-size:13px;color:#888;">UTC window: ${esc(opts.windowStart)} → ${esc(opts.windowEnd)}</p>
 
     <h2 style="font-size:16px;color:#1a1a1a;margin:0 0 8px;">AI vs human</h2>
-    <p style="margin:0 0 8px;font-size:12px;color:#888;">Unique visitors are counted per day (anonymous daily hash, no cookies), so a person who visits on 3 days counts 3 times.</p>
+    <p style="margin:0 0 8px;font-size:12px;color:#888;">Verified views are counted only when a real browser rendered the page and ran JavaScript. The edge-filtered figure is the older, looser count, kept as an upper bound. Unique visitors are counted per day (anonymous daily hash, no cookies), so a person who visits on 3 days counts 3 times.</p>
     ${buildSummaryTable(opts.summary)}
+
+    <h2 style="font-size:16px;color:#1a1a1a;margin:24px 0 8px;">Active time per page view</h2>
+    <p style="margin:0 0 8px;font-size:12px;color:#888;">Counted only while the tab is visible, focused and in use, so a page left open in a background tab adds nothing. Capped at 30 minutes per view.</p>
+    ${buildSummaryTable(opts.timing).replace(">Traffic<", ">Measure<")}
 
     <h2 style="font-size:16px;color:#1a1a1a;margin:0 0 8px;">AI crawlers (ranked)</h2>
     ${buildRankedBotTable(opts.bots)}
 
     <h2 style="font-size:16px;color:#1a1a1a;margin:0 0 8px;">Human visitors by location</h2>
-    <p style="margin:0 0 8px;font-size:12px;color:#888;">Country and city from Cloudflare edge (best effort). HTML pages only; static assets excluded.</p>
+    <p style="margin:0 0 8px;font-size:12px;color:#888;">Country and city from Cloudflare edge (best effort). ${opts.verified ? "From verified (JavaScript) views." : "From edge-filtered views; verified views not available yet."}</p>
     ${buildGeoTable(opts.geo, opts.countryLabel)}
 
     ${buildPathTable("Top paths: humans", opts.humanPaths)}
@@ -230,6 +248,7 @@ export function buildHtmlReport(opts: {
 
     <h2 style="font-size:16px;color:#1a1a1a;margin:24px 0 8px;">Filtered out (not counted as human)</h2>
     ${buildFilteredTable(opts.filtered)}
+    ${buildPathTable("Top hosting networks filtered", opts.networks)}
 
     <p style="margin:24px 0 0;font-size:12px;color:#999;border-top:1px solid #eee;padding-top:16px;">
       Logged at the edge on kimbersykes.com. Humans: real browser navigations to pages that returned 200 HTML; probes, 404s, redirects, API calls and non-browser clients are filtered. AI: User-Agents in robots.txt allow-list.

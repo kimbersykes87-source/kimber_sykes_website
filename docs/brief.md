@@ -448,7 +448,7 @@ Priority tier (lead with these):
 
 ```
 Roles: Executive Producer, Production Manager, Technical Director, Project Lead, Production Director
-Specialisms: B2B Technology Conferences, Consumer Brand Activations, Sports Sponsorship Activations, Major Tournament Delivery, Experiential Events, AV Technical Delivery, Exhibition Floor Management, Show Flow, Live Event Production, Touring Global Programmes
+Specialisations: B2B Technology Conferences, Consumer Brand Activations, Sports Sponsorship Activations, Major Tournament Delivery, Experiential Events, AV Technical Delivery, Exhibition Floor Management, Show Flow, Live Event Production, Touring Global Programmes
 Clients include: Google, Netflix, Canva, Mastercard, Visa, Emirates, Samsung, Stella McCartney, Johnson & Johnson, MTV, Microsoft, Xero, Aperol, EA Sports, NTT Data, Geely Auto
 Agencies include: Wonder, Amplify, Jack Morton, INVNT, Octagon, Imagination, Pulse Group, BMF
 Sports tournaments delivered: ATP Tennis Tour, PGA Golf Tour, Cricket World Cup, Commonwealth Games, UEFA Champions League, British Open Golf, FIFA Women's World Cup

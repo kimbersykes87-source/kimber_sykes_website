@@ -55,6 +55,63 @@ async function countHuman(env: Env, since: string, until?: string): Promise<numb
   return Number(row?.c ?? 0);
 }
 
+async function countBeacon(env: Env, since: string, until?: string): Promise<number> {
+  const q = until
+    ? "SELECT COUNT(*) as c FROM beacon_views WHERE ts >= ? AND ts < ?"
+    : "SELECT COUNT(*) as c FROM beacon_views WHERE ts >= ?";
+  const stmt = env.DB.prepare(q);
+  const row = until
+    ? await stmt.bind(since, until).first<{ c: number }>()
+    : await stmt.bind(since).first<{ c: number }>();
+  return Number(row?.c ?? 0);
+}
+
+async function countUniqueBeaconVisitors(env: Env, since: string, until?: string): Promise<number> {
+  const q = until
+    ? "SELECT COUNT(*) as c FROM (SELECT DISTINCT substr(ts,1,10), visitor_id FROM beacon_views WHERE visitor_id IS NOT NULL AND ts >= ? AND ts < ?)"
+    : "SELECT COUNT(*) as c FROM (SELECT DISTINCT substr(ts,1,10), visitor_id FROM beacon_views WHERE visitor_id IS NOT NULL AND ts >= ?)";
+  const stmt = env.DB.prepare(q);
+  const row = until
+    ? await stmt.bind(since, until).first<{ c: number }>()
+    : await stmt.bind(since).first<{ c: number }>();
+  return Number(row?.c ?? 0);
+}
+
+/** Median and average active (engaged) seconds per verified page view. */
+async function activeTime(env: Env, since: string, until?: string): Promise<{ median: number; avg: number }> {
+  const where = until
+    ? "active_ms IS NOT NULL AND active_ms > 0 AND ts >= ? AND ts < ?"
+    : "active_ms IS NOT NULL AND active_ms > 0 AND ts >= ?";
+  const binds = until ? [since, until] : [since];
+  const agg = await env.DB.prepare(
+    `SELECT COUNT(*) as n, AVG(active_ms) as a FROM beacon_views WHERE ${where}`,
+  )
+    .bind(...binds)
+    .first<{ n: number; a: number }>();
+  const n = Number(agg?.n ?? 0);
+  if (!n) return { median: 0, avg: 0 };
+  const mid = await env.DB.prepare(
+    `SELECT active_ms as m FROM beacon_views WHERE ${where} ORDER BY active_ms LIMIT 1 OFFSET ?`,
+  )
+    .bind(...binds, Math.floor((n - 1) / 2))
+    .first<{ m: number }>();
+  return {
+    median: Math.round(Number(mid?.m ?? 0) / 1000),
+    avg: Math.round(Number(agg?.a ?? 0) / 1000),
+  };
+}
+
+/** Networks (hosting providers) behind the most filtered requests. */
+async function topFilteredNetworks(env: Env, since: string): Promise<PathRow[]> {
+  const rows = await env.DB.prepare(
+    `SELECT COALESCE(NULLIF(detail,''),'unknown') as path, COUNT(*) as c FROM filtered_visits
+     WHERE reason = 'datacenter' AND ts >= ? GROUP BY path ORDER BY c DESC LIMIT 5`,
+  )
+    .bind(since)
+    .all<{ path: string; c: number }>();
+  return (rows.results ?? []).map((r) => ({ path: r.path, c: Number(r.c) }));
+}
+
 async function countUniqueVisitors(env: Env, since: string, until?: string): Promise<number> {
   // Visitor IDs rotate daily, so this is the sum of daily uniques (a returning visitor counts once per day).
   const q = until
@@ -85,6 +142,7 @@ async function filteredWithWoW(env: Env, weekAgo: string, twoWeeksAgo: string): 
 
 const FILTER_LABELS: Record<string, string> = {
   probe_path: "Scanner probes (.env, .git, wp-login, API)",
+  datacenter: "Hosting / cloud network (not a person)",
   automated_ua: "Automated / non-browser User-Agent",
   no_ua: "No User-Agent",
   not_html_accept: "Did not ask for HTML",
@@ -131,16 +189,21 @@ async function botsWithWoW(
     .sort((a, b) => b.thisWeek - a.thisWeek);
 }
 
-async function geoWithWoW(env: Env, weekAgo: string, twoWeeksAgo: string): Promise<GeoRow[]> {
+async function geoWithWoW(
+  env: Env,
+  weekAgo: string,
+  twoWeeksAgo: string,
+  table: "human_visits" | "beacon_views" = "human_visits",
+): Promise<GeoRow[]> {
   const thisGeo = await env.DB.prepare(
-    `SELECT country, city, region, COUNT(*) as c FROM human_visits
+    `SELECT country, city, region, COUNT(*) as c FROM ${table}
      WHERE ts >= ? GROUP BY country, city, region`,
   )
     .bind(weekAgo)
     .all<{ country: string; city: string; region: string; c: number }>();
 
   const prevGeo = await env.DB.prepare(
-    `SELECT country, city, region, COUNT(*) as c FROM human_visits
+    `SELECT country, city, region, COUNT(*) as c FROM ${table}
      WHERE ts >= ? AND ts < ? GROUP BY country, city, region`,
   )
     .bind(twoWeeksAgo, weekAgo)
@@ -171,16 +234,23 @@ async function geoWithWoW(env: Env, weekAgo: string, twoWeeksAgo: string): Promi
 
 async function topPaths(
   env: Env,
-  table: "crawler_visits" | "human_visits",
+  table: "crawler_visits" | "human_visits" | "beacon_views",
   since: string,
   limit: number,
 ): Promise<PathRow[]> {
+  const withTime = table === "beacon_views";
   const rows = await env.DB.prepare(
-    `SELECT path, COUNT(*) as c FROM ${table} WHERE ts >= ? GROUP BY path ORDER BY c DESC LIMIT ?`,
+    withTime
+      ? `SELECT path, COUNT(*) as c, AVG(active_ms) as ms FROM ${table} WHERE ts >= ? GROUP BY path ORDER BY c DESC LIMIT ?`
+      : `SELECT path, COUNT(*) as c, NULL as ms FROM ${table} WHERE ts >= ? GROUP BY path ORDER BY c DESC LIMIT ?`,
   )
     .bind(since, limit)
-    .all<{ path: string; c: number }>();
-  return (rows.results ?? []).map((r) => ({ path: r.path, c: Number(r.c) }));
+    .all<{ path: string; c: number; ms: number | null }>();
+  return (rows.results ?? []).map((r) => ({
+    path: r.path,
+    c: Number(r.c),
+    activeSeconds: r.ms == null ? undefined : Math.round(Number(r.ms) / 1000),
+  }));
 }
 
 function buildPlainText(opts: {
@@ -190,6 +260,8 @@ function buildPlainText(opts: {
   bots: { bot: string; thisWeek: number; prevWeek: number }[];
   geo: GeoRow[];
   filtered: CountRow[];
+  networks: PathRow[];
+  timing: CountRow[];
 }): string {
   const lines: string[] = [
     `kimbersykes.com: Weekly Traffic Report ${opts.windowEnd.slice(0, 10)}`,
@@ -214,11 +286,17 @@ function buildPlainText(opts: {
       return `  ${i + 1}. ${countryLabel(g.country)} (${place}): ${g.thisWeek} (${ch.label})`;
     }),
     "",
+    "Active time (tab visible and in use):",
+    ...opts.timing.map((r) => `  ${r.label}: ${r.thisWeek} (was ${r.prevWeek})`),
+    "",
     "Filtered out (not counted as human):",
     ...opts.filtered.map((r) => {
       const ch = pctChange(r.thisWeek, r.prevWeek);
       return `  ${r.label}: ${r.thisWeek} (was ${r.prevWeek}, ${ch.label})`;
     }),
+    "",
+    "Top hosting networks filtered:",
+    ...opts.networks.map((n, i) => `  ${i + 1}. ${n.path}: ${n.c}`),
   ];
   return lines.join("\n");
 }
@@ -235,20 +313,38 @@ async function buildReport(env: Env): Promise<{ html: string; text: string }> {
   const aiPrev = await countCrawler(env, sincePrev, untilPrev);
   const humanThis = await countHuman(env, since);
   const humanPrev = await countHuman(env, sincePrev, untilPrev);
-  const uniqueThis = await countUniqueVisitors(env, since);
-  const uniquePrev = await countUniqueVisitors(env, sincePrev, untilPrev);
+  const beaconThis = await countBeacon(env, since);
+  const beaconPrev = await countBeacon(env, sincePrev, untilPrev);
+  const verified = beaconThis > 0;
+  const uniqueThis = verified
+    ? await countUniqueBeaconVisitors(env, since)
+    : await countUniqueVisitors(env, since);
+  const uniquePrev = beaconPrev > 0
+    ? await countUniqueBeaconVisitors(env, sincePrev, untilPrev)
+    : await countUniqueVisitors(env, sincePrev, untilPrev);
 
   const summary: CountRow[] = [
     { label: "AI crawler requests", thisWeek: aiThis, prevWeek: aiPrev },
-    { label: "Human page views", thisWeek: humanThis, prevWeek: humanPrev },
+    { label: "Verified human page views (JavaScript)", thisWeek: beaconThis, prevWeek: beaconPrev },
     { label: "Unique human visitors (daily)", thisWeek: uniqueThis, prevWeek: uniquePrev },
+    { label: "Edge-filtered page views (upper bound)", thisWeek: humanThis, prevWeek: humanPrev },
   ];
 
   const filtered = await filteredWithWoW(env, since, sincePrev);
+  const networks = await topFilteredNetworks(env, since);
+  const timeThis = await activeTime(env, since);
+  const timePrev = await activeTime(env, sincePrev, untilPrev);
+
+  const timing: CountRow[] = [
+    { label: "Median active time per page (seconds)", thisWeek: timeThis.median, prevWeek: timePrev.median },
+    { label: "Average active time per page (seconds)", thisWeek: timeThis.avg, prevWeek: timePrev.avg },
+  ];
+
 
   const bots = await botsWithWoW(env, since, now.toISOString(), sincePrev);
-  const geo = await geoWithWoW(env, since, sincePrev);
-  const humanPaths = await topPaths(env, "human_visits", since, 5);
+  const humanTable = verified ? ("beacon_views" as const) : ("human_visits" as const);
+  const geo = await geoWithWoW(env, since, sincePrev, humanTable);
+  const humanPaths = await topPaths(env, humanTable, since, 5);
   const aiPaths = await topPaths(env, "crawler_visits", since, 5);
 
   const reportOpts = {
@@ -260,6 +356,9 @@ async function buildReport(env: Env): Promise<{ html: string; text: string }> {
     humanPaths,
     aiPaths,
     filtered,
+    networks,
+    timing,
+    verified,
     countryLabel,
   };
 

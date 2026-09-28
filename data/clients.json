@@ -3,285 +3,372 @@
     "id": "google",
     "name": "Google",
     "file": "/images/logos/clients/google.svg",
-    "alt": "Google"
+    "alt": "Google",
+    "url": "https://www.google.com",
+    "displayScale": 1.05
   },
   {
     "id": "google-cloud",
     "name": "Google Cloud",
     "file": "/images/logos/clients/google-cloud.svg",
-    "alt": "Google Cloud"
+    "alt": "Google Cloud",
+    "url": "https://cloud.google.com",
+    "displayScale": 1.1
   },
   {
     "id": "netflix",
     "name": "Netflix",
     "file": "/images/logos/clients/netflix.svg",
-    "alt": "Netflix"
+    "alt": "Netflix",
+    "url": "https://www.netflix.com",
+    "displayScale": 0.85
   },
   {
     "id": "canva",
     "name": "Canva",
     "file": "/images/logos/clients/canva.svg",
-    "alt": "Canva"
+    "alt": "Canva",
+    "url": "https://www.canva.com",
+    "displayScale": 1.05
   },
   {
     "id": "geely",
     "name": "Geely",
     "file": "/images/logos/clients/geely.svg",
-    "alt": "Geely Auto"
+    "alt": "Geely Auto",
+    "url": "https://global.geely.com",
+    "displayScale": 0.9
   },
   {
     "id": "mastercard",
     "name": "Mastercard",
     "file": "/images/logos/clients/mastercard.svg",
-    "alt": "Mastercard"
+    "alt": "Mastercard",
+    "url": "https://www.mastercard.com",
+    "displayScale": 0.85
   },
   {
     "id": "visa",
     "name": "Visa",
     "file": "/images/logos/clients/visa.svg",
-    "alt": "Visa"
+    "alt": "Visa",
+    "url": "https://www.visa.com",
+    "displayScale": 0.9
   },
   {
     "id": "emirates",
     "name": "Emirates",
     "file": "/images/logos/clients/emirates.svg",
-    "alt": "Emirates"
+    "alt": "Emirates",
+    "url": "https://www.emirates.com",
+    "displayScale": 1.2
   },
   {
     "id": "emirates-skycargo",
     "name": "Emirates SkyCargo",
     "file": "/images/logos/clients/emirates-skycargo.svg",
-    "alt": "Emirates SkyCargo"
+    "alt": "Emirates SkyCargo",
+    "url": "https://www.skycargo.com",
+    "displayScale": 1.15
   },
   {
     "id": "samsung",
     "name": "Samsung",
     "file": "/images/logos/clients/samsung.svg",
-    "alt": "Samsung"
+    "alt": "Samsung",
+    "url": "https://www.samsung.com",
+    "displayScale": 0.9
   },
   {
     "id": "johnson-johnson",
     "name": "Johnson & Johnson",
     "file": "/images/logos/clients/johnson-johnson.svg",
-    "alt": "Johnson & Johnson"
+    "alt": "Johnson & Johnson",
+    "url": "https://www.jnj.com",
+    "displayScale": 1.3
   },
   {
     "id": "stella-mccartney",
     "name": "Stella McCartney",
     "file": "/images/logos/clients/stella-mccartney.svg",
     "alt": "Stella McCartney",
-    "displayScale": 1.5
+    "url": "https://www.stellamccartney.com",
+    "displayScale": 0.85
   },
   {
     "id": "aperol",
     "name": "Aperol",
     "file": "/images/logos/clients/aperol.svg",
-    "alt": "Aperol"
+    "alt": "Aperol",
+    "url": "https://www.aperol.com",
+    "displayScale": 1.1
   },
   {
     "id": "mtv",
     "name": "MTV",
     "file": "/images/logos/clients/mtv.svg",
-    "alt": "MTV"
+    "alt": "MTV",
+    "url": "https://www.mtv.com",
+    "displayScale": 0.85
   },
   {
     "id": "microsoft",
     "name": "Microsoft",
     "file": "/images/logos/clients/microsoft.svg",
-    "alt": "Microsoft"
+    "alt": "Microsoft",
+    "url": "https://www.microsoft.com"
   },
   {
     "id": "xero",
     "name": "Xero",
     "file": "/images/logos/clients/xero.svg",
     "alt": "Xero",
-    "displayScale": 1.5
+    "url": "https://www.xero.com",
+    "displayScale": 0.85
   },
   {
     "id": "ntt-data",
     "name": "NTT Data",
     "file": "/images/logos/clients/ntt-data.svg",
-    "alt": "NTT Data"
+    "alt": "NTT Data",
+    "url": "https://www.nttdata.com/global/en/",
+    "displayScale": 0.9
   },
   {
     "id": "ea-sports",
     "name": "EA Sports",
     "file": "/images/logos/clients/ea-sports.svg",
-    "alt": "EA Sports"
+    "alt": "EA Sports",
+    "url": "https://www.ea.com/sports",
+    "displayScale": 0.95
   },
   {
     "id": "sony",
     "name": "Sony",
     "file": "/images/logos/clients/sony.svg",
-    "alt": "Sony"
+    "alt": "Sony",
+    "url": "https://www.sony.com",
+    "displayScale": 0.95
   },
   {
     "id": "diageo",
     "name": "Diageo",
     "file": "/images/logos/clients/diageo.svg",
-    "alt": "Diageo"
+    "alt": "Diageo",
+    "url": "https://www.diageo.com",
+    "displayScale": 0.95
   },
   {
     "id": "philips",
     "name": "Philips",
     "file": "/images/logos/clients/philips.svg",
-    "alt": "Philips"
+    "alt": "Philips",
+    "url": "https://www.philips.com",
+    "displayScale": 0.85
   },
   {
     "id": "soundcloud",
     "name": "SoundCloud",
     "file": "/images/logos/clients/soundcloud.svg",
-    "alt": "SoundCloud"
+    "alt": "SoundCloud",
+    "url": "https://soundcloud.com",
+    "displayScale": 0.9
   },
   {
     "id": "peugeot",
     "name": "Peugeot",
     "file": "/images/logos/clients/peugeot.svg",
-    "alt": "Peugeot"
+    "alt": "Peugeot",
+    "url": "https://www.peugeot.com",
+    "displayScale": 0.85
   },
   {
     "id": "infiniti",
     "name": "Infiniti",
     "file": "/images/logos/clients/infiniti.svg",
-    "alt": "Infiniti"
+    "alt": "Infiniti",
+    "url": "https://www.infiniti.com",
+    "displayScale": 1.05
   },
   {
     "id": "jaguar",
     "name": "Jaguar",
     "file": "/images/logos/clients/jaguar.svg",
-    "alt": "Jaguar"
+    "alt": "Jaguar",
+    "url": "https://www.jaguar.com",
+    "displayScale": 1.3
   },
   {
     "id": "american-express",
     "name": "American Express",
     "file": "/images/logos/clients/american-express.svg",
-    "alt": "American Express"
+    "alt": "American Express",
+    "url": "https://www.americanexpress.com",
+    "displayScale": 0.85
   },
   {
     "id": "commonwealth-bank",
     "name": "Commonwealth Bank",
     "file": "/images/logos/clients/commonwealth-bank.svg",
-    "alt": "Commonwealth Bank"
+    "alt": "Commonwealth Bank",
+    "url": "https://www.commbank.com.au",
+    "displayScale": 1.1
   },
   {
     "id": "walt-disney",
     "name": "Walt Disney",
     "file": "/images/logos/clients/walt-disney.svg",
-    "alt": "Walt Disney"
+    "alt": "Walt Disney",
+    "url": "https://thewaltdisneycompany.com",
+    "displayScale": 1.1
   },
   {
     "id": "instagram",
     "name": "Instagram",
     "file": "/images/logos/clients/instagram.svg",
-    "alt": "Instagram"
+    "alt": "Instagram",
+    "url": "https://www.instagram.com",
+    "displayScale": 0.95
   },
   {
     "id": "lilly",
     "name": "Lilly",
     "file": "/images/logos/clients/lilly.svg",
-    "alt": "Lilly"
+    "alt": "Lilly",
+    "url": "https://www.lilly.com",
+    "displayScale": 1.1
   },
   {
     "id": "destination-nsw",
     "name": "Destination NSW",
     "file": "/images/logos/clients/destination-nsw.svg",
-    "alt": "Destination NSW"
+    "alt": "Destination NSW",
+    "url": "https://www.destinationnsw.com.au",
+    "displayScale": 1.05
   },
   {
     "id": "cnn",
     "name": "CNN",
     "file": "/images/logos/clients/cnn.svg",
-    "alt": "CNN"
+    "alt": "CNN",
+    "url": "https://www.cnn.com",
+    "displayScale": 0.85
   },
   {
     "id": "marriott",
     "name": "Marriott Group",
     "file": "/images/logos/clients/marriott.svg",
-    "alt": "Marriott Group"
+    "alt": "Marriott Group",
+    "url": "https://www.marriott.com"
   },
   {
     "id": "tourism-nt",
     "name": "Tourism NT",
     "file": "/images/logos/clients/tourism-nt.svg",
-    "alt": "Tourism NT"
+    "alt": "Tourism NT",
+    "url": "https://www.tourismandeventsnt.com.au",
+    "displayScale": 1.3
   },
   {
     "id": "b-braun",
     "name": "B Braun",
     "file": "/images/logos/clients/b-braun.svg",
-    "alt": "B Braun"
+    "alt": "B Braun",
+    "url": "https://www.bbraun.com",
+    "displayScale": 1.05
   },
   {
     "id": "dnata",
     "name": "dnata",
     "file": "/images/logos/clients/dnata.svg",
-    "alt": "dnata"
+    "alt": "dnata",
+    "url": "https://www.dnata.com"
   },
   {
     "id": "dp-world",
     "name": "DP World",
     "file": "/images/logos/clients/dp-world.svg",
-    "alt": "DP World"
+    "alt": "DP World",
+    "url": "https://www.dpworld.com",
+    "displayScale": 1.2
   },
   {
     "id": "expo-2020",
     "name": "Expo 2020",
     "file": "/images/logos/clients/expo-2020.svg",
-    "alt": "Expo 2020"
+    "alt": "Expo 2020",
+    "url": "https://www.expocitydubai.com/en/expo-2020/",
+    "displayScale": 1.2
   },
   {
     "id": "gunpowder-plot",
     "name": "Gunpowder Plot",
     "file": "/images/logos/clients/gunpowder-plot.svg",
-    "alt": "Gunpowder Plot"
+    "alt": "Gunpowder Plot",
+    "displayScale": 0.95
   },
   {
     "id": "intercontinental-hotels",
     "name": "Intercontinental Hotels",
     "file": "/images/logos/clients/intercontinental-hotels.svg",
-    "alt": "Intercontinental Hotels"
+    "alt": "Intercontinental Hotels",
+    "url": "https://www.ihg.com",
+    "displayScale": 1.3
   },
   {
     "id": "jumeirah-hotels",
     "name": "Jumeirah Hotels",
     "file": "/images/logos/clients/jumeirah-hotels.svg",
-    "alt": "Jumeirah Hotels"
+    "alt": "Jumeirah Hotels",
+    "url": "https://www.jumeirah.com",
+    "displayScale": 1.3
   },
   {
     "id": "pfizer",
     "name": "Pfizer",
     "file": "/images/logos/clients/pfizer.svg",
-    "alt": "Pfizer"
+    "alt": "Pfizer",
+    "url": "https://www.pfizer.com",
+    "displayScale": 0.85
   },
   {
     "id": "reed-elsevier",
     "name": "Reed Elsevier",
     "file": "/images/logos/clients/reed-elsevier.svg",
-    "alt": "Reed Elsevier"
+    "alt": "Reed Elsevier",
+    "url": "https://www.relx.com",
+    "displayScale": 1.05
   },
   {
     "id": "rizla",
     "name": "Rizla",
     "file": "/images/logos/clients/rizla.svg",
-    "alt": "Rizla"
+    "alt": "Rizla",
+    "url": "https://www.rizla.com",
+    "displayScale": 0.85
   },
   {
     "id": "schwarzkopf",
     "name": "Schwarzkopf",
     "file": "/images/logos/clients/schwarzkopf.svg",
-    "alt": "Schwarzkopf Professional"
+    "alt": "Schwarzkopf Professional",
+    "url": "https://www.schwarzkopf-professional.com",
+    "displayScale": 1.3
   },
   {
     "id": "tiger",
     "name": "Tiger",
     "file": "/images/logos/clients/tiger.svg",
-    "alt": "Tiger"
+    "alt": "Tiger",
+    "url": "https://www.tigerbeer.com",
+    "displayScale": 1.05
   },
   {
     "id": "yoto",
     "name": "Yoto",
     "file": "/images/logos/clients/yoto.png",
     "alt": "Yoto",
-    "displayScale": 1.5
+    "url": "https://yotoplay.com",
+    "displayScale": 1.2
   }
 ]

@@ -1,5 +1,5 @@
 import { getMarqueeClients } from "@/lib/marquee";
-import { marqueeLogoDisplay } from "@/lib/logoDisplay";
+import { logoFit } from "@/lib/logoDisplay";
 
 type LogoMarqueeProps = {
   /** When true, omit outer border/background (compose inside a parent section). */
@@ -10,23 +10,24 @@ export function LogoMarquee({ strip }: LogoMarqueeProps) {
   const ordered = getMarqueeClients();
   const dup = [...ordered, ...ordered];
 
+  // No padding/gap on the track: translateX(-50%) must equal exactly one set of cells,
+  // otherwise the loop jumps by half the padding each cycle. Spacing lives inside each cell
+  // (fixed `.logo-band-cell` width per breakpoint, logo sized by `.logo-fit`).
   const inner = (
-    <div className="flex w-max animate-marquee pr-6 sm:pr-8">
+    <div className="logo-band flex w-max animate-marquee" style={{ animationDuration: "68s" }}>
       {dup.map((c, i) => {
-        const logo = marqueeLogoDisplay(c);
+        const logo = logoFit(c);
         return (
-          <div
-            key={`${c.id}-${i}`}
-            className="flex w-[9rem] shrink-0 items-center justify-center px-3 sm:w-[10.5rem] sm:px-4"
-          >
+          <div key={`${c.id}-${i}`} className="logo-band-cell flex shrink-0 items-center justify-center">
             <img
-          src={c.file}
-          alt={c.alt}
+              src={c.file}
+              alt={i < ordered.length ? c.alt : ""}
+              aria-hidden={i < ordered.length ? undefined : true}
               width={logo.width}
               height={logo.height}
               style={logo.style}
-          loading="eager"
-          decoding="async"
+              loading="eager"
+              decoding="async"
               className={logo.className}
             />
           </div>
@@ -36,7 +37,7 @@ export function LogoMarquee({ strip }: LogoMarqueeProps) {
   );
 
   if (strip) {
-    return <div className="relative overflow-hidden py-6">{inner}</div>;
+    return <div className="relative overflow-hidden py-4 sm:py-6">{inner}</div>;
   }
 
   return (

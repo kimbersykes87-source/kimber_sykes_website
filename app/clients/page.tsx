@@ -1,9 +1,32 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { agencies, clients } from "@/lib/data";
-import { clientsPageLogoDisplay } from "@/lib/logoDisplay";
+import { logoFit } from "@/lib/logoDisplay";
 import { Container, Section } from "@/components/layout";
 import { buildPageMetadata } from "@/lib/seo";
+import type { ReactNode } from "react";
+import type { LogoEntry } from "@/lib/types";
+
+const tileClass = "flex items-center justify-center rounded-lg border border-white/10 bg-black/20 p-4 sm:p-6";
+
+function LogoTile({ entry, children }: { entry: LogoEntry; children: ReactNode }) {
+  if (!entry.url) {
+    return <li className={tileClass}>{children}</li>;
+  }
+  return (
+    <li className="flex">
+      <a
+        href={entry.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${entry.name} website (opens in a new tab)`}
+        className={`${tileClass} w-full transition-colors hover:border-white/30 hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/60`}
+      >
+        {children}
+      </a>
+    </li>
+  );
+}
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Clients & Agencies — Global Brands",
@@ -21,18 +44,20 @@ export default function ClientsPage() {
         <h2 className="mt-14 font-display text-xl font-semibold">Brands</h2>
         <ul className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
           {clients.map((c) => {
-            const logo = clientsPageLogoDisplay(c);
+            const logo = logoFit(c);
             return (
-              <li key={c.id} className="flex items-center justify-center rounded-lg border border-white/10 bg-black/20 p-6">
-                <Image
-                  src={c.file}
-                  alt={c.alt}
-                  width={logo.width}
-                  height={logo.height}
-                  style={logo.style}
-                  className={logo.className}
-                />
-              </li>
+              <LogoTile key={c.id} entry={c}>
+                <div className="logo-tile-box">
+                  <Image
+                    src={c.file}
+                    alt={c.alt}
+                    width={logo.width}
+                    height={logo.height}
+                    style={logo.style}
+                    className={logo.className}
+                  />
+                </div>
+              </LogoTile>
             );
           })}
         </ul>
@@ -41,20 +66,23 @@ export default function ClientsPage() {
 
         <h2 className="font-display text-xl font-semibold">Agencies</h2>
         <ul className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
-          {agencies.map((a) => (
-            <li
-              key={a.id}
-              className="flex items-center justify-center rounded-lg border border-white/10 bg-black/20 p-6"
-            >
-              <Image
-                src={a.file}
-                alt={a.alt}
-                width={160}
-                height={48}
-                className="logo-on-dark h-10 w-auto max-w-[140px] object-contain"
-              />
-            </li>
-          ))}
+          {agencies.map((a) => {
+            const logo = logoFit(a);
+            return (
+              <LogoTile key={a.id} entry={a}>
+                <div className="logo-tile-box">
+                  <Image
+                    src={a.file}
+                    alt={a.alt}
+                    width={logo.width}
+                    height={logo.height}
+                    style={logo.style}
+                    className={logo.className}
+                  />
+                </div>
+              </LogoTile>
+            );
+          })}
         </ul>
       </Container>
     </Section>

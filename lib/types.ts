@@ -41,4 +41,6 @@ export type LogoEntry = {
   alt: string;
   /** Rendered size multiplier on Clients page and home marquee (default 1). */
   displayScale?: number;
+  /** Company website; logo links here on the Clients page when set. */
+  url?: string;
 };
