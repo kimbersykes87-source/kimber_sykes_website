@@ -45,6 +45,7 @@ export const CITY_COORDS: Record<string, [number, number]> = {
   Manchester: [53.48, -2.24],
   Troon: [55.54, -4.66],
   Denver: [39.74, -104.99],
+  "Las Vegas": [36.17, -115.14],
   "Los Angeles": [34.05, -118.24],
   Nashville: [36.16, -86.78],
   "New Orleans": [29.95, -90.07],

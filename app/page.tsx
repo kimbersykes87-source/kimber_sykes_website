@@ -4,7 +4,7 @@ import { LogoMarquee } from "@/components/LogoMarquee";
 import { ProjectCard, ProjectCardCaption } from "@/components/ProjectCard";
 import { Container, Section } from "@/components/layout";
 import { getFeaturedProjects, mapCountries } from "@/lib/data";
-import { MARQUEE_CLIENT_IDS } from "@/lib/marquee";
+import { CLIENT_COUNT } from "@/lib/marquee";
 import { HOME_DESCRIPTION, HOME_TITLE, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -15,7 +15,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 const stats = [
   { value: "23", label: "Years Experience" },
-  { value: String(MARQUEE_CLIENT_IDS.length), label: "Global Brands" },
+  { value: String(CLIENT_COUNT), label: "Clients" },
   { value: String(mapCountries.length), label: "Countries" },
 ];
 
@@ -61,7 +61,7 @@ export default function HomePage() {
           </p>
           <p className="mt-6 max-w-2xl text-lg text-[var(--color-muted)] sm:text-xl">
             Events professional specialising in large-scale event production, experiential event delivery and creative
-            design across the UK, Europe, Middle East, Asia-Pacific and the US. Widely networked worldwide and known for
+            design across the UK, Europe, Middle East, Asia-Pacific, Africa and the Americas. Widely networked worldwide and known for
             strategic, hands-on leadership.
           </p>
           <Link
