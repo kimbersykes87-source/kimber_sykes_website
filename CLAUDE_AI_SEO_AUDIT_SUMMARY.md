@@ -1,33 +1,33 @@
 > **Superseded (29 Sep 2026):** see `site-audit.md` for the current audit and change log. JSON-LD now comes from `scripts/lib/schema-graph.mjs` (identity in `data/site.json`); `lib/json-ld.ts` and `lib/llms-txt.ts` were removed.
 
-# Kimber Sykes — AI SEO Audit Summary (for Claude)
+# Kimber Sykes: AI SEO Audit Summary (for Claude)
 
 **Site:** https://kimbersykes.com | **Goal:** AI agents can fetch, parse, and cite the site for freelance EP hiring.  
 **Verified:** May 2026, build `kQB1yFVkFU1gX2MFw_2Tg`, `curl -A "ClaudeBot/1.0"`
 
 ---
 
-## Prompt 1 — Initial audit
+## Prompt 1: Initial audit
 
 Full AI-SEO upgrade requested: pre-rendered HTML, robots/sitemap/llms.txt, JSON-LD, metadata, H1s, alts, bot access.
 
 **User decisions:** Canonical `https://kimbersykes.com` (apex). Roles: EP, Production Manager, Technical Director. **20+ years** experience (not 40+). Homepage stat **15+ countries** (conservative).
 
-**Stack (confirmed in repo — not Eleventy/Hugo/Jekyll):**
+**Stack (confirmed in repo, not Eleventy/Hugo/Jekyll):**
 
 - Next.js 15 App Router, React 18, Tailwind 4, `output: "export"` → Cloudflare Pages
 - 26 case studies in `data/projects.json`
-- Metadata via Next.js `Metadata` / `lib/seo.ts` — **no YAML frontmatter files exist**
+- Metadata via Next.js `Metadata` / `lib/seo.ts`: **no YAML frontmatter files exist**
 
 **Hosting:** 403 for AI bots on apex (Cloudflare); fixed in dashboard. Worker `crawler-logger` forwards only.
 
-## Prompt 2 — Eleven live HTML issues
+## Prompt 2: Eleven live HTML issues
 
 | # | Issue | Target state |
 |---|--------|--------------|
 | 1 | YAML `---` / `meta-description:` in body | Real `<meta>` + `<title>` in `<head>` only |
 | 2 | Doubled case study titles | `[Project], [Role] \| Kimber Sykes` |
-| 3 | GCS 2024 role = "Technical" | Keep **"Technical"** exactly as written (deliberate credit) |
+| 3 | GCS 2024 role | **Senior Production Manager** for 2024, 2025 and 2026 (confirmed by Kimber, 1 Oct 2026; replaces the earlier "Technical" credit) |
 | 4 | No JSON-LD | Person (home); CreativeWork (each case study) |
 | 5 | robots, sitemap, llms.txt | Bot allows + full llms template |
 | 6 | `/where` map-only | Text: "Countries with on-site project delivery" |
@@ -37,17 +37,17 @@ Full AI-SEO upgrade requested: pre-rendered HTML, robots/sitemap/llms.txt, JSON-
 | 10 | Logo marquee 2× in SSR | `grep -c google.svg` → 1 |
 | 11 | Canonical tags | Every page absolute canonical |
 
-## Prompt 3 — Re-audit
+## Prompt 3: Re-audit
 
-Prior "fixed" claims failed live curl. Required grep proof from production. Priority: frontmatter → JSON-LD → templates. **H1:** was `Producer.Production.Technical.` — ask user before changing; optional H2.
+Prior "fixed" claims failed live curl. Required grep proof from production. Priority: frontmatter → JSON-LD → templates. **H1:** was `Producer.Production.Technical.`: ask user before changing; optional H2.
 
-## Issue 1 — Frontmatter: finding
+## Issue 1: Frontmatter: finding
 
 **Not reproducible on current production Next.js deploy.**
 
 ```bash
 curl -s -A "ClaudeBot/1.0" https://kimbersykes.com | head -c 500
-# <!DOCTYPE html>...<head><title>Kimber Sykes — Freelance Executive Producer...
+# <!DOCTYPE html>...<head><title>Kimber Sykes [em dash] Freelance Executive Producer...
 
 curl -s -A "ClaudeBot/1.0" https://kimbersykes.com | grep -c "meta-description"
 # 0
@@ -60,9 +60,9 @@ If YAML still reported: wrong host, cache, or RSC misread. No gray-matter pipeli
 | Issue | Status | Evidence |
 |-------|--------|----------|
 | 1 Frontmatter | N/A on live | `meta-description` count = 0 |
-| 2 Titles | Fixed | `Google Cloud Summit 2024, Technical Director \| Kimber Sykes` |
+| 2 Titles | Fixed | `Google Cloud Summit London 2024, Senior Production Manager \| Kimber Sykes` (updated 1 Oct 2026) |
 | 2 H1 | Fixed | `<h1>Google Cloud Summit 2024</h1>` (client kicker above) |
-| 3 GCS role | Fixed | Technical Director in Role + body |
+| 3 GCS role | Fixed | Senior Production Manager in Role + body (updated 1 Oct 2026) |
 | 4 Logos | Fixed | `grep -c .../google.svg` → **1** (2nd set JS-cloned) |
 | 5 Cards | Fixed | `Canva Studio Pop-Up` on `/work` → **1** |
 | 6 /where | Fixed | "Countries with on-site project delivery" present |
@@ -91,4 +91,4 @@ curl -s -A "ClaudeBot/1.0" https://kimbersykes.com/work/google-cloud-summit-2024
 curl -sI -A "ClaudeBot/1.0" https://kimbersykes.com/{robots.txt,sitemap.xml,llms.txt}
 ```
 
-HTML is one line — use `head -c N` or `sed`, not `head -30`.
+HTML is one line: use `head -c N` or `sed`, not `head -30`.

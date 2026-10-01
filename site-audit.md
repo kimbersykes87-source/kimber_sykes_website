@@ -2,6 +2,10 @@
 
 **Phase 1 of 3 (audit only, no code changed).** Audited 29 September 2026 against the repo at `C:\dev\KS_Website`, the latest build in `out/` (28 Sep 2026) and the live site.
 
+> **Confirmed by Kimber, 1 October 2026 (applies to the whole file):**
+> - **Google Cloud Summit London 2024, 2025 and 2026 are all credited Senior Production Manager.** Mentions below of a "Technical" credit for 2024 or "Production Manager" for 2025 describe the site as it stood on 29 September and are superseded.
+> - **Career dates** are as published on the About page and the CV: Everest Event Enterprises, Sydney, 2003 to 2007; t7 event solutions, Sydney, January 2008 to March 2011; Exposure, London, April to December 2011; Pulse Group, London, January 2012 to February 2015; freelance, worldwide, March 2015 to present.
+
 ## Summary
 
 Some of the groundwork is already in place and working. The site is a static export, every page sends real HTML, and canonicals, Open Graph and Twitter cards are present. JSON-LD is injected into `<head>`, and `llms.txt` and `robots.txt` are generated. The Cloudflare 403 has been fixed: on the live site I got HTTP 200 for a browser, ClaudeBot, Claude-SearchBot, GPTBot, PerplexityBot and Bingbot. `www` returns a 301 to the apex, a trailing slash returns a 308 to the version without one, and missing pages return a real 404.
@@ -74,7 +78,7 @@ At the moment, case studies can only be found through the sitemap, the 4 feature
 | Clients | Clients & Agencies [em dash] Global Brands | no name |
 | Where | Global Project Locations [em dash] 18 Countries | no name |
 | Contact | Contact [em dash] Freelance Event Production | no name |
-| Case study | `{Project}, {Role} \| Kimber Sykes` | good; keeps credits as written (e.g. "Google Cloud Summit 2024, Technical") |
+| Case study | `{Project}, {Role} \| Kimber Sykes` | good; keeps credits as written (e.g. "Google Cloud Summit London 2024, Senior Production Manager") |
 
 `buildPageMetadata` uses `title.absolute`, so the layout's `%s | Kimber Sykes` template never applies. **Change:** static pages use `"{Topic} | Kimber Sykes"`. The home page becomes something like "Kimber Sykes | Freelance Executive Producer, Production Manager, Technical Director, London". No dashes anywhere.
 
@@ -165,7 +169,7 @@ https://kimbersykes.com/#website         WebSite  publisher -> #person, about ->
   isPartOf -> /work#collection, mainEntityOfPage -> {page}#webpage
 /services/{x}#service                    Service  provider -> #business, areaServed, subjectOf case studies
 ```
-Using a `Role` wrapper keeps each credit exactly as written (e.g. "Technical") while still pointing to the single Person node.
+Using a `Role` wrapper keeps each credit exactly as written (e.g. "Senior Production Manager") while still pointing to the single Person node.
 
 `FAQPage`: Google now shows FAQ rich results only for government and health sites, so do not expect a SERP feature. The markup is still worth adding because AI parsers use it. There will be no review or rating schema.
 
@@ -204,10 +208,10 @@ Add a short version for the footer: "Freelance Executive Producer, Production Ma
 ## 5. Content
 
 ### 5.1 Contradictions to resolve first (#2)
-1. **Google Cloud Summit.** About says "Production Manager for Google Cloud Summit for a 3,000 PAX conference over the last three years". The case studies say 2024 = **Technical** credit with **4,000 attendees**, 2025 = Production Manager, 2026 = **Senior** Production Manager. The 2026 text also says "third consecutive year under Kimber's production management". Proposed wording, which keeps every credit as written: "worked on Google Cloud Summit London at Tobacco Dock for three consecutive years (2024 Technical, 2025 Production Manager, 2026 Senior Production Manager)". The attendee number needs your answer.
+1. **Google Cloud Summit.** About says "Production Manager for Google Cloud Summit for a 3,000 PAX conference over the last three years". The case studies say 2024 = **Technical** credit with **4,000 attendees**, 2025 = Production Manager, 2026 = **Senior** Production Manager. The 2026 text also says "third consecutive year under Kimber's production management". Proposed wording, which keeps every credit as written: "worked on Google Cloud Summit London at Tobacco Dock for three consecutive years (2024 Technical, 2025 Production Manager, 2026 Senior Production Manager)". The attendee number needs your answer. **Resolved 1 Oct 2026:** all three years are credited Senior Production Manager, with 2,500+ attendees at Tobacco Dock.
 2. **Emirates tennis.** About lists "ATP (London, Paris, Barcelona, New York, Indian Wells, Rome)". The case study lists Wimbledon, Roland Garros, US Open, Barcelona, Indian Wells and Rome. Wimbledon, Roland Garros and the US Open are Grand Slams, not ATP events. Needs one accurate wording.
 3. **NTT Data** is located "London, UK", but it was delivered at The Open Championship (not held in London). Needs the venue.
-4. The old `CLAUDE_AI_SEO_AUDIT_SUMMARY.md` says GCS 2024 was changed to "Technical Director". The data correctly says "Technical", so the old note is wrong and should be updated or deleted.
+4. The old `CLAUDE_AI_SEO_AUDIT_SUMMARY.md` says GCS 2024 was changed to "Technical Director". The data correctly says "Technical", so the old note is wrong and should be updated or deleted. **Resolved 1 Oct 2026:** the credit for all three years is Senior Production Manager, and that note has been updated.
 
 ### 5.2 Core pages
 | Page | Words (approx.) | Verdict |
@@ -234,7 +238,7 @@ Scored out of 10: summary facts present (client, event, city, year, role) 2, sca
 | Expo 2020 UAE National Day | Project Lead | 49 | 6 | team size, timeline, your scope vs agency |
 | Rizla Rizlab | Producer | 54 | 6 | venues, number of shows (the only one with outcomes) |
 | Xerocon Denver 2026 | Technical Director | 80 | 5 | attendees, crew size, "directly supported the team" is vague |
-| GCS 2024 | Technical | 57 | 5 | detail of AV scope, supplier, team |
+| GCS 2024 | Technical (since changed to Senior Production Manager) | 57 | 5 | detail of AV scope, supplier, team |
 | Canva Studio (Holborn) | Executive Producer | 59 | 5 | footprint, visitors, build detail |
 | Yoto PlayDate 2026 | Executive Producer | 96 | 5 | venue, audience size, replica scale |
 | MTV EMA After Party | Senior Producer | 69 | 5 | venue name to confirm, guest count |
@@ -279,7 +283,7 @@ These are questions buyers and AI engines ask. None of them has a direct, quotab
 | What size of events? | scattered numbers | FAQ + service pages |
 
 **Proposed new pages** (each justified by distinct case studies, so none is a doorway page):
-- `/services/technical-direction`: Xerocon Denver, London, Nashville; GCS 2024 (Technical credit); Expo 2020 (content and projection); Geely (projection blend).
+- `/services/technical-direction`: Xerocon Denver, London, Nashville; GCS 2024 (then credited Technical; now Senior Production Manager); Expo 2020 (content and projection); Geely (projection blend).
 - `/services/production-management`: GCS 2025 and 2026; Netflix (Production Director); Emirates sports touring.
 - `/services/executive-production`: Canva, Geely, Stella McCartney, Yoto, Visa, Aperol, J&J, Aqua Rugby, Gunpowder Plot.
 - `/faq`: agency engagement, fees (no figures), travel, event scale, white-label and NDA, what you need at briefing, lead times. `FAQPage` schema on this page only.
@@ -404,12 +408,12 @@ Answer whatever you can. Anything left blank stays out of the site.
 - **NTT Data:** The Open Championship, Royal Liverpool, Hoylake, 2014.
 - **MTV EMA after party (2017):** Fountain Studios, Wembley (former So You Think You Can Dance studios); 1,500 guests.
 - **Battlefront II:** brand is "Electronic Arts", not EA Sports.
-- **Career:** 2003 to 2008 t7 event solutions, Sydney; 2012 to 2016 Pulse Group, London, freelance/permalance (Emirates, NTT Data, dnata, Bentley); 2016 onwards freelance for various agencies.
+- **Career (confirmed 1 Oct 2026, as on the About page and CV):** 2003 to 2007 Everest Event Enterprises, Sydney; January 2008 to March 2011 t7 event solutions, Sydney; April to December 2011 Exposure, London; January 2012 to February 2015 Pulse Group, London (Emirates, NTT Data, dnata, Bentley); March 2015 onwards freelance for various agencies. (An earlier note here said 2003 to 2008 t7, 2012 to 2016 Pulse and freelance from 2016; Kimber confirmed the published dates are correct.)
 - **Engagement:** publish nothing about pricing, rates, booking length or lead time. **No FAQ page at all.**
 - **No testimonials. No NDA restrictions** (all clients can be named). **No profiles besides LinkedIn.**
 - **New case study, Microsoft x London College of Fashion (2019, confirmed; not 2018):** Spitalfields Market, London; agency We Are Listen; role Technical Director. Worked with LCF students at the college to create technical solutions for exhibiting their major works using Microsoft technology; managed the installation of the event. Images in `public/images/work/microsoft-lcf`.
 - **New case study, SoundCloud (2017):** ExCeL London; agency Amplify; role Lead Producer. Bespoke exhibition stand featuring SoundCloud's key products at a music conference; ran the whole project and supervised delivery of a bespoke web application that let guests explore the SoundCloud platform. Images in `public/images/work/soundcloud`.
-- **CV (1 Oct 2026):** `public/Kimber Sykes - CV - 2026.pdf` rebuilt to match the site's credits (Aqua Rugby, Expo 2020, J&J, Gunpowder Plot, Parrtjima, Mastercard, Xerocon, Samsung), adding GCS London 2024 to 2026, Yoto, Aperol, Destination NSW, Microsoft x LCF, MTV EMA, Electronic Arts, SoundCloud; Microsoft and Yoto added to clients, Akcelo and K&K Productions to agencies; dashes and typos fixed. The InDesign source was not changed. GCS line on the CV reads "Senior Production Manager (2024-2026)" at Kimber's request (site credits unchanged pending his decision). Career start confirmed as 2003 (Everest Event Enterprises, Sydney, 2003 to 2007; t7 event solutions 2008 to 2011 per CV), so "23 years" stands.
+- **CV (1 Oct 2026):** `public/Kimber Sykes - CV - 2026.pdf` rebuilt to match the site's credits (Aqua Rugby, Expo 2020, J&J, Gunpowder Plot, Parrtjima, Mastercard, Xerocon, Samsung), adding GCS London 2024 to 2026, Yoto, Aperol, Destination NSW, Microsoft x LCF, MTV EMA, Electronic Arts, SoundCloud; Microsoft and Yoto added to clients, Akcelo and K&K Productions to agencies; dashes and typos fixed. The InDesign source was not changed. GCS line on the CV reads "Senior Production Manager (2024-2026)" at Kimber's request; the site now matches (see below). Career start confirmed as 2003 (Everest Event Enterprises, Sydney, 2003 to 2007; t7 event solutions 2008 to 2011 per CV), so "23 years" stands.
 - **Google Cloud Summit credit (1 Oct 2026):** at Kimber's instruction, all three years are now credited as **Senior Production Manager** on the site and CV (replacing "Technical" for 2024 and "Production Manager" for 2025). Titles renamed "Google Cloud Summit London 2024/2025/2026" (URLs unchanged), attendees "2,500+" everywhere, Tobacco Dock named for all three years, About page sentence corrected. Build and schema validation pass.
 - **Gallery alt text:** skipped for now at Kimber's request (generic "event photograph N of M" alts remain).
 
@@ -494,3 +498,11 @@ Search results still list old site URLs that now 404: `/rizler`, `/aqua-rugby-au
 - Windows compatibility of new scripts reviewed (path handling, `git` via execFileSync, `sharp` win32 binary already in node_modules).
 - `_to_delete/` added to `.gitignore` so preview tarballs and old files can never be committed.
 - Batch 7 (text lists under the Clients logos) is not done; it's optional and can follow after go-live.
+
+## Phase 4: follow-up (1 Oct 2026)
+- Kimber confirmed Google Cloud Summit London 2024, 2025 and 2026 are all **Senior Production Manager**, and that the published career dates are correct (see the note at the top of this file).
+- `portrait.jpg` is now tracked in git (`.gitignore` line scoped to `/portrait.jpg`).
+- The client is named in every case study title, H1, `/work` tile and schema name (the `project` field in `data/projects.json` and `data/map.json`; credits and URLs unchanged).
+- `/work` loads its first two cards with priority: mobile LCP fell from 4.9 s to about 3.5 s in a throttled local test.
+- Measured results found in public sources (listed in `site-audit-2.md`, Follow-up) were approved by Kimber and applied to Pixel 3, Emirates Aviation Experience, Parrtjima, MTV EMA, The Gunpowder Plot, Visa, Microsoft x LCF, Expo 2020, Google Cloud Summit London 2026 and Xerocon Denver. Battlefront II gains "64 consoles". Xerocon Nashville now says "more than 1,000" attendees (was "around 3,000").
+

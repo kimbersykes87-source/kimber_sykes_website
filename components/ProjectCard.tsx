@@ -1,18 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
+import { clientAndProject } from "@/lib/case-study-meta";
 import type { Project } from "@/lib/types";
 
 type Props = {
   project: Project;
   className?: string;
   showCaption?: boolean;
+  /** Above-the-fold cards: load eagerly with high fetch priority (LCP). */
+  priority?: boolean;
 };
 
-function cardAriaLabel(project: Project): string {
-  return `${project.project}. ${project.client}. ${project.role}. ${project.agency}. ${project.year}`;
+/** The client line is only shown when the project name does not already include it. */
+function clientLine(project: Project): string | null {
+  return project.project.toLowerCase().includes(project.client.toLowerCase()) ? null : project.client;
 }
 
-export function ProjectCard({ project, className = "", showCaption = true }: Props) {
+function cardAriaLabel(project: Project): string {
+  return [project.project, clientLine(project), project.role, project.agency, String(project.year)].filter(Boolean).join(". ");
+}
+
+export function ProjectCard({ project, className = "", showCaption = true, priority = false }: Props) {
   return (
     <div className={className}>
       <Link
@@ -23,8 +31,9 @@ export function ProjectCard({ project, className = "", showCaption = true }: Pro
         <div className="relative aspect-[16/9] w-full bg-neutral-900">
           <Image
             src={project.heroImage}
-            alt={`${project.client}: ${project.project}`}
+            alt={clientAndProject(project)}
             fill
+            priority={priority}
             className="object-cover transition duration-300 group-hover:scale-[1.02]"
             sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
           />
@@ -34,7 +43,7 @@ export function ProjectCard({ project, className = "", showCaption = true }: Pro
           />
           <div className="absolute inset-x-0 bottom-0 hidden p-4 opacity-0 transition group-hover:opacity-100 group-focus-within:opacity-100 md:block">
             <p className="font-medium text-white">{project.project}</p>
-            <p className="text-sm text-white/90">{project.client}</p>
+            {clientLine(project) ? <p className="text-sm text-white/90">{clientLine(project)}</p> : null}
             <p className="text-xs text-white/75">
               {project.role} · {project.agency} · {project.year}
             </p>
@@ -55,7 +64,7 @@ export function ProjectCardCaption({ project }: { project: Project }) {
     <div className="mt-3">
       <p className="font-medium">{project.project}</p>
       <p className="text-sm text-[var(--color-muted)]">
-        {project.client} · {project.role} · {project.agency} · {project.year}
+        {[clientLine(project), project.role, project.agency, String(project.year)].filter(Boolean).join(" · ")}
       </p>
     </div>
   );

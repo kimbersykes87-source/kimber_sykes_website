@@ -12,12 +12,15 @@ function sectorId(sector: Sector): string {
   return `sector-${sector.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 }
 
-function Grid({ items }: { items: Project[] }) {
+/** The first two cards are above the fold on phones (the LCP image), so they load eagerly with high priority. */
+const PRIORITY_CARDS = 2;
+
+function Grid({ items, priorityCount = 0 }: { items: Project[]; priorityCount?: number }) {
   return (
     <ul className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {items.map((p) => (
+      {items.map((p, i) => (
         <li key={p.slug}>
-          <ProjectCard project={p} />
+          <ProjectCard project={p} priority={i < priorityCount} />
         </li>
       ))}
     </ul>
@@ -52,14 +55,14 @@ export function WorkProjectList({ projects }: { projects: Project[] }) {
             ? `No projects match “${rawQuery}”.`
             : `${visible.length} project${visible.length === 1 ? "" : "s"} matching “${rawQuery}”.`}
         </p>
-        <Grid items={visible} />
+        <Grid items={visible} priorityCount={PRIORITY_CARDS} />
       </>
     );
   }
 
   return (
     <>
-      {SECTOR_ORDER.map((sector) => {
+      {SECTOR_ORDER.map((sector, sectorIndex) => {
         const items = projects.filter((p) => p.sector === sector);
         if (items.length === 0) return null;
         const id = sectorId(sector);
@@ -68,7 +71,7 @@ export function WorkProjectList({ projects }: { projects: Project[] }) {
             <h2 id={id} className="font-display text-xl font-semibold sm:text-2xl">
               {SECTOR_HEADINGS[sector]}
             </h2>
-            <Grid items={items} />
+            <Grid items={items} priorityCount={sectorIndex === 0 ? PRIORITY_CARDS : 0} />
           </section>
         );
       })}

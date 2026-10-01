@@ -28,7 +28,11 @@
       "2,500+ attendees",
       "Spread across Tobacco Dock's brick-vaulted rooms and dockside courtyards",
       "Headline features: a Formula E AI Experience and a hands-on AI Playground activation zone",
-      "More than 1,000 contractors on site"
+      "More than 1,000 contractors on site",
+      "More than 2,000 attendees a day over two days",
+      "Tobacco Dock's 16,000 sqm across 50 spaces",
+      "A four-day load-in and build",
+      "More than 100 technicians on site from technical production partner Creative Technology"
     ],
     "responsibilities": [
       "Senior Production Manager for the agency, Wonder",
@@ -105,7 +109,8 @@
     "scale": [
       "Two days at the Colorado Convention Center, 19 and 20 August 2026",
       "A broadcast-equipped main stage plus Supercharge, Discovery, App Spotlight and partner stages",
-      "An exhibitor hall, podcast recording space and a dedicated small-business-community room"
+      "An exhibitor hall, podcast recording space and a dedicated small-business-community room",
+      "45+ exhibitors"
     ],
     "responsibilities": [
       "Technical Director for the agency, INVNT",
@@ -214,7 +219,7 @@
   {
     "slug": "netflix-stranger-things",
     "client": "Netflix",
-    "project": "Stranger Things Fan Experience",
+    "project": "Netflix Stranger Things Fan Experience",
     "agency": "Amplify",
     "role": "Production Director",
     "year": 2022,
@@ -277,7 +282,7 @@
   {
     "slug": "geely-auto",
     "client": "Geely Auto",
-    "project": "EX5 Brand Launch",
+    "project": "Geely Auto EX5 Brand Launch",
     "agency": "INVNT",
     "role": "Executive Producer",
     "year": 2025,
@@ -309,7 +314,7 @@
   {
     "slug": "xerocon-nashville",
     "client": "Xero",
-    "project": "Xerocon Nashville",
+    "project": "Xerocon Nashville 2024",
     "agency": "INVNT",
     "role": "Technical Director",
     "year": 2024,
@@ -320,11 +325,11 @@
       "/images/work/xerocon-nashville/01.jpg",
       "/images/work/xerocon-nashville/02.jpg"
     ],
-    "body": "Xerocon is Xero's flagship B2B conference for accounting professionals, welcoming around 3,000 attendees from across the United States.\n\nAs Technical Director, Kimber oversaw the physical installation of the exhibition floor in Nashville and provided technical and production support to the Sydney-based production team.",
-    "summary": "Technical Director for INVNT on Xerocon Nashville 2024 at the Music City Center, Xero's US conference for around 3,000 accounting professionals.",
+    "body": "Xerocon is Xero's flagship B2B conference for accounting professionals, welcoming more than 1,000 attendees from across the United States.\n\nAs Technical Director, Kimber oversaw the physical installation of the exhibition floor in Nashville and provided technical and production support to the Sydney-based production team.",
+    "summary": "Technical Director for INVNT on Xerocon Nashville 2024 at the Music City Center, Xero's US conference for more than 1,000 accounting professionals.",
     "brief": "Xerocon is Xero's flagship B2B conference for accounting professionals. The 2024 US edition ran at the Music City Center, Nashville, on 14 and 15 August.",
     "scale": [
-      "Around 3,000 attendees from across the United States",
+      "More than 1,000 attendees from across the United States",
       "Two days at the Music City Center",
       "An exhibition floor installed on site"
     ],
@@ -359,7 +364,9 @@
     "updated": "2026-10-01",
     "scale": [
       "12 finalists from six regions",
-      "Staged during the opening week of the FIFA Women's World Cup France 2019"
+      "Staged during the opening week of the FIFA Women's World Cup France 2019",
+      "Nearly 1,300 applicants",
+      "Two category winners, each awarded US$100,000"
     ]
   },
   {
@@ -384,11 +391,13 @@
     "updated": "2026-10-01",
     "scale": [
       "Six student teams",
-      "A one-day public exhibition at Old Spitalfields Market"
+      "A one-day public exhibition at Old Spitalfields Market",
+      "Prototypes developed over three months"
     ],
     "highlights": [
       "Microsoft HoloLens for mixed reality retail experiences",
-      "Azure Cognitive Services applied to reducing waste in clothing production"
+      "Azure Cognitive Services applied to reducing waste in clothing production",
+      "Kinect sensors and OLED screens in the exhibited prototypes"
     ]
   },
   {
@@ -406,24 +415,26 @@
       "/images/work/google-pixel-3/02.jpg"
     ],
     "body": "Google Pixel's Curiosity Rooms transformed 55 Regent Street in London into an immersive three-floor experience blending fashion, food, and technology over five weeks. The activation was developed in partnership with 72andSunny, OMD, Essence, and Halpern.\n\nAs Senior Producer, Kimber helped concept and deliver the experience in just eight weeks, coordinating creative, build, and operational teams across the partner network.",
-    "summary": "Senior Producer for Amplify on Google Pixel 3 Curiosity Rooms, a three-floor experience at 55 Regent Street, London, in 2018.",
+    "summary": "Senior Producer for Amplify on Google Pixel 3 Curiosity Rooms at 55 Regent Street, London, 2018: 71,000+ visitors and a Campaign Experience Awards Grand Prix.",
     "brief": "Google Pixel's Curiosity Rooms turned 55 Regent Street, the former Tower Records at Piccadilly Circus, into an immersive experience blending fashion, food and technology, developed in partnership with 72andSunny, OMD, Essence and Halpern.",
     "scale": [
       "Three floors at 55 Regent Street",
       "A five-week residency",
-      "Concepted and delivered in eight weeks"
+      "Concepted and delivered in eight weeks",
+      "36 live events during the residency"
     ],
     "responsibilities": [
       "Senior Producer for the agency, Amplify",
       "Helped concept and deliver the experience",
       "Coordinated creative, build and operational teams across the partner network"
     ],
-    "updated": "2026-10-01"
+    "updated": "2026-10-01",
+    "outcome": "More than 71,000 visitors explored the Curiosity Rooms, with an average dwell time of 21 minutes, and 83% took part in the experiences. Media partnerships reached more than 80 million people online. The project won the Grand Prix at the Campaign Experience Awards, plus Gold for Best Integrated Experience, Best Collaboration, Best Production Experience and Best Food Experience, Silver for Bravest Campaign, and Bronze for Best Digital Experience and Creative Event of the Year."
   },
   {
     "slug": "aperol-spritz",
     "client": "Aperol Spritz",
-    "project": "Australian Open",
+    "project": "Aperol Spritz at the Australian Open 2024",
     "agency": "Yakusan",
     "role": "Executive Producer",
     "year": 2024,
@@ -455,7 +466,7 @@
   {
     "slug": "stella-mccartney-cop28",
     "client": "Stella McCartney",
-    "project": "Sustainable Market at COP28",
+    "project": "Stella McCartney Sustainable Market at COP28",
     "agency": "INVNT",
     "role": "Executive Producer",
     "year": 2023,
@@ -487,7 +498,7 @@
   {
     "slug": "mastercard-ucl",
     "client": "Mastercard",
-    "project": "UEFA Champions League Final",
+    "project": "Mastercard at the UEFA Champions League Final",
     "agency": "Octagon",
     "role": "Senior Producer",
     "year": 2016,
@@ -514,7 +525,7 @@
   {
     "slug": "mastercard-british-open",
     "client": "Mastercard",
-    "project": "British Open Golf",
+    "project": "Mastercard at The Open, Royal Troon",
     "agency": "Octagon",
     "role": "Senior Producer",
     "year": 2016,
@@ -537,7 +548,7 @@
   {
     "slug": "mtv-ema",
     "client": "MTV",
-    "project": "EMA Awards After Party",
+    "project": "MTV EMA Awards After Party",
     "agency": "Amplify",
     "role": "Senior Producer",
     "year": 2017,
@@ -562,14 +573,15 @@
     "highlights": [
       "London cityscape projections on a suspended voile cube",
       "A real London Underground carriage as the DJ booth backdrop",
-      "Sets from DJ EZ, Manny Norte and Ray BLK, among 10 artists"
+      "Sets from DJ EZ, Manny Norte and Ray BLK, among 10 artists",
+      "More than 25 hours of creative content produced"
     ],
     "updated": "2026-10-01"
   },
   {
     "slug": "soundcloud",
     "client": "SoundCloud",
-    "project": "Exhibition Stand at ExCeL London",
+    "project": "SoundCloud Stand at ExCeL London",
     "agency": "Amplify",
     "role": "Lead Producer",
     "year": 2017,
@@ -623,12 +635,13 @@
       "A large-scale A380 nose cone",
       "A 360-degree hologram"
     ],
-    "updated": "2026-10-01"
+    "updated": "2026-10-01",
+    "outcome": "Pulse Group reports around 120,000 visitors a year, including 4,500 students from 250 schools."
   },
   {
     "slug": "emirates-sports",
     "client": "Emirates",
-    "project": "Global Sports Sponsorship Programme",
+    "project": "Emirates Global Sports Sponsorship Programme",
     "agency": "Pulse Group",
     "role": "Senior Producer",
     "year": 2015,
@@ -658,7 +671,7 @@
   {
     "slug": "emirates-cricket",
     "client": "Emirates",
-    "project": "Cricket World Cup",
+    "project": "Emirates at the Cricket World Cup 2015",
     "agency": "Pulse Group",
     "role": "Senior Producer",
     "year": 2015,
@@ -717,7 +730,7 @@
   {
     "slug": "ea-sports-battlefront",
     "client": "Electronic Arts",
-    "project": "Battlefront II Launch",
+    "project": "Electronic Arts Battlefront II Launch",
     "agency": "Amplify",
     "role": "Senior Producer",
     "year": 2017,
@@ -733,7 +746,8 @@
     "scale": [
       "Paris Games Week: five days and 300,000+ visitors",
       "Public and press audiences",
-      "Peak audience load during live periods"
+      "Peak audience load during live periods",
+      "64 consoles running Battlefront II for multiplayer play"
     ],
     "responsibilities": [
       "Senior Producer for the agency, Amplify",
@@ -745,7 +759,7 @@
   {
     "slug": "johnson-johnson",
     "client": "Johnson & Johnson",
-    "project": "Mobile Laboratory",
+    "project": "Johnson & Johnson VELYS Mobile Lab",
     "agency": "K&K Productions",
     "role": "Executive Producer",
     "year": 2021,
@@ -778,7 +792,7 @@
   {
     "slug": "expo-2020",
     "client": "Expo 2020",
-    "project": "UAE National Day Celebration",
+    "project": "Expo 2020 UAE National Day Celebration",
     "agency": "Curiious",
     "role": "Project Lead",
     "year": 2021,
@@ -790,11 +804,12 @@
     ],
     "body": "The UAE's Golden Jubilee celebration at Expo 2020 featured content production for a 25,380 sqm projection surface using 252 projectors across 84 video channels.\n\nAs Project Lead, Kimber produced nearly a petabyte of content for the domed plaza installation, coordinating creative, technical, and rendering teams to deliver on schedule.",
     "summary": "Project Lead for Curiious on the UAE Golden Jubilee show at Expo 2020 Dubai's Al Wasl Plaza dome, 2021: 252 projectors, 84 video channels.",
-    "brief": "The UAE's Golden Jubilee celebration at Expo 2020 featured content production for the Al Wasl Plaza dome, one of the largest 360-degree projection surfaces in the world.",
+    "brief": "The UAE's Golden Jubilee celebration at Expo 2020 featured content production for the Al Wasl Plaza dome, one of the largest 360-degree projection surfaces in the world. The show, Journey of the 50, ran twice nightly from 1 to 4 December 2021.",
     "scale": [
       "A 25,380 sqm projection surface",
       "252 Christie 4K laser projectors in 42 pods, across 84 video channels",
-      "Nearly a petabyte of content"
+      "Nearly a petabyte of content",
+      "Two shows a night, 1 to 4 December 2021"
     ],
     "responsibilities": [
       "Project Lead for the agency, Curiious",
@@ -807,7 +822,7 @@
   {
     "slug": "samsung-galaxy-a5",
     "client": "Samsung",
-    "project": "Galaxy A5 Launch Tour",
+    "project": "Samsung Galaxy A5 Launch Tour",
     "agency": "Imagination",
     "role": "Senior Producer",
     "year": 2017,
@@ -833,7 +848,7 @@
   {
     "slug": "parrtjima",
     "client": "Tourism NT",
-    "project": "Parrtjima Festival",
+    "project": "Parrtjima Festival for Tourism NT",
     "agency": "AGB Events",
     "role": "Creative Technologist",
     "year": 2021,
@@ -856,12 +871,13 @@
       "Helped bring the artists' visions to life through structure and sculpture",
       "Worked alongside cultural custodians and the creative team"
     ],
-    "updated": "2026-10-01"
+    "updated": "2026-10-01",
+    "outcome": "The 2021 festival recorded more than 23,000 attendances over its ten nights."
   },
   {
     "slug": "destination-NSW",
     "client": "Destination NSW",
-    "project": "The Long Road",
+    "project": "The Long Road for Destination NSW",
     "agency": "Emotive",
     "role": "Producer",
     "year": 2020,
@@ -898,7 +914,7 @@
   {
     "slug": "rizla",
     "client": "Rizla",
-    "project": "Rizlab",
+    "project": "Rizlab: Experiments in Music",
     "agency": "Exposure",
     "role": "Producer",
     "year": 2011,
@@ -924,7 +940,7 @@
   {
     "slug": "aqua-rugby",
     "client": "Aqua Rugby Australia",
-    "project": "Darling Harbour Festival",
+    "project": "Aqua Rugby Australia Festival at Darling Harbour",
     "agency": "Independent",
     "role": "Executive Producer",
     "year": 2024,
@@ -955,7 +971,7 @@
   {
     "slug": "gunpowder-plot",
     "client": "Gunpowder Plot",
-    "project": "Immersive Theatre Experience",
+    "project": "The Gunpowder Plot Immersive Theatre Experience",
     "agency": "dotdotdot",
     "role": "Executive Producer",
     "year": 2022,
@@ -974,6 +990,10 @@
       "Physical UX design of each room",
       "Worked closely with the director and the head of technical"
     ],
-    "updated": "2026-10-01"
+    "updated": "2026-10-01",
+    "scale": [
+      "25,000 sq ft of vaults beside the Tower of London"
+    ],
+    "outcome": "Second place for Immersive Experience and for Storytelling at the blooloop Innovation Awards 2022, and five stars from The Times."
   }
 ]

@@ -11,7 +11,7 @@ out/
 # Local / scratch files
 image.png
 tmp-*
-portrait.jpg
+/portrait.jpg
 email-signature/assets/icons/*.png
 
 # Wrangler local state

@@ -33,7 +33,7 @@ What's included:
 
 Typical projects: Brand and product launches, pop-ups and experiential activations, innovation and sustainability exhibits, and sports sponsorship activations.
 
-Case studies: [Canva Studio Pop-Up](https://kimbersykes.com/work/canva-studio), [Geely Auto: EX5 Brand Launch](https://kimbersykes.com/work/geely-auto), [Stella McCartney: Sustainable Market at COP28](https://kimbersykes.com/work/stella-mccartney-cop28), [Yoto PlayDate London 2026](https://kimbersykes.com/work/yoto-playdate-london-2026), [Visa Everywhere Initiative](https://kimbersykes.com/work/visa-everywhere), [Aperol Spritz: Australian Open](https://kimbersykes.com/work/aperol-spritz)
+Case studies: [Canva Studio Pop-Up](https://kimbersykes.com/work/canva-studio), [Geely Auto EX5 Brand Launch](https://kimbersykes.com/work/geely-auto), [Stella McCartney Sustainable Market at COP28](https://kimbersykes.com/work/stella-mccartney-cop28), [Yoto PlayDate London 2026](https://kimbersykes.com/work/yoto-playdate-london-2026), [Visa Everywhere Initiative](https://kimbersykes.com/work/visa-everywhere), [Aperol Spritz at the Australian Open 2024](https://kimbersykes.com/work/aperol-spritz)
 
 ### Production Management
 
@@ -51,7 +51,7 @@ What's included:
 
 Typical projects: Multi-room B2B conferences and summits, exhibitions and immersive fan experiences.
 
-Case studies: [Google Cloud Summit London 2026](https://kimbersykes.com/work/google-cloud-summit-2026), [Google Cloud Summit London 2025](https://kimbersykes.com/work/google-cloud-summit-2025), [Google Cloud Summit London 2024](https://kimbersykes.com/work/google-cloud-summit-2024), [Netflix: Stranger Things Fan Experience](https://kimbersykes.com/work/netflix-stranger-things)
+Case studies: [Google Cloud Summit London 2026](https://kimbersykes.com/work/google-cloud-summit-2026), [Google Cloud Summit London 2025](https://kimbersykes.com/work/google-cloud-summit-2025), [Google Cloud Summit London 2024](https://kimbersykes.com/work/google-cloud-summit-2024), [Netflix Stranger Things Fan Experience](https://kimbersykes.com/work/netflix-stranger-things)
 
 ### Technical Direction
 
@@ -68,7 +68,7 @@ What's included:
 
 Typical projects: Flagship conferences with multiple stages and broadcast, exhibition floors, and technology-led installations and projection.
 
-Case studies: [Xerocon Denver 2026](https://kimbersykes.com/work/xerocon-denver-2026), [Xerocon London 2026](https://kimbersykes.com/work/xerocon-london-2026), [Xerocon Nashville](https://kimbersykes.com/work/xerocon-nashville), [Microsoft x London College of Fashion](https://kimbersykes.com/work/microsoft-lcf), [Expo 2020: UAE National Day Celebration](https://kimbersykes.com/work/expo-2020)
+Case studies: [Xerocon Denver 2026](https://kimbersykes.com/work/xerocon-denver-2026), [Xerocon London 2026](https://kimbersykes.com/work/xerocon-london-2026), [Xerocon Nashville 2024](https://kimbersykes.com/work/xerocon-nashville), [Microsoft x London College of Fashion](https://kimbersykes.com/work/microsoft-lcf), [Expo 2020 UAE National Day Celebration](https://kimbersykes.com/work/expo-2020)
 
 ## Career summary
 
@@ -123,6 +123,10 @@ Scale and constraints
 - Spread across Tobacco Dock's brick-vaulted rooms and dockside courtyards
 - Headline features: a Formula E AI Experience and a hands-on AI Playground activation zone
 - More than 1,000 contractors on site
+- More than 2,000 attendees a day over two days
+- Tobacco Dock's 16,000 sqm across 50 spaces
+- A four-day load-in and build
+- More than 100 technicians on site from technical production partner Creative Technology
 
 What was Kimber responsible for?
 
@@ -191,6 +195,7 @@ Scale and constraints
 - Two days at the Colorado Convention Center, 19 and 20 August 2026
 - A broadcast-equipped main stage plus Supercharge, Discovery, App Spotlight and partner stages
 - An exhibitor hall, podcast recording space and a dedicated small-business-community room
+- 45+ exhibitors
 
 What was Kimber responsible for?
 
@@ -255,17 +260,17 @@ What was Kimber responsible for?
 - Delivered all audio-visual elements across the experiential areas
 - Ensured seamless execution across the AI technology activations and exhibitor stands
 
-### Xerocon Nashville
+### Xerocon Nashville 2024
 
 - URL: https://kimbersykes.com/work/xerocon-nashville
 - Client: Xero
-- Project: Xerocon Nashville
+- Project: Xerocon Nashville 2024
 - Kimber's credit: Technical Director
 - Agency: INVNT
 - Location: Nashville, USA
 - Year: 2024
 
-Technical Director for INVNT on Xerocon Nashville 2024 at the Music City Center, Xero's US conference for around 3,000 accounting professionals.
+Technical Director for INVNT on Xerocon Nashville 2024 at the Music City Center, Xero's US conference for more than 1,000 accounting professionals.
 
 What was the brief?
 
@@ -273,7 +278,7 @@ Xerocon is Xero's flagship B2B conference for accounting professionals. The 2024
 
 Scale and constraints
 
-- Around 3,000 attendees from across the United States
+- More than 1,000 attendees from across the United States
 - Two days at the Music City Center
 - An exhibition floor installed on site
 
@@ -303,6 +308,8 @@ Scale and constraints
 
 - 12 finalists from six regions
 - Staged during the opening week of the FIFA Women's World Cup France 2019
+- Nearly 1,300 applicants
+- Two category winners, each awarded US$100,000
 
 What was Kimber responsible for?
 
@@ -310,11 +317,11 @@ What was Kimber responsible for?
 - Produced the Women's Global Edition event
 - Managed venue, supplier and client relationships across the event
 
-### SoundCloud: Exhibition Stand at ExCeL London
+### SoundCloud Stand at ExCeL London
 
 - URL: https://kimbersykes.com/work/soundcloud
 - Client: SoundCloud
-- Project: Exhibition Stand at ExCeL London
+- Project: SoundCloud Stand at ExCeL London
 - Kimber's credit: Lead Producer
 - Agency: Amplify
 - Location: London, UK
@@ -366,11 +373,11 @@ What was Kimber responsible for?
 - Led pre-production, including cost planning and supplier procurement for the Yoto Player replica
 - Unavailable for the live dates, so built and contracted a trusted freelance delivery team to carry the project through fabrication, installation and on-site delivery
 
-### Netflix: Stranger Things Fan Experience
+### Netflix Stranger Things Fan Experience
 
 - URL: https://kimbersykes.com/work/netflix-stranger-things
 - Client: Netflix
-- Project: Stranger Things Fan Experience
+- Project: Netflix Stranger Things Fan Experience
 - Kimber's credit: Production Director
 - Agency: Amplify
 - Location: Paris, France
@@ -429,11 +436,11 @@ Outcome
 
 Delivered on time and on budget. The activation drew 1,200 live attendees over three days, 13,000+ unique views of the Canva Studio London page and 300K+ organic social reach, with a 300% increase in UK paid social click-through rate.
 
-### Geely Auto: EX5 Brand Launch
+### Geely Auto EX5 Brand Launch
 
 - URL: https://kimbersykes.com/work/geely-auto
 - Client: Geely Auto
-- Project: EX5 Brand Launch
+- Project: Geely Auto EX5 Brand Launch
 - Kimber's credit: Executive Producer
 - Agency: INVNT
 - Location: Sydney, Australia
@@ -481,6 +488,7 @@ Scale and constraints
 
 - Six student teams
 - A one-day public exhibition at Old Spitalfields Market
+- Prototypes developed over three months
 
 What was Kimber responsible for?
 
@@ -492,6 +500,7 @@ Technical and production highlights
 
 - Microsoft HoloLens for mixed reality retail experiences
 - Azure Cognitive Services applied to reducing waste in clothing production
+- Kinect sensors and OLED screens in the exhibited prototypes
 
 ### Google Pixel 3: Curiosity Rooms
 
@@ -503,7 +512,7 @@ Technical and production highlights
 - Location: London, UK
 - Year: 2018
 
-Senior Producer for Amplify on Google Pixel 3 Curiosity Rooms, a three-floor experience at 55 Regent Street, London, in 2018.
+Senior Producer for Amplify on Google Pixel 3 Curiosity Rooms at 55 Regent Street, London, 2018: 71,000+ visitors and a Campaign Experience Awards Grand Prix.
 
 What was the brief?
 
@@ -514,6 +523,7 @@ Scale and constraints
 - Three floors at 55 Regent Street
 - A five-week residency
 - Concepted and delivered in eight weeks
+- 36 live events during the residency
 
 What was Kimber responsible for?
 
@@ -521,11 +531,15 @@ What was Kimber responsible for?
 - Helped concept and deliver the experience
 - Coordinated creative, build and operational teams across the partner network
 
-### Aperol Spritz: Australian Open
+Outcome
+
+More than 71,000 visitors explored the Curiosity Rooms, with an average dwell time of 21 minutes, and 83% took part in the experiences. Media partnerships reached more than 80 million people online. The project won the Grand Prix at the Campaign Experience Awards, plus Gold for Best Integrated Experience, Best Collaboration, Best Production Experience and Best Food Experience, Silver for Bravest Campaign, and Bronze for Best Digital Experience and Creative Event of the Year.
+
+### Aperol Spritz at the Australian Open 2024
 
 - URL: https://kimbersykes.com/work/aperol-spritz
 - Client: Aperol Spritz
-- Project: Australian Open
+- Project: Aperol Spritz at the Australian Open 2024
 - Kimber's credit: Executive Producer
 - Agency: Yakusan
 - Location: Melbourne, Australia
@@ -554,11 +568,11 @@ Technical and production highlights
 - A circular archway leading to a large-format digital sunset photo experience
 - An Aperol Spritz sampling station
 
-### Stella McCartney: Sustainable Market at COP28
+### Stella McCartney Sustainable Market at COP28
 
 - URL: https://kimbersykes.com/work/stella-mccartney-cop28
 - Client: Stella McCartney
-- Project: Sustainable Market at COP28
+- Project: Stella McCartney Sustainable Market at COP28
 - Kimber's credit: Executive Producer
 - Agency: INVNT
 - Location: Dubai, UAE
@@ -587,11 +601,11 @@ Technical and production highlights
 - A modular, sustainably built installation
 - Stalls 3D printed with PURE.TECH carbon-absorbing material that removes CO2 and VOCs from the air
 
-### MTV: EMA Awards After Party
+### MTV EMA Awards After Party
 
 - URL: https://kimbersykes.com/work/mtv-ema
 - Client: MTV
-- Project: EMA Awards After Party
+- Project: MTV EMA Awards After Party
 - Kimber's credit: Senior Producer
 - Agency: Amplify
 - Location: London, UK
@@ -619,6 +633,7 @@ Technical and production highlights
 - London cityscape projections on a suspended voile cube
 - A real London Underground carriage as the DJ booth backdrop
 - Sets from DJ EZ, Manny Norte and Ray BLK, among 10 artists
+- More than 25 hours of creative content produced
 
 ### Emirates Aviation Experience
 
@@ -654,11 +669,15 @@ Technical and production highlights
 - A large-scale A380 nose cone
 - A 360-degree hologram
 
-### Electronic Arts: Battlefront II Launch
+Outcome
+
+Pulse Group reports around 120,000 visitors a year, including 4,500 students from 250 schools.
+
+### Electronic Arts Battlefront II Launch
 
 - URL: https://kimbersykes.com/work/ea-sports-battlefront
 - Client: Electronic Arts
-- Project: Battlefront II Launch
+- Project: Electronic Arts Battlefront II Launch
 - Kimber's credit: Senior Producer
 - Agency: Amplify
 - Location: Paris, France
@@ -675,6 +694,7 @@ Scale and constraints
 - Paris Games Week: five days and 300,000+ visitors
 - Public and press audiences
 - Peak audience load during live periods
+- 64 consoles running Battlefront II for multiplayer play
 
 What was Kimber responsible for?
 
@@ -682,11 +702,11 @@ What was Kimber responsible for?
 - Supplier coordination, rehearsals and show-flow planning
 - Led on-site problem-solving across build, tech checks and live periods
 
-### Johnson & Johnson: Mobile Laboratory
+### Johnson & Johnson VELYS Mobile Lab
 
 - URL: https://kimbersykes.com/work/johnson-johnson
 - Client: Johnson & Johnson
-- Project: Mobile Laboratory
+- Project: Johnson & Johnson VELYS Mobile Lab
 - Kimber's credit: Executive Producer
 - Agency: K&K Productions
 - Location: Australia
@@ -715,11 +735,11 @@ Technical and production highlights
 - 3D-printed surgical models for hands-on training
 - Hands-on training with the VELYS robotic-assisted system
 
-### Expo 2020: UAE National Day Celebration
+### Expo 2020 UAE National Day Celebration
 
 - URL: https://kimbersykes.com/work/expo-2020
 - Client: Expo 2020
-- Project: UAE National Day Celebration
+- Project: Expo 2020 UAE National Day Celebration
 - Kimber's credit: Project Lead
 - Agency: Curiious
 - Location: Dubai, UAE
@@ -729,13 +749,14 @@ Project Lead for Curiious on the UAE Golden Jubilee show at Expo 2020 Dubai's Al
 
 What was the brief?
 
-The UAE's Golden Jubilee celebration at Expo 2020 featured content production for the Al Wasl Plaza dome, one of the largest 360-degree projection surfaces in the world.
+The UAE's Golden Jubilee celebration at Expo 2020 featured content production for the Al Wasl Plaza dome, one of the largest 360-degree projection surfaces in the world. The show, Journey of the 50, ran twice nightly from 1 to 4 December 2021.
 
 Scale and constraints
 
 - A 25,380 sqm projection surface
 - 252 Christie 4K laser projectors in 42 pods, across 84 video channels
 - Nearly a petabyte of content
+- Two shows a night, 1 to 4 December 2021
 
 What was Kimber responsible for?
 
@@ -747,11 +768,11 @@ Outcome
 
 Delivered on schedule.
 
-### Samsung: Galaxy A5 Launch Tour
+### Samsung Galaxy A5 Launch Tour
 
 - URL: https://kimbersykes.com/work/samsung-galaxy-a5
 - Client: Samsung
-- Project: Galaxy A5 Launch Tour
+- Project: Samsung Galaxy A5 Launch Tour
 - Kimber's credit: Senior Producer
 - Agency: Imagination
 - Location: Australia
@@ -773,11 +794,11 @@ What was Kimber responsible for?
 - Senior Producer for the agency, Imagination
 - Delivered the tour end to end: build, transport logistics, on-site activation and crew management at each stop
 
-### Tourism NT: Parrtjima Festival
+### Parrtjima Festival for Tourism NT
 
 - URL: https://kimbersykes.com/work/parrtjima
 - Client: Tourism NT
-- Project: Parrtjima Festival
+- Project: Parrtjima Festival for Tourism NT
 - Kimber's credit: Creative Technologist
 - Agency: AGB Events
 - Location: Alice Springs, Australia
@@ -801,11 +822,15 @@ What was Kimber responsible for?
 - Helped bring the artists' visions to life through structure and sculpture
 - Worked alongside cultural custodians and the creative team
 
-### Destination NSW: The Long Road
+Outcome
+
+The 2021 festival recorded more than 23,000 attendances over its ten nights.
+
+### The Long Road for Destination NSW
 
 - URL: https://kimbersykes.com/work/destination-NSW
 - Client: Destination NSW
-- Project: The Long Road
+- Project: The Long Road for Destination NSW
 - Kimber's credit: Producer
 - Agency: Emotive
 - Location: New South Wales, Australia
@@ -834,11 +859,11 @@ Outcome
 
 The series stayed on schedule and on brief.
 
-### Rizlab
+### Rizlab: Experiments in Music
 
 - URL: https://kimbersykes.com/work/rizla
 - Client: Rizla
-- Project: Rizlab
+- Project: Rizlab: Experiments in Music
 - Kimber's credit: Producer
 - Agency: Exposure
 - Location: London, UK
@@ -863,11 +888,11 @@ Outcome
 
 Direct event reach grew 600% year on year, reaching half a million people, and PR reach exceeded 16.5 million.
 
-### Gunpowder Plot: Immersive Theatre Experience
+### The Gunpowder Plot Immersive Theatre Experience
 
 - URL: https://kimbersykes.com/work/gunpowder-plot
 - Client: Gunpowder Plot
-- Project: Immersive Theatre Experience
+- Project: The Gunpowder Plot Immersive Theatre Experience
 - Kimber's credit: Executive Producer
 - Agency: dotdotdot
 - Location: London, UK
@@ -879,6 +904,10 @@ What was the brief?
 
 The Gunpowder Plot is a permanent immersive theatre experience at the Tower Vaults, next to the Tower of London.
 
+Scale and constraints
+
+- 25,000 sq ft of vaults beside the Tower of London
+
 What was Kimber responsible for?
 
 - Executive Producer for dotdotdot
@@ -886,13 +915,17 @@ What was Kimber responsible for?
 - Physical UX design of each room
 - Worked closely with the director and the head of technical
 
+Outcome
+
+Second place for Immersive Experience and for Storytelling at the blooloop Innovation Awards 2022, and five stars from The Times.
+
 ## Case studies: Sports sponsorship programmes
 
-### Mastercard: UEFA Champions League Final
+### Mastercard at the UEFA Champions League Final
 
 - URL: https://kimbersykes.com/work/mastercard-ucl
 - Client: Mastercard
-- Project: UEFA Champions League Final
+- Project: Mastercard at the UEFA Champions League Final
 - Kimber's credit: Senior Producer
 - Agency: Octagon
 - Location: Milan, Italy
@@ -915,11 +948,11 @@ What was Kimber responsible for?
 - On site in Milan for supplier coordination, run of show and live delivery
 - Kept every brand moment consistent through the matchday weekend
 
-### Mastercard: British Open Golf
+### Mastercard at The Open, Royal Troon
 
 - URL: https://kimbersykes.com/work/mastercard-british-open
 - Client: Mastercard
-- Project: British Open Golf
+- Project: Mastercard at The Open, Royal Troon
 - Kimber's credit: Senior Producer
 - Agency: Octagon
 - Location: Troon, Scotland
@@ -937,11 +970,11 @@ What was Kimber responsible for?
 - Delivered the activation on the ground
 - Coordinated build, supplier teams and live operations across the tournament
 
-### Emirates: Global Sports Sponsorship Programme
+### Emirates Global Sports Sponsorship Programme
 
 - URL: https://kimbersykes.com/work/emirates-sports
 - Client: Emirates
-- Project: Global Sports Sponsorship Programme
+- Project: Emirates Global Sports Sponsorship Programme
 - Kimber's credit: Senior Producer
 - Agency: Pulse Group
 - Location: Global
@@ -966,11 +999,11 @@ What was Kimber responsible for?
 - Developed each activation as a portable touring kit
 - Produced between 10 and 18 events per calendar year
 
-### Emirates: Cricket World Cup
+### Emirates at the Cricket World Cup 2015
 
 - URL: https://kimbersykes.com/work/emirates-cricket
 - Client: Emirates
-- Project: Cricket World Cup
+- Project: Emirates at the Cricket World Cup 2015
 - Kimber's credit: Senior Producer
 - Agency: Pulse Group
 - Location: Australia & New Zealand
@@ -1019,11 +1052,11 @@ Technical and production highlights
 - Live tournament data animated on a large-scale LED screen
 - A second-screen digital experience for remote fans
 
-### Aqua Rugby Australia: Darling Harbour Festival
+### Aqua Rugby Australia Festival at Darling Harbour
 
 - URL: https://kimbersykes.com/work/aqua-rugby
 - Client: Aqua Rugby Australia
-- Project: Darling Harbour Festival
+- Project: Aqua Rugby Australia Festival at Darling Harbour
 - Kimber's credit: Executive Producer
 - Agency: Independent
 - Location: Sydney, Australia

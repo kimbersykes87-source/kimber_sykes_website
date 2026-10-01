@@ -153,6 +153,11 @@ export function createSchemaBuilder({ site, identity, projects, publicDir }) {
     };
   }
 
+  /** "Client Project" without repeating the client when the project name already includes it. */
+  function clientAndProject(p) {
+    return p.project.toLowerCase().includes(p.client.toLowerCase()) ? p.project : `${p.client} ${p.project}`;
+  }
+
   function caseStudyNode(route, p) {
     const credit = {
       "@type": "Role",
@@ -163,13 +168,13 @@ export function createSchemaBuilder({ site, identity, projects, publicDir }) {
       "@type": "CreativeWork",
       "@id": `${pageUrl(route)}#work`,
       name: p.project,
-      alternateName: `${p.client}: ${p.project}`,
+      ...(clientAndProject(p) !== p.project ? { alternateName: clientAndProject(p) } : {}),
       url: pageUrl(route),
       description: p.summary ?? p.body.trim().split(/\n\n+/)[0],
       image: imageObject(
         p.heroImage,
         undefined,
-        `${p.project.toLowerCase().includes(p.client.toLowerCase()) ? p.project : `${p.client} ${p.project}`}, ${p.location}, ${p.year}`,
+        `${clientAndProject(p)}, ${p.location}, ${p.year}`,
       ),
       dateCreated: String(p.year),
       creator: credit,
@@ -249,7 +254,7 @@ export function createSchemaBuilder({ site, identity, projects, publicDir }) {
             "@type": "ListItem",
             position: i + 1,
             url: `${site}/work/${p.slug}`,
-            name: `${p.client}: ${p.project} (${p.role}, ${p.year})`,
+            name: `${clientAndProject(p)} (${p.role}, ${p.year})`,
           })),
         };
       }

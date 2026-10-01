@@ -1,4 +1,6 @@
-# Kimber Sykes — product brief
+# Kimber Sykes: product brief
+
+> **Updated 1 Oct 2026:** Google Cloud Summit London 2024, 2025 and 2026 are all credited Senior Production Manager. The live data in `data/projects.json` is the source of truth for credits; this brief is the original reference.
 
 **Status:** Site deployed at [kimbersykes.com](https://kimbersykes.com). For operations and content updates, see [docs/README.md](README.md).
 
@@ -96,7 +98,7 @@ The site is not a showreel platform. It is a professional positioning tool that 
    - Second horizontal marquee beneath Brands, same motion pattern, agency marks only
    - Order follows `data/agencies.json` (Wonder, Jack Morton, Amplify, INVNT, Imagination, Octagon, Pulse Group, BMF, Curiious, AGB Events, Yakusan, Emotive, We Are Listen, Exposure, K&K Productions, Bacchus, Blondefish)
 
-5. **Featured Work** (3–4 cards)
+5. **Featured Work** (3 to 4 cards)
    - Hand-curated via `data/featured.json`, not auto-generated
    - Current set: Netflix Stranger Things, Google Cloud Summit 2025, Canva Studio, Geely Auto
    - Each card: full-bleed project image, client name, role, year
@@ -205,7 +207,7 @@ Priority tier (lead with these):
   - Client
   - Year
   - Location
-- Body copy: 2–3 paragraphs describing the project, Kimber's specific contribution, and scale/complexity. See Section 7 for copy.
+- Body copy: 2 to 3 paragraphs describing the project, Kimber's specific contribution, and scale/complexity. See Section 7 for copy.
 - Photo gallery: masonry or grid of additional project images
 - Bottom navigation: ← Previous Project / Next Project →
 
@@ -440,7 +442,7 @@ Priority tier (lead with these):
 
 > Kimber Sykes is a freelance Executive Producer, Production Manager, and Technical Director with over 20 years of experience delivering large-scale live events across three distinct disciplines: B2B technology conferences, consumer brand activations, and major sports sponsorship programmes.
 >
-> In the B2B tech space, Kimber has served as Production Manager for Google Cloud Summit, managing nine simultaneous conference rooms across a 4,000-attendee event, and as Technical Director for Xerocon Nashville. In consumer brand activations, credits include Production Director for the Netflix Stranger Things immersive fan experience in Paris, Executive Producer for the Canva Studio pop-up in London, and Senior Producer for the Google Pixel 3 Curiosity Rooms on Regent Street. In sports, Kimber has delivered global sponsorship programmes for Emirates across the ATP Tennis Tour (London, Paris, Barcelona, New York, Indian Wells, Rome), PGA Golf (Dubai, Kuala Lumpur, Shanghai), the Cricket World Cup (Australia, New Zealand), and the Commonwealth Games (Glasgow), as well as activations for Mastercard at the UEFA Champions League Final and the British Open Golf, and for Visa at the FIFA Women's World Cup.
+> In the B2B tech space, Kimber has served as Senior Production Manager for Google Cloud Summit London at Tobacco Dock (2024 to 2026), managing up to nine simultaneous conference rooms for 2,500+ attendees, and as Technical Director for Xerocon Nashville. In consumer brand activations, credits include Production Director for the Netflix Stranger Things immersive fan experience in Paris, Executive Producer for the Canva Studio pop-up in London, and Senior Producer for the Google Pixel 3 Curiosity Rooms on Regent Street. In sports, Kimber has delivered global sponsorship programmes for Emirates across the ATP Tennis Tour (London, Paris, Barcelona, New York, Indian Wells, Rome), PGA Golf (Dubai, Kuala Lumpur, Shanghai), the Cricket World Cup (Australia, New Zealand), and the Commonwealth Games (Glasgow), as well as activations for Mastercard at the UEFA Champions League Final and the British Open Golf, and for Visa at the FIFA Women's World Cup.
 >
 > Based in London and available for contracts globally, Kimber has worked with some of the world's most recognised brands, including Google, Netflix, Canva, Mastercard, Visa, Emirates, Samsung, and Stella McCartney, through leading experiential agencies including Wonder, Amplify, Jack Morton, INVNT, Octagon, and Pulse Group. With a track record spanning the UK, Europe, Australia, the USA, the Middle East, and Asia, Kimber brings the operational rigour of large-scale conference production together with the creative problem-solving of high-profile consumer experience work and the logistical complexity of touring global sports programmes.
 
@@ -518,7 +520,7 @@ All content is managed via JSON files in `/data/`. Developer builds components t
   map.json            ← Country + project data for interactive map
   clients.json        ← Client logo list
   agencies.json       ← Agency logo list
-  featured.json       ← 3–4 hand-picked home page featured projects
+  featured.json       ← 3 to 4 hand-picked home page featured projects
 ```
 
 ### projects.json structure:
@@ -528,7 +530,7 @@ All content is managed via JSON files in `/data/`. Developer builds components t
   "client": "Google",
   "project": "Google Cloud Summit 2025",
   "agency": "Wonder",
-  "role": "Production Manager",
+  "role": "Senior Production Manager",
   "year": 2025,
   "location": "London, UK",
   "sector": "B2B Tech",
@@ -547,10 +549,10 @@ All content is managed via JSON files in `/data/`. Developer builds components t
 
 Copy for each project page, drawn from portfolio and CV. Kimber to review and expand.
 
-**Google Cloud Summit 2025**: Production Manager, Wonder, London, 2025
+**Google Cloud Summit London 2025**: Senior Production Manager, Wonder, London, 2025
 For London Summit 2025, Kimber led production management and technical delivery across nine live conference rooms operating in parallel. The role sat at the intersection of content, technical infrastructure, and on-the-ground delivery, ensuring every room ran safely, smoothly, and on schedule. Responsibilities included coordinating AV, staging, show flow, and crew across all nine spaces, managing keynotes, panels, breakouts, and workshops. Alongside room ownership, Kimber provided floating production support across the event by resolving technical faults, supporting speakers and moderators, and adapting rooms to last-minute changes.
 
-**Google Cloud Summit 2024**: Technical, Wonder, London, 2024
+**Google Cloud Summit London 2024**: Senior Production Manager, Wonder, London, 2024
 The event at Tobacco Dock brought together 4,000 attendees over two days to explore the latest advancements in generative AI, security, cloud data, and collaboration technologies. Kimber led technical delivery in the experiential areas, managing all audio-visual elements and ensuring seamless execution across AI technology activations and 60+ exhibitor stands.
 
 **Netflix, Stranger Things**: Production Director, Amplify, Paris, 2022
@@ -589,7 +591,7 @@ An exclusive after-party for MTV at the iconic Wembley Theatre, welcoming VIP gu
 **Emirates Aviation Experience**: Project Lead, Pulse Group, London, 2014
 A 500sqm two-floor interactive museum at Greenwich Peninsula, featuring four flight simulators, a large-scale A380 nose cone, a Rolls-Royce Trent 900 engine, and a 360° hologram. Kimber led a handbuilt team of 40 on a £7 million project.
 
-**Emirates Sports Sponsorship**: Senior Producer, Pulse Group, Global, 2012–2015
+**Emirates Sports Sponsorship**: Senior Producer, Pulse Group, Global, 2012 to 2015
 A multi-year global sports sponsorship programme spanning some of the world's most prestigious tournaments. ATP Tennis Tour activations across Wimbledon (London), Roland Garros (Paris), Barcelona Open, US Open (New York), Indian Wells, and Rome. PGA Golf activations in Dubai, Kuala Lumpur, and Shanghai. On-the-ground delivery for the Cricket World Cup across Australia and New Zealand, and the Commonwealth Games in Glasgow. Each activation was developed as a portable touring kit, with Kimber producing between 10 and 18 events per calendar year.
 
 **NTT Data, British Open**: Senior Producer, Pulse Group, London, 2013
@@ -691,7 +693,7 @@ Recommended image specs:
 ## 9. Design Direction
 
 - **Theme**: Dark. Near-black background, white/off-white body text
-- **Accent**: Single accent colour throughout. Developer to propose 2–3 options for Kimber to choose.
+- **Accent**: Single accent colour throughout. Developer to propose 2 to 3 options for Kimber to choose.
 - **Typography**: Bold, distinctive display font for headings. Refined, highly legible body font. Not Inter, Roboto, or Arial.
 - **Icons**: Lucide React throughout
 - **Motion**: Subtle. Page load fade-ins, hover states on cards, smooth map interactions. Nothing that delays content or feels gratuitous.
@@ -714,13 +716,13 @@ Recommended image specs:
 
 ## 11. Ongoing maintenance
 
-1. **Content:** edit JSON in `data/` — see [CONTENT.md](CONTENT.md)
-2. **Images:** `public/images/work/[slug]/` — hero + numbered gallery JPGs
+1. **Content:** edit JSON in `data/`: see [CONTENT.md](CONTENT.md)
+2. **Images:** `public/images/work/[slug]/`: hero + numbered gallery JPGs
 3. **Logos:** `npm run sync:logos` / `sync:agency-logos` and update `clients.json` / `agencies.json`
-4. **Deploy:** `npm run pages:deploy` — see [DEPLOY.md](DEPLOY.md)
+4. **Deploy:** `npm run pages:deploy`: see [DEPLOY.md](DEPLOY.md)
 5. **Copy gaps:** search `projects.json` for `[Kimber to add description]` and fill in
-6. **Email signature:** `email-signature/` — [DEPLOY.md](../email-signature/DEPLOY.md)
+6. **Email signature:** `email-signature/`: [DEPLOY.md](../email-signature/DEPLOY.md)
 
 ---
 
-*Brief version 1.0, May 2026 — archived as reference; site is live.*
+*Brief version 1.0, May 2026, archived as reference; site is live.*
