@@ -1,4 +1,4 @@
-# Kimber Sykes — portfolio site
+# Kimber Sykes: portfolio site
 
 Next.js static portfolio for **[kimbersykes.com](https://kimbersykes.com)**: work gallery, clients and agencies, world map, about, and contact. Content is JSON in `data/`.
 

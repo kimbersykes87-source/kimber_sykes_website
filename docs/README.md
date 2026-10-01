@@ -1,6 +1,6 @@
 # Documentation
 
-Production site: **[kimbersykes.com](https://kimbersykes.com)** — static Next.js on Cloudflare Pages, with Workers for large assets, crawler logging, and weekly reports.
+Production site: **[kimbersykes.com](https://kimbersykes.com)**: static Next.js on Cloudflare Pages, with Workers for large assets, crawler logging, and weekly reports.
 
 | Guide | What it covers |
 |-------|----------------|
@@ -9,6 +9,8 @@ Production site: **[kimbersykes.com](https://kimbersykes.com)** — static Next.
 | [LOGOS.md](LOGOS.md) | Client & agency logos (see **Changelog, 24 May 2026**) |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | How Pages, Workers, R2, D1, and Pages Functions fit together |
 | [brief.md](brief.md) | Original product brief (reference) |
+| [../site-audit.md](../site-audit.md) | SEO and AI answer engine audit, decisions and change log (29 Sep to 1 Oct 2026) |
+| [../site-audit-2.md](../site-audit-2.md) | BEFORE vs AFTER scored audit, follow-up changes and the sourced facts applied (1 Oct 2026) |
 
 ## Repo layout
 

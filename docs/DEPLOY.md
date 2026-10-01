@@ -6,7 +6,7 @@
 
 - Node.js 20+
 - `npm install`
-- [Wrangler](https://developers.cloudflare.com/workers/wrangler/) logged in: `npx wrangler login`
+- [Wrangler](https://developers.cloudflare.com/workers/wrangler/) logged in: `npx wrangler login`. Deploys run from Kimber's Windows machine, where Wrangler and GitHub are signed in; Claude sessions can build and commit but cannot deploy or push.
 - Cloudflare account with zone **kimbersykes.com**
 
 ## Environment variables
@@ -15,7 +15,7 @@ Copy [`.env.example`](../.env.example) to `.env.local` for local builds. For pro
 
 | Variable | Where | Purpose |
 |----------|--------|---------|
-| `NEXT_PUBLIC_SITE_URL` | Pages build | Canonical URL (`https://kimbersykes.com`) — sitemap, robots, JSON-LD |
+| `NEXT_PUBLIC_SITE_URL` | Pages build | Canonical URL (`https://kimbersykes.com`): sitemap, robots, JSON-LD |
 | `NEXT_PUBLIC_CF_WEB_ANALYTICS_TOKEN` | Pages build | Cloudflare Web Analytics beacon |
 | `NEXT_PUBLIC_PORTFOLIO_PDF_URL` | Pages build | Optional; defaults to assets worker URL when site URL is kimbersykes.com |
 | `KIMBER_GPS_WORKER_URL` | Pages **runtime** | `/api/kimber-now` GPS worker |
@@ -78,7 +78,7 @@ npx wrangler deploy --config workers/weekly-report/wrangler.toml
 ### crawler-logger
 
 - Routes: `kimbersykes.com/*`, `www.kimbersykes.com/*`
-- Set `PAGES_ORIGIN` to your **Pages `*.pages.dev` hostname** (e.g. `https://kimber-sykes-site.pages.dev`), **not** `kimbersykes.com` — the worker already runs on the custom domain; forwarding to the same host would loop.
+- Set `PAGES_ORIGIN` to your **Pages `*.pages.dev` hostname** (e.g. `https://kimber-sykes-site.pages.dev`), **not** `kimbersykes.com`: the worker already runs on the custom domain; forwarding to the same host would loop.
 
 ### D1 schema
 
@@ -101,10 +101,12 @@ If you recreate the database, update `database_id` in both worker `wrangler.toml
 ## Verify after deploy
 
 1. [https://kimbersykes.com](https://kimbersykes.com) loads
-2. `/work`, `/about`, `/where` — spot-check
-3. About page portfolio link opens the PDF on `assets.kimbersykes.com`
-4. `/api/kimber-now` returns JSON (Where page “Right Now”)
-5. Web Analytics shows pageviews after browsing the live site
+2. `/work`, `/about`, `/where`: spot-check
+3. A case study title names the client (e.g. `/work/aperol-spritz`), `/llms.txt` and `/llms-full.txt` return 200 as `text/plain`, and `/images/about/portrait.jpg` returns 200
+4. Optional: `curl -A "ClaudeBot/1.0" -I https://kimbersykes.com/work` returns 200
+5. About page portfolio link opens the PDF on `assets.kimbersykes.com`
+6. `/api/kimber-now` returns JSON (Where page “Right Now”)
+7. Web Analytics shows pageviews after browsing the live site
 
 ## Lighthouse (optional)
 
@@ -116,4 +118,4 @@ Run against the **production domain**, not `*.pages.dev` (preview sends `noindex
 
 ## What we do not use
 
-**`@cloudflare/next-on-pages`** — not needed. The site is a static export; edge logic lives in `workers/` and `functions/`.
+**`@cloudflare/next-on-pages`**: not needed. The site is a static export; edge logic lives in `workers/` and `functions/`.

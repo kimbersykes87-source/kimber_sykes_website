@@ -34,10 +34,22 @@ flowchart LR
 - **Build:** `npm run build` → static export in `out/`
 - **Deploy:** `npm run pages:deploy` (strips files ≥25 MiB before upload)
 - **Domain:** `kimbersykes.com` (and `www`)
-- **Config:** [`next.config.ts`](../next.config.ts) — `output: "export"`, unoptimized images
-- **Pages Function:** [`functions/api/kimber-now.ts`](../functions/api/kimber-now.ts) — `GET /api/kimber-now` for the **Where** page “Right Now” block (GPS proxy + geocoding). Env vars are set in **Pages → Settings → Environment variables** (not `NEXT_PUBLIC_*`).
+- **Config:** [`next.config.ts`](../next.config.ts): `output: "export"`, with a custom image loader ([`lib/image-loader.ts`](../lib/image-loader.ts)) that serves pre-generated WebP variants
+- **Pages Function:** [`functions/api/kimber-now.ts`](../functions/api/kimber-now.ts): `GET /api/kimber-now` for the **Where** page “Right Now” block (GPS proxy + geocoding). Env vars are set in **Pages → Settings → Environment variables** (not `NEXT_PUBLIC_*`).
 
-Static export only — no SSR. Dynamic behaviour at the edge uses **standalone Workers** or **Pages Functions**, not `@cloudflare/next-on-pages`.
+Static export only: no SSR. Dynamic behaviour at the edge uses **standalone Workers** or **Pages Functions**, not `@cloudflare/next-on-pages`.
+
+## Images and performance
+
+- `scripts/optimize-images.mjs` (prebuild and predev) writes 640, 1280 and 1920 px WebP variants of every photo in `public/images/work` and `public/images/about` to `public/images/_opt/` (gitignored). Originals stay for Open Graph and JSON-LD.
+- Case study heroes are preloaded with a responsive `imagesrcset`.
+- On `/work` the first two cards load with `priority` (they are above the fold on a phone and include the LCP image); the rest are lazy. Measured live on 1 Oct 2026, throttled mobile: LCP about 2.6 to 2.8 s (was 4.1 s).
+- Homepage marquee logos use `fetchPriority="low"` so they don't compete with the hero.
+
+## Structured data and AI files
+
+- JSON-LD `@graph` per page from `scripts/lib/schema-graph.mjs`, injected into `<head>` by `scripts/inject-json-ld-head.mjs` after the build. That script also writes `X-Robots-Tag: noindex` for the RSC `.txt` payloads into `out/_headers`.
+- `llms.txt` and `llms-full.txt` are generated before the build from the `data/` files and linked from every page with `<link rel="alternate" type="text/plain">`.
 
 ## Large portfolio PDF
 
@@ -62,7 +74,7 @@ Does not block traffic.
 
 ## Weekly email report
 
-[`workers/weekly-report`](../workers/weekly-report/) — cron Monday 08:00 UTC:
+[`workers/weekly-report`](../workers/weekly-report/): cron Monday 08:00 UTC:
 
 - Aggregates D1 `crawler_visits` + `human_visits` for the past 7 days
 - Sends HTML table email via Resend (`RESEND_API_KEY` secret), with week-on-week change colours
@@ -74,7 +86,7 @@ Does not block traffic.
 
 ## Email signature assets
 
-HTML and icons live in [`email-signature/`](../email-signature/). Served from R2 under the `email-signature/` prefix via the same **assets Worker** (`/email-signature/*`). Deploy with `npm run signature:deploy` — see [email-signature/DEPLOY.md](../email-signature/DEPLOY.md).
+HTML and icons live in [`email-signature/`](../email-signature/). Served from R2 under the `email-signature/` prefix via the same **assets Worker** (`/email-signature/*`). Deploy with `npm run signature:deploy`: see [email-signature/DEPLOY.md](../email-signature/DEPLOY.md).
 
 ## Content
 

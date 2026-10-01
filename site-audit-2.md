@@ -23,7 +23,7 @@ Audited 1 October 2026. No code was changed. This file is the only addition to t
 
   The About page, llms.txt, llms-full.txt and the CV already matched these dates. The conflicting note in `site-audit.md` has been corrected. Question 2 is closed.
 
-### Changes made (code)
+### Changes made (code, documentation updated 1 Oct 2026)
 1. **Portrait tracked in git.** In `.gitignore`, line 14 changed from `portrait.jpg` to `/portrait.jpg`, so it only ignores a scratch file at the repo root. `public/images/about/portrait.jpg` is now tracked, so a clean build has the About portrait, the `og:image` and the schema image.
 2. **The client is named in every case study title, H1, `/work` tile and schema name.** Only the `project` field changed. Credits, URLs and slugs did not change. Old to new:
 
@@ -66,7 +66,9 @@ Audited 1 October 2026. No code was changed. This file is the only addition to t
 
    The remaining time on `/work` is bandwidth shared between the first card (a 1280 px WebP that a DPR 3 phone requests), fonts and the framework JavaScript.
 
-**Verification:** clean build passes; no em or en dashes in any built page, llms file or sitemap; every JSON-LD `@id` resolves; no doubled client names anywhere in the output. Not deployed yet.
+**Verification:** clean build passes; no em or en dashes in any built page, llms file or sitemap; every JSON-LD `@id` resolves; no doubled client names anywhere in the output.
+
+**Released 1 Oct 2026:** commit `2fc83aa` on master, deployed to Cloudflare Pages with `npm run pages:deploy` and pushed to GitHub by Kimber. Live checks the same day: every key URL (pages, both llms files, the portrait) returns 200 to ClaudeBot; titles and H1s name the client; the Pixel 3 Outcome, Xerocon Nashville "more than 1,000" and Battlefront II "64 consoles" are live; the About `og:image` carries its dimensions; no dashes on the homepage. **Live `/work` mobile LCP: 2.6 to 2.8 s** (3 runs, same throttling as 3.7), down from 4.1 s.
 
 ### Measured results found in public sources (approved by Kimber and applied, 1 Oct 2026)
 Kimber approved every fact below. All are now in `data/projects.json` and flow through to the pages, llms.txt, llms-full.txt and the schema. Each fact is worded as its source states it.
