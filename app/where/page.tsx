@@ -3,12 +3,12 @@ import { DeliveryLocationsList } from "@/components/DeliveryLocationsList";
 import { KimberRightNow } from "@/components/KimberRightNow";
 import { WorldMap } from "@/components/WorldMap";
 import { Container, Section } from "@/components/layout";
-import { buildPageMetadata } from "@/lib/seo";
+import { mapCountries } from "@/lib/data";
+import { buildPageMetadata, pageTitle } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Global Project Locations — 18 Countries",
-  description:
-    "Countries and cities where Kimber Sykes has delivered events as Executive Producer, Production Manager, or Technical Director across Europe, APAC, and the Americas — including Toronto, Vancouver, Montreal, and Barcelona.",
+  title: pageTitle(`Where I Have Worked: ${mapCountries.length} Countries`),
+  description: `Where Kimber Sykes has delivered events on site: ${mapCountries.length} countries across Europe, the Middle East, Africa, Asia-Pacific and the Americas.`,
   path: "/where",
 });
 

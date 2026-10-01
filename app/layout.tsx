@@ -4,7 +4,7 @@ import "./globals.css";
 import { CloudflareAnalytics } from "@/components/CloudflareAnalytics";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { DEFAULT_OG_IMAGE, HOME_DESCRIPTION, HOME_TITLE } from "@/lib/seo";
+import { DEFAULT_OG_IMAGE, DEFAULT_OG_IMAGE_ALT, HOME_DESCRIPTION, HOME_TITLE, SITE_NAME } from "@/lib/seo";
 import { getSiteUrl } from "@/lib/site";
 
 const syne = Syne({
@@ -27,26 +27,28 @@ export const metadata: Metadata = {
     template: "%s | Kimber Sykes",
   },
   description: HOME_DESCRIPTION,
-  robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "en_GB",
-    siteName: "Kimber Sykes",
-    images: [{ url: DEFAULT_OG_IMAGE, alt: "Kimber Sykes — Executive Producer" }],
+    siteName: SITE_NAME,
+    images: [{ url: DEFAULT_OG_IMAGE, alt: DEFAULT_OG_IMAGE_ALT }],
   },
   twitter: {
     card: "summary_large_image",
   },
   alternates: {
     types: {
-      "text/plain": [{ url: "/llms.txt", title: "LLM site summary" }],
+      "text/plain": [
+        { url: "/llms.txt", title: "LLM site summary" },
+        { url: "/llms-full.txt", title: "LLM full text" },
+      ],
     },
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
+    <html lang="en-GB" className={`${syne.variable} ${dmSans.variable}`}>
       <body className="min-h-screen antialiased">
         <Header />
         <main id="main" className="pt-14 sm:pt-16">

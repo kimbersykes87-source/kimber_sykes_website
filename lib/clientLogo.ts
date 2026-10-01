@@ -7,6 +7,7 @@ const ID_BY_CLIENT_LABEL: Record<string, string> = {
   "johnson & johnson": "johnson-johnson",
   "stella mccartney": "stella-mccartney",
   "ea sports": "ea-sports",
+  "electronic arts": "ea-sports",
   "ntt data": "ntt-data",
   "tourism nt": "tourism-nt",
   "destination nsw": "destination-nsw",

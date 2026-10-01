@@ -12,6 +12,15 @@ export type Project = {
   heroImage: string;
   gallery: string[];
   body: string;
+  /** ISO date the case study copy was last materially updated (sitemap lastmod, visible date). */
+  updated?: string;
+  /** Structured case study copy (Phase 2 batch 5). When present it replaces `body` on the page. */
+  summary?: string;
+  brief?: string;
+  scale?: string[];
+  responsibilities?: string[];
+  highlights?: string[];
+  outcome?: string;
 };
 
 export type MapProjectRow = {

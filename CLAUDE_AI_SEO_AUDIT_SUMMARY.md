@@ -1,3 +1,5 @@
+> **Superseded (29 Sep 2026):** see `site-audit.md` for the current audit and change log. JSON-LD now comes from `scripts/lib/schema-graph.mjs` (identity in `data/site.json`); `lib/json-ld.ts` and `lib/llms-txt.ts` were removed.
+
 # Kimber Sykes — AI SEO Audit Summary (for Claude)
 
 **Site:** https://kimbersykes.com | **Goal:** AI agents can fetch, parse, and cite the site for freelance EP hiring.  
@@ -25,7 +27,7 @@ Full AI-SEO upgrade requested: pre-rendered HTML, robots/sitemap/llms.txt, JSON-
 |---|--------|--------------|
 | 1 | YAML `---` / `meta-description:` in body | Real `<meta>` + `<title>` in `<head>` only |
 | 2 | Doubled case study titles | `[Project], [Role] \| Kimber Sykes` |
-| 3 | GCS 2024 role = "Technical" | **Technical Director** everywhere |
+| 3 | GCS 2024 role = "Technical" | Keep **"Technical"** exactly as written (deliberate credit) |
 | 4 | No JSON-LD | Person (home); CreativeWork (each case study) |
 | 5 | robots, sitemap, llms.txt | Bot allows + full llms template |
 | 6 | `/where` map-only | Text: "Countries with on-site project delivery" |

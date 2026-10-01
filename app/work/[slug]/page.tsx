@@ -3,12 +3,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container, Section } from "@/components/layout";
-import { excerptFirstSentence, splitBodyParagraphs } from "@/lib/body";
+import { splitBodyParagraphs } from "@/lib/body";
 import { getAdjacentProjects, getProjectBySlug, projects } from "@/lib/data";
 import { getProjectGalleryFromPublic } from "@/lib/gallery";
-import { caseStudyPageTitle } from "@/lib/case-study-meta";
+import { caseStudyDescription, caseStudyHeroAlt, caseStudyPageTitle, clientAndProject } from "@/lib/case-study-meta";
+import type { Project } from "@/lib/types";
+import { IDENTITY } from "@/lib/identity";
 import { buildPageMetadata } from "@/lib/seo";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { CaseStudySections } from "@/components/CaseStudySections";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -21,26 +24,19 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const p = getProjectBySlug(slug);
   if (!p) return {};
   const title = caseStudyPageTitle(p);
-  const description = excerptFirstSentence(p.body);
+  const description = caseStudyDescription(p);
   return buildPageMetadata({
     title,
     description,
     path: `/work/${p.slug}`,
     ogType: "article",
     ogImage: p.heroImage,
+    ogImageAlt: caseStudyHeroAlt(p),
   });
 }
 
-function projectHeroAlt(project: { client: string; project: string; role: string; location: string }): string {
-  return `${project.client} ${project.project} — ${project.role} at ${project.location}`;
-}
-
-function projectGalleryAlt(
-  project: { client: string; project: string },
-  index: number,
-  total: number,
-): string {
-  return `${project.client} ${project.project} — event photograph ${index + 1} of ${total}`;
+function projectGalleryAlt(project: Project, index: number, total: number): string {
+  return `${clientAndProject(project)}, event photograph ${index + 1} of ${total}`;
 }
 
 export default async function ProjectPage(props: Props) {
@@ -51,7 +47,8 @@ export default async function ProjectPage(props: Props) {
   const { prev, next } = getAdjacentProjects(slug);
   const paras = splitBodyParagraphs(project.body);
   const gallery = (await getProjectGalleryFromPublic(project.slug)) ?? project.gallery;
-  const heroAlt = projectHeroAlt(project);
+  const heroAlt = caseStudyHeroAlt(project);
+  const relatedServices = IDENTITY.services.filter((svc) => svc.caseStudies.includes(project.slug));
 
   return (
     <>
@@ -71,6 +68,9 @@ export default async function ProjectPage(props: Props) {
             <header className="max-w-3xl">
               <p className="text-sm font-medium text-[var(--color-accent)]">{project.client}</p>
               <h1 className="font-display mt-2 text-3xl font-bold sm:text-4xl">{project.project}</h1>
+              {project.summary ? (
+                <p className="mt-6 text-lg leading-relaxed text-[var(--color-foreground)]">{project.summary}</p>
+              ) : null}
               <dl className="mt-8 grid gap-3 sm:grid-cols-2 border-t border-white/10 pt-8 text-sm">
                 <div>
                   <dt className="text-[var(--color-muted)]">Role</dt>
@@ -95,13 +95,31 @@ export default async function ProjectPage(props: Props) {
               </dl>
             </header>
 
-            <div className="prose prose-invert mt-12 max-w-3xl space-y-4 text-[var(--color-foreground)]">
-              {paras.map((para, i) => (
-                <p key={i} className="leading-relaxed text-[var(--color-muted)]">
-                  {para}
-                </p>
-              ))}
-            </div>
+            {project.summary ? (
+              <CaseStudySections project={project} />
+            ) : (
+              <div className="prose prose-invert mt-12 max-w-3xl space-y-4 text-[var(--color-foreground)]">
+                {paras.map((para, i) => (
+                  <p key={i} className="leading-relaxed text-[var(--color-muted)]">
+                    {para}
+                  </p>
+                ))}
+              </div>
+            )}
+
+            {relatedServices.length > 0 ? (
+              <p className="mt-10 max-w-3xl text-sm text-[var(--color-muted)]">
+                Related service:{" "}
+                {relatedServices.map((svc, i) => (
+                  <span key={svc.id}>
+                    {i > 0 ? ", " : null}
+                    <Link href={`/about#${svc.id}`} className="text-[var(--color-accent)] hover:underline">
+                      {svc.name}
+                    </Link>
+                  </span>
+                ))}
+              </p>
+            ) : null}
 
             {gallery.length > 0 ? (
               <div className="mt-16">

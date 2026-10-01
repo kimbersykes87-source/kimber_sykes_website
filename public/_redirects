@@ -1,2 +1,7 @@
 # Canonical host: www → apex (Pages; www also 301s in crawler-logger when Worker route is active)
 https://www.kimbersykes.com/* https://kimbersykes.com/:splat 301
+
+# Old site URLs still listed in search results (found 1 Oct 2026)
+/rizler /work/rizla 301
+/aqua-rugby-australia /work/aqua-rugby 301
+/bbraun /clients 301

@@ -5,7 +5,7 @@ import { useEffect, useRef, type ReactNode } from "react";
 /**
  * Seamless marquee: SSR outputs one horizontal strip; on the client we clone it *beside*
  * the original inside the same animated row (keyframes use translateX(-50%)).
- * Appending to the overflow-hidden parent stacks rows — never do that.
+ * Appending to the overflow-hidden parent stacks rows; never do that.
  */
 export function LogoMarqueeTrack({ children }: { children: ReactNode }) {
   const stripRef = useRef<HTMLDivElement>(null);

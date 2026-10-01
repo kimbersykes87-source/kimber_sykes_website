@@ -1,0 +1,157 @@
+{
+  "name": "Kimber Sykes",
+  "businessName": "Kimber Sykes",
+  "businessType": "Sole trader",
+  "roles": [
+    "Executive Producer",
+    "Production Manager",
+    "Technical Director"
+  ],
+  "rolesLine": "Executive Producer, Production Manager and Technical Director",
+  "oneLiner": "Kimber Sykes is a London-based freelance Executive Producer, Production Manager and Technical Director, delivering large-scale corporate events worldwide for agencies and brands across B2B tech conferences, consumer brand activations and sports sponsorship programmes.",
+  "shortLine": "Freelance Executive Producer, Production Manager and Technical Director. Based in London, working worldwide.",
+  "metaDescription": "London-based freelance Executive Producer, Production Manager and Technical Director for tech conferences, brand activations and sports sponsorship, worldwide.",
+  "yearsExperience": 23,
+  "baseLocality": "London",
+  "baseCountryCode": "GB",
+  "baseCountryName": "United Kingdom",
+  "areaServed": "Worldwide",
+  "portrait": {
+    "src": "/images/about/portrait.jpg"
+  },
+  "sameAs": [
+    "https://uk.linkedin.com/in/kimber-sykes-33400326"
+  ],
+  "contact": {
+    "email": "kimber@kimbersykes.com",
+    "phoneUk": "+447553673133",
+    "phoneUkDisplay": "+44 755 367 3133",
+    "phoneUs": "+13235362611",
+    "phoneUsDisplay": "+1 323 536 2611"
+  },
+  "knowsAbout": [
+    "Executive production",
+    "Event production management",
+    "Technical direction",
+    "B2B technology conferences",
+    "Consumer brand activations",
+    "Experiential marketing",
+    "Sports sponsorship activations",
+    "Live event production",
+    "Audio-visual technical delivery",
+    "Show flow and run of show",
+    "Exhibition floor management",
+    "Touring event programmes"
+  ],
+  "sectors": {
+    "B2B Tech": "B2B tech conferences",
+    "Consumer": "Consumer brand activations",
+    "Sports": "Sports sponsorship programmes",
+    "Other": "Other projects"
+  },
+  "career": [
+    {
+      "years": "2015 to present",
+      "organisation": "Freelance",
+      "place": "Worldwide",
+      "role": "Executive Producer, Senior Production Manager, Technical Director and Project Lead",
+      "summary": "Engaged by agencies including Wonder, INVNT, Jack Morton, Amplify, Curiious, Octagon, Imagination and BMF to lead production on conferences, brand activations and sports sponsorship programmes."
+    },
+    {
+      "years": "2012 to 2015",
+      "organisation": "Pulse Group",
+      "place": "London",
+      "role": "Senior Producer and Account Director",
+      "summary": "Project led the Emirates Aviation Experience at Greenwich Peninsula with a hand-built team of 40 (c. GBP 7 million), and worked across Emirates' global sports sponsorship programme. Clients included Emirates, NTT Data, dnata, Bentley, DP World, Intercontinental Hotels and Jumeirah Hotels."
+    },
+    {
+      "years": "2011",
+      "organisation": "Exposure",
+      "place": "London",
+      "role": "Producer",
+      "summary": "Produced the live programme for Rizlab, Experiments in Music, for Rizla."
+    },
+    {
+      "years": "2008 to 2011",
+      "organisation": "t7 event solutions",
+      "place": "Sydney",
+      "role": "Producer",
+      "summary": "Clients included American Express, B Braun, CBA, Jaguar, Pfizer, Sony and Telstra. Nominated for Meeting and Event Association Australian Young Professional of the Year 2010."
+    },
+    {
+      "years": "2003 to 2007",
+      "organisation": "Everest Event Enterprises",
+      "place": "Sydney",
+      "role": "Principal",
+      "summary": "Founded a small business providing staffing support for the events industry."
+    }
+  ],
+  "aboutUpdated": "2026-10-01",
+  "services": [
+    {
+      "id": "executive-production",
+      "name": "Executive Production",
+      "role": "Executive Producer",
+      "intro": "As Executive Producer, Kimber owns a project for the agency from brief to derig: the client relationship, budget, supplier network and freelance delivery team. He delivered Canva Studio in London from concept to delivery in six weeks.",
+      "included": [
+        "Client and agency stakeholder management",
+        "Budget ownership and cost planning",
+        "Supplier sourcing and procurement",
+        "Building and leading freelance production teams",
+        "Delivery to compressed timelines",
+        "Live event execution"
+      ],
+      "typical": "Brand and product launches, pop-ups and experiential activations, innovation and sustainability exhibits, and sports sponsorship activations.",
+      "caseStudies": [
+        "canva-studio",
+        "geely-auto",
+        "stella-mccartney-cop28",
+        "yoto-playdate-london-2026",
+        "visa-everywhere",
+        "aperol-spritz"
+      ]
+    },
+    {
+      "id": "production-management",
+      "name": "Production Management",
+      "role": "Senior Production Manager",
+      "intro": "As Senior Production Manager, Kimber runs production on site across large multi-room conferences, covering AV, staging, show flow, crew and contractors. He has led production on Google Cloud Summit London at Tobacco Dock for three consecutive years, with 2,500+ attendees and up to nine rooms running in parallel.",
+      "included": [
+        "Production schedules, show flow and run of show",
+        "AV, staging and room coordination",
+        "Crew and contractor management, including bespoke sign-in software for 1,000+ contractors",
+        "Speaker and moderator support",
+        "Live troubleshooting and room changeovers",
+        "Technical pre-production"
+      ],
+      "typical": "Multi-room B2B conferences and summits, exhibitions and immersive fan experiences.",
+      "caseStudies": [
+        "google-cloud-summit-2026",
+        "google-cloud-summit-2025",
+        "google-cloud-summit-2024",
+        "netflix-stranger-things"
+      ]
+    },
+    {
+      "id": "technical-direction",
+      "name": "Technical Direction",
+      "role": "Technical Director",
+      "intro": "As Technical Director, Kimber keeps stages, broadcast feeds, AV and exhibition floors technically aligned and on schedule, working between the agency's creative team and its technical suppliers. Recent work includes Xerocon in Nashville, London and Denver for INVNT.",
+      "included": [
+        "Technical pre-production and design review",
+        "Stage, AV and broadcast coordination",
+        "Exhibition floor installation",
+        "On-site supplier and crew coordination",
+        "Technical support for overseas production teams"
+      ],
+      "typical": "Flagship conferences with multiple stages and broadcast, exhibition floors, and technology-led installations and projection.",
+      "caseStudies": [
+        "xerocon-denver-2026",
+        "xerocon-london-2026",
+        "xerocon-nashville",
+        "microsoft-lcf",
+        "expo-2020"
+      ]
+    }
+  ]
+}

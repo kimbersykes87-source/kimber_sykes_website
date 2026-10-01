@@ -1,3 +1,5 @@
+> **Superseded (29 Sep 2026):** see `site-audit.md` for the current audit and change log. JSON-LD now comes from `scripts/lib/schema-graph.mjs` (identity in `data/site.json`); `lib/json-ld.ts` and `lib/llms-txt.ts` were removed.
+
 # AI SEO audit notes — kimbersykes.com
 
 Last updated: May 2026

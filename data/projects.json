@@ -2,7 +2,7 @@
   {
     "slug": "google-cloud-summit-2026",
     "client": "Google Cloud",
-    "project": "Google Cloud Summit 2026",
+    "project": "Google Cloud Summit London 2026",
     "agency": "Wonder",
     "role": "Senior Production Manager",
     "year": 2026,
@@ -21,7 +21,26 @@
       "/images/work/google-cloud-summit-2026/09.jpg",
       "/images/work/google-cloud-summit-2026/10.jpg"
     ],
-    "body": "Google Cloud Summit 2026 returned to Tobacco Dock in London for a third consecutive year under Kimber's production management, spreading across the venue's brick-vaulted rooms and dockside courtyards to bring Google Cloud's UK customer and partner community together across generative AI, infrastructure, security, and business transformation content, headlined by a Formula E AI Experience and a hands-on AI Playground activation zone.\n\nAs Senior Production Manager, Kimber combined heavyweight technical pre-production, including computational geometry for the bespoke AI Playground Drone Arena, bespoke crew sign in and check in software for over 1,000 contractors, and rebuilt kiosk signage animations, with on-the-ground delivery."
+    "body": "Google Cloud Summit London 2026 returned to Tobacco Dock for a third consecutive year under Kimber's production management, spreading across the venue's brick-vaulted rooms and dockside courtyards to bring 2,500+ members of Google Cloud's UK customer and partner community together across generative AI, infrastructure, security, and business transformation content, headlined by a Formula E AI Experience and a hands-on AI Playground activation zone.\n\nAs Senior Production Manager, Kimber combined heavyweight technical pre-production, including computational geometry for the bespoke AI Playground Drone Arena, bespoke crew sign in and check in software for over 1,000 contractors, and rebuilt kiosk signage animations, with on-the-ground delivery.",
+    "summary": "Senior Production Manager for Wonder on Google Cloud Summit London 2026 at Tobacco Dock, Google Cloud's UK conference for 2,500+ attendees.",
+    "brief": "Google Cloud Summit London brings Google Cloud's UK customer and partner community together for content on generative AI, infrastructure, security and business transformation. 2026 was the third consecutive year the summit ran at Tobacco Dock under Kimber's production management.",
+    "scale": [
+      "2,500+ attendees",
+      "Spread across Tobacco Dock's brick-vaulted rooms and dockside courtyards",
+      "Headline features: a Formula E AI Experience and a hands-on AI Playground activation zone",
+      "More than 1,000 contractors on site"
+    ],
+    "responsibilities": [
+      "Senior Production Manager for the agency, Wonder",
+      "Technical pre-production for the show",
+      "On-the-ground production delivery across the venue"
+    ],
+    "highlights": [
+      "Computational geometry for the bespoke AI Playground Drone Arena",
+      "Bespoke crew sign-in and check-in software for more than 1,000 contractors",
+      "Rebuilt animations for the kiosk signage"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "xerocon-london-2026",
@@ -41,7 +60,25 @@
       "/images/work/xerocon-london-2026/05.jpg",
       "/images/work/xerocon-london-2026/06.jpg"
     ],
-    "body": "Xerocon London is Xero's flagship UK and Europe conference for the accounting and bookkeeping community, staged at Olympia London over two days in July 2026 for several thousand delegates across keynotes, breakout stages, and an exhibitor floor built around playful, branded activations.\n\nAs Technical Director, Kimber provided technical and production support across the show, keeping the main stage, partner stages, and exhibitor floor running to schedule alongside the wider production team."
+    "body": "Xerocon London is Xero's flagship UK and Europe conference for the accounting and bookkeeping community, staged at Olympia London over two days in July 2026 for several thousand delegates across keynotes, breakout stages, and an exhibitor floor built around playful, branded activations.\n\nAs Technical Director, Kimber provided technical and production support across the show, keeping the main stage, partner stages, and exhibitor floor running to schedule alongside the wider production team.",
+    "summary": "Technical Director for INVNT on Xerocon London 2026, Xero's UK and Europe conference for 2,200 delegates at Olympia London.",
+    "brief": "Xerocon London is Xero's flagship UK and Europe conference for the accounting and bookkeeping community, staged in the Grand Hall at Olympia London on 8 and 9 July 2026.",
+    "scale": [
+      "2,200 delegates from the UK and Europe over two days",
+      "Keynotes, breakout stages, and an exhibitor floor built around playful, branded activations",
+      "Four Discovery Stages running at once, using silent-conference headphones"
+    ],
+    "responsibilities": [
+      "Technical Director for the agency, INVNT",
+      "Technical and production support across the show",
+      "Kept the main stage, partner stages and exhibitor floor running to schedule alongside the wider production team"
+    ],
+    "updated": "2026-10-01",
+    "highlights": [
+      "A 70 m immersive LED environment",
+      "A 40 m indoor slide and a giant ball pit",
+      "Reusable scenic infrastructure shipped from Brisbane in two 20 ft containers rather than new fabrication"
+    ]
   },
   {
     "slug": "xerocon-denver-2026",
@@ -62,7 +99,20 @@
       "/images/work/xerocon-denver-2026/06.jpg",
       "/images/work/xerocon-denver-2026/07.jpg"
     ],
-    "body": "Xerocon Denver is Xero's flagship US conference for accounting and bookkeeping professionals, held at the Colorado Convention Center over two days in August 2026. The show spans a broadcast-equipped main stage, Discovery and partner stages, an exhibitor hall, podcast recording space, and a dedicated small-business-community room.\n\nAs Technical Director, Kimber directly supported the team that kept every stage, broadcast feed, and exhibitor element aligned across the two-day show, coordinating a crew spanning content and AV through to the partner-stage teams."
+    "body": "Xerocon Denver is Xero's flagship US conference for accounting and bookkeeping professionals, held at the Colorado Convention Center over two days in August 2026. The show spans a broadcast-equipped main stage, Discovery and partner stages, an exhibitor hall, podcast recording space, and a dedicated small-business-community room.\n\nAs Technical Director, Kimber directly supported the team that kept every stage, broadcast feed, and exhibitor element aligned across the two-day show, coordinating a crew spanning content and AV through to the partner-stage teams.",
+    "summary": "Technical Director for INVNT on Xerocon Denver 2026, Xero's US conference at the Colorado Convention Center.",
+    "brief": "Xerocon Denver is Xero's flagship US conference for accounting and bookkeeping professionals, held at the Colorado Convention Center on 19 and 20 August 2026.",
+    "scale": [
+      "Two days at the Colorado Convention Center, 19 and 20 August 2026",
+      "A broadcast-equipped main stage plus Supercharge, Discovery, App Spotlight and partner stages",
+      "An exhibitor hall, podcast recording space and a dedicated small-business-community room"
+    ],
+    "responsibilities": [
+      "Technical Director for the agency, INVNT",
+      "Directly supported the team that kept every stage, broadcast feed and exhibitor element aligned across the two days",
+      "Coordinated a crew spanning content and AV through to the partner-stage teams"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "yoto-playdate-london-2026",
@@ -83,14 +133,26 @@
       "/images/work/yoto-playdate-london-2026/06.jpg",
       "/images/work/yoto-playdate-london-2026/07.jpg"
     ],
-    "body": "Yoto PlayDate London 2026 was a brand experience event for the children's audio technology company Yoto, staged at the brand's London home to bring its product roadmap and community programmes to life for an invited audience.\n\nAs Executive Producer, working with Akcelo, Kimber led pre-production on the show, including cost planning and supplier procurement for a giant, fully-lit scale replica of the Yoto Player built as the event's centrepiece installation. With Kimber unavailable for the live dates, he built and contracted a trusted freelance delivery team to carry the project through fabrication, installation, and on-site delivery."
+    "body": "Yoto PlayDate London 2026 was a brand experience event for the children's audio technology company Yoto, staged at the brand's London home to bring its product roadmap and community programmes to life for an invited audience.\n\nAs Executive Producer, working with Akcelo, Kimber led pre-production on the show, including cost planning and supplier procurement for a giant, fully-lit scale replica of the Yoto Player built as the event's centrepiece installation. With Kimber unavailable for the live dates, he built and contracted a trusted freelance delivery team to carry the project through fabrication, installation, and on-site delivery.",
+    "summary": "Executive Producer for Akcelo on Yoto PlayDate London 2026, a brand experience event at Yoto's London home.",
+    "brief": "Yoto PlayDate London 2026 was a brand experience event for the children's audio technology company Yoto, bringing its product roadmap and community programmes to life for an invited audience.",
+    "scale": [
+      "An invited audience at the brand's London home",
+      "A centrepiece installation: a giant, fully lit scale replica of the Yoto Player"
+    ],
+    "responsibilities": [
+      "Executive Producer for the agency, Akcelo",
+      "Led pre-production, including cost planning and supplier procurement for the Yoto Player replica",
+      "Unavailable for the live dates, so built and contracted a trusted freelance delivery team to carry the project through fabrication, installation and on-site delivery"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "google-cloud-summit-2025",
     "client": "Google Cloud",
-    "project": "Google Cloud Summit 2025",
+    "project": "Google Cloud Summit London 2025",
     "agency": "Wonder",
-    "role": "Production Manager",
+    "role": "Senior Production Manager",
     "year": 2025,
     "location": "London, UK",
     "sector": "B2B Tech",
@@ -104,14 +166,28 @@
       "/images/work/google-cloud-summit-2025/06.jpg",
       "/images/work/google-cloud-summit-2025/07.jpg"
     ],
-    "body": "For Google Cloud Summit 2025 in London, Kimber led production management and technical delivery across nine live conference rooms running in parallel. The role sat at the intersection of content, technical infrastructure, and on-the-ground delivery, ensuring every room ran safely, smoothly, and on schedule.\n\nAs Production Manager, Kimber coordinated AV, staging, show flow, and crew across all nine spaces, managing keynotes, panels, breakouts, and workshops. Alongside owning his rooms, he provided floating production support across the wider event by resolving technical faults, supporting speakers and moderators, and adapting rooms to last-minute changes."
+    "body": "For Google Cloud Summit London 2025 at Tobacco Dock, Kimber led production management and technical delivery across nine live conference rooms running in parallel for 2,500+ attendees. The role sat at the intersection of content, technical infrastructure, and on-the-ground delivery, ensuring every room ran safely, smoothly, and on schedule.\n\nAs Senior Production Manager, Kimber coordinated AV, staging, show flow, and crew across all nine spaces, managing keynotes, panels, breakouts, and workshops. Alongside owning his rooms, he provided floating production support across the wider event by resolving technical faults, supporting speakers and moderators, and adapting rooms to last-minute changes.",
+    "summary": "Senior Production Manager for Wonder on Google Cloud Summit London 2025 at Tobacco Dock: nine conference rooms running in parallel.",
+    "brief": "Google Cloud Summit London brings Google Cloud's UK customer and partner community together at Tobacco Dock. In 2025 the role sat at the intersection of content, technical infrastructure and on-the-ground delivery, making sure every room ran safely, smoothly and on schedule.",
+    "scale": [
+      "2,500+ attendees",
+      "Nine live conference rooms running in parallel",
+      "Keynotes, panels, breakouts and workshops"
+    ],
+    "responsibilities": [
+      "Senior Production Manager for the agency, Wonder",
+      "Production management and technical delivery across all nine rooms",
+      "Coordinated AV, staging, show flow and crew",
+      "Floating production support across the wider event: resolving technical faults, supporting speakers and moderators, and adapting rooms to last-minute changes"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "google-cloud-summit-2024",
     "client": "Google Cloud",
-    "project": "Google Cloud Summit 2024",
+    "project": "Google Cloud Summit London 2024",
     "agency": "Wonder",
-    "role": "Technical",
+    "role": "Senior Production Manager",
     "year": 2024,
     "location": "London, UK",
     "sector": "B2B Tech",
@@ -120,7 +196,20 @@
       "/images/work/google-cloud-summit-2024/01.jpg",
       "/images/work/google-cloud-summit-2024/02.jpg"
     ],
-    "body": "Held at Tobacco Dock in London, Google Cloud Summit 2024 brought together 4,000 attendees over two days to explore the latest advances in generative AI, security, cloud data, and collaboration technologies.\n\nAs the Technical credit on the experiential areas, Kimber delivered all audio-visual elements and ensured seamless execution across the AI technology activations and 60-plus exhibitor stands."
+    "body": "Held at Tobacco Dock in London, Google Cloud Summit London 2024 brought together 2,500+ attendees over two days to explore the latest advances in generative AI, security, cloud data, and collaboration technologies.\n\nAs Senior Production Manager, Kimber delivered all audio-visual elements across the experiential areas and ensured seamless execution across the AI technology activations and 60-plus exhibitor stands.",
+    "summary": "Senior Production Manager for Wonder on Google Cloud Summit London 2024 at Tobacco Dock, a two-day conference for 2,500+ attendees.",
+    "brief": "Google Cloud Summit London 2024 brought attendees to Tobacco Dock over two days to explore the latest advances in generative AI, security, cloud data and collaboration technologies.",
+    "scale": [
+      "2,500+ attendees over two days",
+      "AI technology activations",
+      "60-plus exhibitor stands"
+    ],
+    "responsibilities": [
+      "Senior Production Manager for the agency, Wonder",
+      "Delivered all audio-visual elements across the experiential areas",
+      "Ensured seamless execution across the AI technology activations and exhibitor stands"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "netflix-stranger-things",
@@ -137,7 +226,23 @@
       "/images/work/netflix-stranger-things/02.jpg",
       "/images/work/netflix-stranger-things/03.jpg"
     ],
-    "body": "To launch Season 4 of Stranger Things, Netflix created an immersive fan experience at the historic Cirque d'Hiver in Paris, transporting guests into the world of Hawkins High School. The six-day event featured 12 interactive experience areas and a cast of 28 actors.\n\nAs Production Director, Kimber managed the full production team and supplier network, delivering the event in just seven weeks."
+    "body": "To launch Season 4 of Stranger Things, Netflix created an immersive fan experience at the historic Cirque d'Hiver in Paris, transporting guests into the world of Hawkins High School. The six-day event featured 12 interactive experience areas and a cast of 28 actors.\n\nAs Production Director, Kimber managed the full production team and supplier network, delivering the event in just seven weeks.",
+    "summary": "Production Director for Amplify on Netflix's Stranger Things Season 4 fan experience at the Cirque d'Hiver, Paris, in 2022.",
+    "brief": "To launch Season 4 of Stranger Things, Netflix created an immersive fan experience at the historic Cirque d'Hiver in Paris, transporting guests into the world of Hawkins High School.",
+    "scale": [
+      "Six-day event, including press and influencer days",
+      "Open to the public 26 to 29 May 2022, with 10,000 free tickets",
+      "Around 1,000 sqm of immersive space",
+      "12 interactive experience areas",
+      "A cast of 28 actors",
+      "Delivered in seven weeks"
+    ],
+    "responsibilities": [
+      "Production Director for the agency, Amplify",
+      "Managed the full production team",
+      "Managed the supplier network through to delivery"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "canva-studio",
@@ -153,7 +258,21 @@
       "/images/work/canva-studio/01.jpg",
       "/images/work/canva-studio/02.jpg"
     ],
-    "body": "Canva Studio was a pop-up experiential activation in Holborn, Central London, designed to immerse guests in the Canva product through interactive experiences.\n\nAs Executive Producer, Kimber managed the client and supplier network from concept to delivery in six weeks, navigating tight deadlines, material availability challenges, and a complex set build. The activation was delivered on time and on budget."
+    "body": "Canva Studio was a pop-up experiential activation in Bloomsbury, Central London, designed to immerse guests in the Canva product through interactive experiences.\n\nAs Executive Producer, Kimber managed the client and supplier network from concept to delivery in six weeks, navigating tight deadlines, material availability challenges, and a complex set build. The activation was delivered on time and on budget.",
+    "summary": "Executive Producer for Jack Morton on Canva Studio, a pop-up experiential activation in Bloomsbury, London, in 2023.",
+    "brief": "Canva Studio was a pop-up experiential activation at Hello Love in Bloomsbury, London, marking Canva's entry into the EMEA market and the opening of its London headquarters. It invited guests to explore and play with design through interactive experiences and bookable tutorials.",
+    "scale": [
+      "Six weeks from concept to delivery",
+      "1,200 live attendees over three days",
+      "Tight deadlines and material availability challenges",
+      "A complex set build, with a full interior and exterior transformation of the venue"
+    ],
+    "responsibilities": [
+      "Executive Producer for the agency, Jack Morton",
+      "Managed the client and supplier network from concept to delivery"
+    ],
+    "outcome": "Delivered on time and on budget. The activation drew 1,200 live attendees over three days, 13,000+ unique views of the Canva Studio London page and 300K+ organic social reach, with a 300% increase in UK paid social click-through rate.",
+    "updated": "2026-10-01"
   },
   {
     "slug": "geely-auto",
@@ -169,7 +288,23 @@
       "/images/work/geely-auto/01.jpg",
       "/images/work/geely-auto/02.jpg"
     ],
-    "body": "Geely Auto's launch into the Australian market was delivered across three connected moments: a media drive day, internal staff training, and the official brand launch at Sydney's Luna Park for 400 guests. The headline moment featured an ambitious 360-degree projection blend powered by 37 projectors.\n\nAs Executive Producer, Kimber assembled and led the full freelance production team, managing client relationships, agency creatives, and finance teams throughout the project."
+    "body": "Geely Auto's launch into the Australian market was delivered across three connected moments: a media drive day, internal staff training, and the official brand launch at Sydney's Luna Park for 400 guests. The headline moment featured an ambitious 360-degree projection blend powered by 37 projectors.\n\nAs Executive Producer, Kimber assembled and led the full freelance production team, managing client relationships, agency creatives, and finance teams throughout the project.",
+    "summary": "Executive Producer for INVNT on the Geely Auto EX5 launch in Sydney, 2025, including the brand launch in Luna Park's Big Top for 400+ guests.",
+    "brief": "Geely Auto's launch into the Australian market was delivered across three connected moments: a media drive programme in the Southern Highlands, a week-long dealer training programme on Sydney's northern beaches, and the official brand launch in Luna Park's Big Top in April 2025.",
+    "scale": [
+      "Three connected moments: media drive, dealer training and brand launch",
+      "400+ guests at the Luna Park launch, including media, industry leaders and influencers",
+      "The first automotive brand launched in Luna Park's Big Top"
+    ],
+    "responsibilities": [
+      "Executive Producer for the agency, INVNT",
+      "Assembled and led the full freelance production team",
+      "Managed client relationships, agency creatives and finance teams throughout"
+    ],
+    "highlights": [
+      "A 360-degree projection blend powered by 37 projectors as the headline moment"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "xerocon-nashville",
@@ -185,7 +320,20 @@
       "/images/work/xerocon-nashville/01.jpg",
       "/images/work/xerocon-nashville/02.jpg"
     ],
-    "body": "Xerocon is Xero's flagship B2B conference for accounting professionals, welcoming around 3,000 attendees from across the United States.\n\nAs Technical Director, Kimber oversaw the physical installation of the exhibition floor in Nashville and provided technical and production support to the Sydney-based production team."
+    "body": "Xerocon is Xero's flagship B2B conference for accounting professionals, welcoming around 3,000 attendees from across the United States.\n\nAs Technical Director, Kimber oversaw the physical installation of the exhibition floor in Nashville and provided technical and production support to the Sydney-based production team.",
+    "summary": "Technical Director for INVNT on Xerocon Nashville 2024 at the Music City Center, Xero's US conference for around 3,000 accounting professionals.",
+    "brief": "Xerocon is Xero's flagship B2B conference for accounting professionals. The 2024 US edition ran at the Music City Center, Nashville, on 14 and 15 August.",
+    "scale": [
+      "Around 3,000 attendees from across the United States",
+      "Two days at the Music City Center",
+      "An exhibition floor installed on site"
+    ],
+    "responsibilities": [
+      "Technical Director for the agency, INVNT",
+      "Oversaw the physical installation of the exhibition floor",
+      "Provided technical and production support to the Sydney-based production team"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "visa-everywhere",
@@ -200,7 +348,48 @@
     "gallery": [
       "/images/work/visa-everywhere/01.jpg"
     ],
-    "body": "The Visa Everywhere Initiative is a global innovation program that challenges startups to solve tomorrow's payment problems.\n\nAs Executive Producer, Kimber produced the 2019 Women's Global Edition in Paris, staged during the FIFA Women's World Cup, managing venue, supplier, and client relationships across the event."
+    "body": "The Visa Everywhere Initiative is a global innovation program that challenges startups to solve tomorrow's payment problems.\n\nAs Executive Producer, Kimber produced the 2019 Women's Global Edition in Paris, staged during the FIFA Women's World Cup, managing venue, supplier, and client relationships across the event.",
+    "summary": "Executive Producer for BMF on the Visa Everywhere Initiative Women's Global Edition in Paris, 2019, during the FIFA Women's World Cup.",
+    "brief": "The Visa Everywhere Initiative is a global innovation programme that challenges start-ups to solve tomorrow's payment problems. The 2019 Women's Global Edition final was held in Paris on 7 June 2019, during the opening week of the FIFA Women's World Cup.",
+    "responsibilities": [
+      "Executive Producer for the agency, BMF",
+      "Produced the Women's Global Edition event",
+      "Managed venue, supplier and client relationships across the event"
+    ],
+    "updated": "2026-10-01",
+    "scale": [
+      "12 finalists from six regions",
+      "Staged during the opening week of the FIFA Women's World Cup France 2019"
+    ]
+  },
+  {
+    "slug": "microsoft-lcf",
+    "client": "Microsoft",
+    "project": "Microsoft x London College of Fashion",
+    "agency": "We Are Listen",
+    "role": "Technical Director",
+    "year": 2019,
+    "location": "London, UK",
+    "sector": "Consumer",
+    "heroImage": "/images/work/microsoft-lcf/hero.jpg",
+    "gallery": [],
+    "body": "Microsoft x London College of Fashion was a collaboration in which students exhibited their major works using Microsoft technology, at an event at Spitalfields Market in London.\n\nAs Technical Director, Kimber worked with the students at the college to create technical solutions for exhibiting their work and managed the installation of the event.",
+    "summary": "Technical Director for We Are Listen on Microsoft x London College of Fashion: Accelerating the Future of Fashion, Old Spitalfields Market, 2019.",
+    "brief": "Accelerating the Future of Fashion was a collaboration between Microsoft and London College of Fashion. Six student teams built fashion-industry prototypes using Microsoft mixed reality, artificial intelligence and Internet of Things technology, and exhibited them at Old Spitalfields Market on 4 June 2019.",
+    "responsibilities": [
+      "Technical Director for the agency, We Are Listen",
+      "Worked with the students at the college to create technical solutions for exhibiting their work using technology",
+      "Managed the installation of the event"
+    ],
+    "updated": "2026-10-01",
+    "scale": [
+      "Six student teams",
+      "A one-day public exhibition at Old Spitalfields Market"
+    ],
+    "highlights": [
+      "Microsoft HoloLens for mixed reality retail experiences",
+      "Azure Cognitive Services applied to reducing waste in clothing production"
+    ]
   },
   {
     "slug": "google-pixel-3",
@@ -216,7 +405,20 @@
       "/images/work/google-pixel-3/01.jpg",
       "/images/work/google-pixel-3/02.jpg"
     ],
-    "body": "Google Pixel's Curiosity Rooms transformed 55 Regent Street in London into an immersive three-floor experience blending fashion, food, and technology over five weeks. The activation was developed in partnership with 72andSunny, OMD, Essence, and Halpern.\n\nAs Senior Producer, Kimber helped concept and deliver the experience in just eight weeks, coordinating creative, build, and operational teams across the partner network."
+    "body": "Google Pixel's Curiosity Rooms transformed 55 Regent Street in London into an immersive three-floor experience blending fashion, food, and technology over five weeks. The activation was developed in partnership with 72andSunny, OMD, Essence, and Halpern.\n\nAs Senior Producer, Kimber helped concept and deliver the experience in just eight weeks, coordinating creative, build, and operational teams across the partner network.",
+    "summary": "Senior Producer for Amplify on Google Pixel 3 Curiosity Rooms, a three-floor experience at 55 Regent Street, London, in 2018.",
+    "brief": "Google Pixel's Curiosity Rooms turned 55 Regent Street, the former Tower Records at Piccadilly Circus, into an immersive experience blending fashion, food and technology, developed in partnership with 72andSunny, OMD, Essence and Halpern.",
+    "scale": [
+      "Three floors at 55 Regent Street",
+      "A five-week residency",
+      "Concepted and delivered in eight weeks"
+    ],
+    "responsibilities": [
+      "Senior Producer for the agency, Amplify",
+      "Helped concept and deliver the experience",
+      "Coordinated creative, build and operational teams across the partner network"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "aperol-spritz",
@@ -231,7 +433,24 @@
     "gallery": [
       "/images/work/aperol-spritz/01.jpg"
     ],
-    "body": "Aperol Spritz was the official aperitif sponsor of the Australian Open 2024.\n\nAs Executive Producer, Kimber oversaw the delivery of a standout concept store in Melbourne Airport's international departures terminal, including a bespoke tennis-themed interactive game and a large-format sunset installation."
+    "body": "Aperol Spritz was the official aperitif sponsor of the Australian Open 2024.\n\nAs Executive Producer, Kimber oversaw the delivery of a standout concept store in Melbourne Airport's international departures terminal, including a bespoke tennis-themed interactive game and a large-format sunset installation.",
+    "summary": "Executive Producer for Yakusan on a 55 sqm Aperol Spritz concept store at Melbourne Airport for the Australian Open 2024.",
+    "brief": "Aperol Spritz was the official aperitif sponsor of the Australian Open 2024. With Lotte Duty Free, it opened an experiential concept store in T2 Departures at Melbourne International Airport for two months.",
+    "responsibilities": [
+      "Executive Producer for the agency, Yakusan",
+      "Oversaw delivery of the concept store"
+    ],
+    "highlights": [
+      "A tennis-themed digital trivia game with Australian Open experiences as prizes",
+      "A circular archway leading to a large-format digital sunset photo experience",
+      "An Aperol Spritz sampling station"
+    ],
+    "updated": "2026-10-01",
+    "scale": [
+      "55 sqm in T2 Departures",
+      "A two-month run",
+      "A complementary activation in the arrivals store"
+    ]
   },
   {
     "slug": "stella-mccartney-cop28",
@@ -246,7 +465,24 @@
     "gallery": [
       "/images/work/stella-mccartney-cop28/01.jpg"
     ],
-    "body": "Stella McCartney launched a sustainable innovation exhibit during the COP28 UN Climate Conference in Dubai.\n\nAs Executive Producer, Kimber led client handling, production management, and live event execution for a modular, sustainably built installation featuring 3D-printed stalls created using photocatalysis technology."
+    "body": "Stella McCartney launched a sustainable innovation exhibit during the COP28 UN Climate Conference in Dubai.\n\nAs Executive Producer, Kimber led client handling, production management, and live event execution for a modular, sustainably built installation featuring 3D-printed stalls created using photocatalysis technology.",
+    "summary": "Executive Producer for INVNT on Stella McCartney's sustainable innovation exhibit at COP28 in Dubai, 2023.",
+    "brief": "Stella McCartney launched a Sustainable Market of material innovations during the COP28 UN Climate Conference in Dubai, open from 30 November to 12 December 2023.",
+    "responsibilities": [
+      "Executive Producer for the agency, INVNT",
+      "Client handling",
+      "Production management",
+      "Live event execution"
+    ],
+    "highlights": [
+      "A modular, sustainably built installation",
+      "Stalls 3D printed with PURE.TECH carbon-absorbing material that removes CO2 and VOCs from the air"
+    ],
+    "updated": "2026-10-01",
+    "scale": [
+      "Open 30 November to 12 December 2023",
+      "15+ material innovators, from start-ups to established brands"
+    ]
   },
   {
     "slug": "mastercard-ucl",
@@ -261,7 +497,19 @@
     "gallery": [
       "/images/work/mastercard-ucl/01.jpg"
     ],
-    "body": "On site in Milan for the UEFA Champions League Final, Kimber delivered Mastercard's fan experience activation, including giveaways, priceless surprises, and branded fan-journey touchpoints across the city.\n\nAs Senior Producer, he managed supplier coordination, run-of-show, and live delivery to keep every brand moment consistent throughout the matchday weekend."
+    "body": "On site in Milan for the UEFA Champions League Final, Kimber delivered Mastercard's fan experience activation, including giveaways, priceless surprises, and branded fan-journey touchpoints across the city.\n\nAs Senior Producer, he managed supplier coordination, run-of-show, and live delivery to keep every brand moment consistent throughout the matchday weekend.",
+    "summary": "Senior Producer for Octagon on Mastercard's fan experience at the UEFA Champions League Final in Milan, 2016.",
+    "brief": "Mastercard's fan experience activation for the UEFA Champions League Final in Milan, with giveaways, priceless surprises and branded fan-journey touchpoints across the city.",
+    "scale": [
+      "A matchday weekend",
+      "Branded touchpoints across the city"
+    ],
+    "responsibilities": [
+      "Senior Producer for the agency, Octagon",
+      "On site in Milan for supplier coordination, run of show and live delivery",
+      "Kept every brand moment consistent through the matchday weekend"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "mastercard-british-open",
@@ -276,7 +524,15 @@
     "gallery": [
       "/images/work/mastercard-british-open/01.jpg"
     ],
-    "body": "Mastercard's fan activation at The Open Championship at Royal Troon, Scotland, brought the brand's hospitality and fan-engagement programme on course.\n\nAs Senior Producer, Kimber delivered the activation on the ground, coordinating build, supplier teams, and live operations across the tournament."
+    "body": "Mastercard's fan activation at The Open Championship at Royal Troon, Scotland, brought the brand's hospitality and fan-engagement programme on course.\n\nAs Senior Producer, Kimber delivered the activation on the ground, coordinating build, supplier teams, and live operations across the tournament.",
+    "summary": "Senior Producer for Octagon on Mastercard's fan activation at The Open Championship at Royal Troon, Scotland, in 2016.",
+    "brief": "Mastercard's fan activation at The Open brought the brand's hospitality and fan-engagement programme on course.",
+    "responsibilities": [
+      "Senior Producer for the agency, Octagon",
+      "Delivered the activation on the ground",
+      "Coordinated build, supplier teams and live operations across the tournament"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "mtv-ema",
@@ -291,7 +547,49 @@
     "gallery": [
       "/images/work/mtv-ema/01.jpg"
     ],
-    "body": "MTV's exclusive EMA Awards after-party at the iconic Wembley Theatre welcomed VIP guests, talent, and A-list media to celebrate MTV's return to London after 12 years. The space featured London cityscape projections, a voile cube installation, and a real London Underground carriage integrated into the room.\n\nAs Senior Producer, Kimber delivered the event end to end, balancing creative ambition with the practical demands of a high-profile, high-security guest list."
+    "body": "MTV's exclusive EMA Awards after-party at Fountain Studios in Wembley welcomed 1,700 guests, including VIPs, talent, and A-list media, to celebrate MTV's return to London after 12 years. The space featured London cityscape projections, a voile cube installation, and a real London Underground carriage integrated into the room.\n\nAs Senior Producer, Kimber delivered the event end to end, balancing creative ambition with the practical demands of a high-profile, high-security guest list.",
+    "summary": "Senior Producer for Amplify on MTV's EMA Awards after party at Fountain Studios, Wembley, in 2017, for 1,700 guests.",
+    "brief": "MTV's exclusive EMA Awards after party celebrated MTV's return to London after 12 years, with a theme of \"It's a London Thing\" rooted in the city's garage, grime and house culture.",
+    "scale": [
+      "1,700 guests, including VIPs, talent and A-list media",
+      "A high-security guest list"
+    ],
+    "responsibilities": [
+      "Senior Producer for the agency, Amplify",
+      "Delivered the event end to end",
+      "Balanced creative ambition with the practical demands of a high-profile guest list"
+    ],
+    "highlights": [
+      "London cityscape projections on a suspended voile cube",
+      "A real London Underground carriage as the DJ booth backdrop",
+      "Sets from DJ EZ, Manny Norte and Ray BLK, among 10 artists"
+    ],
+    "updated": "2026-10-01"
+  },
+  {
+    "slug": "soundcloud",
+    "client": "SoundCloud",
+    "project": "Exhibition Stand at ExCeL London",
+    "agency": "Amplify",
+    "role": "Lead Producer",
+    "year": 2017,
+    "location": "London, UK",
+    "sector": "B2B Tech",
+    "heroImage": "/images/work/soundcloud/hero.jpg",
+    "gallery": [],
+    "body": "A bespoke exhibition stand for SoundCloud at a music conference at ExCeL London, featuring the platform's key products.\n\nAs Lead Producer, Kimber ran the whole project and supervised delivery of a bespoke web application that let guests explore the SoundCloud platform.",
+    "summary": "Lead Producer for Amplify on SoundCloud's bespoke stand at BBC Music Introducing hosts Amplify 2017, ExCeL London.",
+    "brief": "A bespoke exhibition stand for SoundCloud at BBC Music Introducing hosts Amplify 2017, a music industry weekend at ExCeL London in October 2017, featuring the platform's key products.",
+    "responsibilities": [
+      "Lead Producer for the agency, Amplify",
+      "Ran the whole project",
+      "Supervised delivery of a bespoke web application that let guests explore the SoundCloud platform"
+    ],
+    "updated": "2026-10-01",
+    "scale": [
+      "A weekend event with 15,000+ tickets sold",
+      "Artists, songwriters, producers and industry professionals"
+    ]
   },
   {
     "slug": "emirates-aviation",
@@ -307,7 +605,25 @@
       "/images/work/emirates-aviation/01.jpg",
       "/images/work/emirates-aviation/02.jpg"
     ],
-    "body": "The Emirates Aviation Experience is a 500 sqm two-floor interactive museum at Greenwich Peninsula in London, featuring four flight simulators, a large-scale A380 nose cone, a Rolls-Royce Trent 900 engine, and a 360-degree hologram.\n\nAs Project Lead, Kimber led a hand-built team of 40 to deliver the £7 million project from concept through to public opening."
+    "body": "The Emirates Aviation Experience is a 500 sqm two-floor interactive museum at Greenwich Peninsula in London, featuring four flight simulators, a large-scale A380 nose cone, and a 360-degree hologram.\n\nAs Project Lead, Kimber led a hand-built team of 40 to deliver the £7 million project from concept through to public opening.",
+    "summary": "Project Lead for Pulse Group on the Emirates Aviation Experience, a £7 million interactive museum at Greenwich Peninsula, London, in 2013.",
+    "brief": "The Emirates Aviation Experience is an interactive aviation attraction beside the cable car terminal at Greenwich Peninsula in London. It opened in July 2013.",
+    "scale": [
+      "500 sqm over two floors",
+      "A £7 million project",
+      "A hand-built team of 40"
+    ],
+    "responsibilities": [
+      "Project Lead for the agency, Pulse Group",
+      "Led the team from concept through to public opening in 2013",
+      "Later led a revamp of the attraction as a freelance Executive Producer for Pulse Group: software and hardware upgrades including the A380 simulators, AR activations and a Rolls-Royce Trent 900 engine"
+    ],
+    "highlights": [
+      "Four flight simulators",
+      "A large-scale A380 nose cone",
+      "A 360-degree hologram"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "emirates-sports",
@@ -323,7 +639,21 @@
       "/images/work/emirates-sports/01.jpg",
       "/images/work/emirates-sports/02.jpg"
     ],
-    "body": "Emirates' multi-year global sports sponsorship programme spanned some of the world's most prestigious tournaments. The schedule included ATP tennis activations at Wimbledon, Roland Garros, Barcelona Open, US Open, Indian Wells, and Rome, alongside PGA golf activations in Dubai, Kuala Lumpur, and Shanghai. On-the-ground delivery also covered the Commonwealth Games in Glasgow.\n\nAs Senior Producer, Kimber developed each activation as a portable touring kit and produced between 10 and 18 events per calendar year."
+    "body": "Emirates' multi-year global sports sponsorship programme spanned some of the world's most prestigious tournaments. The schedule included tennis activations at the ATP Finals at The O2 in London, Roland Garros, the Barcelona Open, the US Open, Indian Wells, and Rome, alongside PGA golf activations in Dubai, Kuala Lumpur, and Shanghai. On-the-ground delivery also covered the Commonwealth Games in Glasgow.\n\nAs Senior Producer, Kimber developed each activation as a portable touring kit and produced between 10 and 18 events per calendar year.",
+    "summary": "Senior Producer for Pulse Group on Emirates' global sports sponsorship programme: 10 to 18 events a year across tennis, golf and more.",
+    "brief": "Emirates' multi-year global sports sponsorship programme spanned some of the world's most prestigious tournaments.",
+    "scale": [
+      "Tennis: the ATP Finals at The O2 in London, Roland Garros, the Barcelona Open, the US Open, Indian Wells and Rome",
+      "Golf: PGA activations in Dubai, Kuala Lumpur and Shanghai",
+      "The Commonwealth Games in Glasgow",
+      "Between 10 and 18 events per calendar year"
+    ],
+    "responsibilities": [
+      "Senior Producer for the agency, Pulse Group",
+      "Developed each activation as a portable touring kit",
+      "Produced between 10 and 18 events per calendar year"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "emirates-cricket",
@@ -344,7 +674,19 @@
       "/images/work/emirates-cricket/06.jpg",
       "/images/work/emirates-cricket/07.jpg"
     ],
-    "body": "On-the-ground production for Emirates' Cricket World Cup sponsorship activation across Australia and New Zealand, delivered as part of the same global sports touring programme as the ATP, PGA, and Commonwealth Games activations.\n\nAs Senior Producer, Kimber coordinated venue logistics, sponsor show elements, and live run-of-show alongside local crews and international stakeholders, keeping activations consistent with Emirates' global brand standards across multiple host cities."
+    "body": "On-the-ground production for Emirates' Cricket World Cup sponsorship activation across Australia and New Zealand, delivered as part of the same global sports touring programme as the ATP, PGA, and Commonwealth Games activations.\n\nAs Senior Producer, Kimber coordinated venue logistics, sponsor show elements, and live run-of-show alongside local crews and international stakeholders, keeping activations consistent with Emirates' global brand standards across multiple host cities.",
+    "summary": "Senior Producer for Pulse Group on Emirates' Cricket World Cup 2015 sponsorship activation across Australia and New Zealand.",
+    "brief": "On-the-ground production for Emirates' Cricket World Cup sponsorship activation, part of the same global sports touring programme as the ATP, PGA and Commonwealth Games activations.",
+    "scale": [
+      "Multiple host cities across Australia and New Zealand",
+      "Local crews and international stakeholders"
+    ],
+    "responsibilities": [
+      "Senior Producer for the agency, Pulse Group",
+      "Coordinated venue logistics, sponsor show elements and live run of show",
+      "Kept activations consistent with Emirates' global brand standards"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "ntt-data",
@@ -352,18 +694,29 @@
     "project": "NTT Data: The Open Championship Data Wall",
     "agency": "Pulse Group",
     "role": "Senior Producer",
-    "year": 2013,
-    "location": "London, UK",
+    "year": 2014,
+    "location": "Hoylake, UK",
     "sector": "Sports",
     "heroImage": "/images/work/ntt-data/hero.jpg",
     "gallery": [
       "/images/work/ntt-data/01.jpg"
     ],
-    "body": "The NTT Data Wall transformed live R&A tournament data into a fully animated, data-rich visual experience on a large-scale LED screen at The Open Championship, supported by a digital second-screen experience for remote fans.\n\nAs Senior Producer, Kimber managed delivery of the on-course installation and the supporting digital experience end to end."
+    "body": "The NTT Data Wall transformed live R&A tournament data into a fully animated, data-rich visual experience on a large-scale LED screen at The Open Championship at Royal Liverpool, Hoylake, supported by a digital second-screen experience for remote fans.\n\nAs Senior Producer, Kimber managed delivery of the on-course installation and the supporting digital experience end to end.",
+    "summary": "Senior Producer for Pulse Group on the NTT Data Wall at The Open Championship, Royal Liverpool, Hoylake, in 2014.",
+    "brief": "The NTT Data Wall turned live R&A tournament data into a fully animated, data-rich visual experience at The Open, supported by a digital second-screen experience for remote fans.",
+    "responsibilities": [
+      "Senior Producer for the agency, Pulse Group",
+      "Managed delivery of the on-course installation and the supporting digital experience end to end"
+    ],
+    "highlights": [
+      "Live tournament data animated on a large-scale LED screen",
+      "A second-screen digital experience for remote fans"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "ea-sports-battlefront",
-    "client": "EA Sports",
+    "client": "Electronic Arts",
     "project": "Battlefront II Launch",
     "agency": "Amplify",
     "role": "Senior Producer",
@@ -374,7 +727,20 @@
     "gallery": [
       "/images/work/ea-sports-battlefront/01.jpg"
     ],
-    "body": "EA Sports' Battlefront II launch activation at Paris Games Week was a high-traffic public and press showcase staged in a major convention environment.\n\nAs Senior Producer, Kimber managed supplier coordination, rehearsals, and show-flow planning, and led on-site problem-solving across build, tech checks, and live periods to keep the immersive games-industry experience on schedule under peak audience load."
+    "body": "Electronic Arts' Battlefront II launch activation at Paris Games Week was a high-traffic public and press showcase staged in a major convention environment.\n\nAs Senior Producer, Kimber managed supplier coordination, rehearsals, and show-flow planning, and led on-site problem-solving across build, tech checks, and live periods to keep the immersive games-industry experience on schedule under peak audience load.",
+    "summary": "Senior Producer for Amplify on the Electronic Arts Battlefront II launch activation at Paris Games Week, 2017.",
+    "brief": "Electronic Arts' Battlefront II launch activation at Paris Games Week, 1 to 5 November 2017, was a high-traffic public and press showcase in a major convention environment.",
+    "scale": [
+      "Paris Games Week: five days and 300,000+ visitors",
+      "Public and press audiences",
+      "Peak audience load during live periods"
+    ],
+    "responsibilities": [
+      "Senior Producer for the agency, Amplify",
+      "Supplier coordination, rehearsals and show-flow planning",
+      "Led on-site problem-solving across build, tech checks and live periods"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "johnson-johnson",
@@ -390,7 +756,24 @@
       "/images/work/johnson-johnson/01.jpg",
       "/images/work/johnson-johnson/02.jpg"
     ],
-    "body": "A touring laboratory designed and delivered for Johnson & Johnson Medical: a solar-powered trailer featuring a fully equipped laboratory, a conference room, and a VR suite, showcasing the latest robot-assisted knee surgery technology to healthcare professionals across Australia.\n\nAs Executive Producer, Kimber led the design, build, and national tour delivery of the mobile lab."
+    "body": "A touring laboratory designed and delivered for Johnson & Johnson Medical: a solar-powered trailer featuring a fully equipped laboratory, a conference room, and a VR suite, showcasing the latest robot-assisted knee surgery technology to healthcare professionals across Australia.\n\nAs Executive Producer, Kimber led the design, build, and national tour delivery of the mobile lab.",
+    "summary": "Executive Producer for K&K Productions on the VELYS Digital Surgery Mobile Lab, a touring training lab for Johnson & Johnson Medical across Australia, 2021.",
+    "brief": "DePuy Synthes and the Johnson & Johnson Institute needed a mobile training lab to introduce the VELYS Robotic-Assisted Solution for knee replacement surgery to surgeons and healthcare professionals across Australia. It launched in Sydney on 20 October 2021.",
+    "scale": [
+      "A semi-trailer with self-contained meeting, training and lab space",
+      "Solar powered",
+      "A national tour of Australia from October 2021"
+    ],
+    "responsibilities": [
+      "Executive Producer for K&K Productions",
+      "Led the design, build and national tour delivery of the mobile lab"
+    ],
+    "highlights": [
+      "Virtual reality operating environments",
+      "3D-printed surgical models for hands-on training",
+      "Hands-on training with the VELYS robotic-assisted system"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "expo-2020",
@@ -405,7 +788,21 @@
     "gallery": [
       "/images/work/expo-2020/01.jpg"
     ],
-    "body": "The UAE's Golden Jubilee celebration at Expo 2020 featured content production for a 25,380 sqm projection surface using 252 projectors across 84 video channels.\n\nAs Project Lead, Kimber produced nearly a petabyte of content for the domed plaza installation, coordinating creative, technical, and rendering teams to deliver on schedule."
+    "body": "The UAE's Golden Jubilee celebration at Expo 2020 featured content production for a 25,380 sqm projection surface using 252 projectors across 84 video channels.\n\nAs Project Lead, Kimber produced nearly a petabyte of content for the domed plaza installation, coordinating creative, technical, and rendering teams to deliver on schedule.",
+    "summary": "Project Lead for Curiious on the UAE Golden Jubilee show at Expo 2020 Dubai's Al Wasl Plaza dome, 2021: 252 projectors, 84 video channels.",
+    "brief": "The UAE's Golden Jubilee celebration at Expo 2020 featured content production for the Al Wasl Plaza dome, one of the largest 360-degree projection surfaces in the world.",
+    "scale": [
+      "A 25,380 sqm projection surface",
+      "252 Christie 4K laser projectors in 42 pods, across 84 video channels",
+      "Nearly a petabyte of content"
+    ],
+    "responsibilities": [
+      "Project Lead for the agency, Curiious",
+      "Produced the content for the domed plaza installation",
+      "Coordinated creative, technical and rendering teams"
+    ],
+    "outcome": "Delivered on schedule.",
+    "updated": "2026-10-01"
   },
   {
     "slug": "samsung-galaxy-a5",
@@ -420,7 +817,18 @@
     "gallery": [
       "/images/work/samsung-galaxy-a5/01.jpg"
     ],
-    "body": "A touring experiential activation promoting the Samsung Galaxy A5, visiting five cities along Australia's east coast. The footprint was fully mobile, packing into a single 40-foot semi-trailer.\n\nAs Senior Producer, Kimber delivered the tour end to end, including build, transport logistics, on-site activation, and crew management at each stop."
+    "body": "A touring experiential activation promoting the Samsung Galaxy A5, visiting five cities along Australia's east coast. The footprint was fully mobile, packing into a single 40-foot semi-trailer.\n\nAs Senior Producer, Kimber delivered the tour end to end, including build, transport logistics, on-site activation, and crew management at each stop.",
+    "summary": "Senior Producer for Imagination on the Samsung Galaxy A5 launch tour: five cities on Australia's east coast, 2017.",
+    "brief": "A touring experiential activation promoting the Samsung Galaxy A5.",
+    "scale": [
+      "Five cities along Australia's east coast",
+      "A fully mobile footprint that packed into a single 40-foot semi-trailer"
+    ],
+    "responsibilities": [
+      "Senior Producer for the agency, Imagination",
+      "Delivered the tour end to end: build, transport logistics, on-site activation and crew management at each stop"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "parrtjima",
@@ -435,7 +843,20 @@
     "gallery": [
       "/images/work/parrtjima/01.jpg"
     ],
-    "body": "Parrtjima is Australia's only authentic Aboriginal light festival, set against the dramatic backdrop of the MacDonnell Ranges in Alice Springs.\n\nAs Creative Technologist, Kimber helped bring the artists' visions to life through structure and sculpture, working in a dynamic nighttime desert environment alongside cultural custodians and the creative team."
+    "body": "Parrtjima is Australia's only authentic Aboriginal light festival, set against the dramatic backdrop of the MacDonnell Ranges in Alice Springs.\n\nAs Creative Technologist, Kimber helped bring the artists' visions to life through structure and sculpture, working in a dynamic nighttime desert environment alongside cultural custodians and the creative team.",
+    "summary": "Creative Technologist for AGB Events at Parrtjima, Australia's only authentic Aboriginal light festival, in Alice Springs, 2021.",
+    "brief": "Parrtjima is Australia's only authentic Aboriginal light festival, set against the MacDonnell Ranges in Alice Springs. The 2021 festival ran for ten nights, 9 to 18 April, under the theme \"Future Kultcha\", curated by Rhoda Roberts AO.",
+    "scale": [
+      "Ten nights, 9 to 18 April 2021",
+      "Large-scale light installations, artworks and performances",
+      "A night-time desert environment"
+    ],
+    "responsibilities": [
+      "Creative Technologist for AGB Events",
+      "Helped bring the artists' visions to life through structure and sculpture",
+      "Worked alongside cultural custodians and the creative team"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "destination-NSW",
@@ -457,7 +878,22 @@
       "/images/work/destination-NSW/07.jpg",
       "/images/work/destination-NSW/08.jpg"
     ],
-    "body": "Destination NSW's The Long Road campaign with Emotive was delivered as a six-episode TV series, supported by online content and national television distribution. The work focused on encouraging local tourism and regional travel across New South Wales.\n\nAs Producer, Kimber aligned creative, production, and partner teams, set scheduling and budget guardrails, managed stakeholder communication, and oversaw delivery across pre-production, shoots, and post-production so the series stayed on schedule and on brief."
+    "body": "Destination NSW's The Long Road campaign with Emotive was delivered as a six-part web series. The work focused on encouraging local tourism and regional travel across New South Wales.\n\nAs Producer, Kimber aligned creative, production, and partner teams, set scheduling and budget guardrails, managed stakeholder communication, and oversaw delivery across pre-production, shoots, and post-production so the series stayed on schedule and on brief.",
+    "summary": "Producer for Emotive on The Long Road, a six-part web series for Destination NSW promoting regional travel, 2020.",
+    "brief": "Destination NSW's The Long Road campaign encouraged local tourism and regional travel across New South Wales. It was a six-part web series following Guy Sebastian, Amy Shark and Ocean Alley on road trips, hosted by Ash London.",
+    "scale": [
+      "A six-part web series",
+      "Three music artists: Guy Sebastian, Amy Shark and Ocean Alley"
+    ],
+    "responsibilities": [
+      "Producer for the agency, Emotive",
+      "Aligned creative, production and partner teams",
+      "Set scheduling and budget guardrails",
+      "Managed stakeholder communication",
+      "Oversaw delivery across pre-production, shoots and post-production"
+    ],
+    "outcome": "The series stayed on schedule and on brief.",
+    "updated": "2026-10-01"
   },
   {
     "slug": "rizla",
@@ -472,7 +908,18 @@
     "gallery": [
       "/images/work/rizla/01.jpg"
     ],
-    "body": "Rizlab, Experiments in Music, was a brand platform funding the creative visions of pioneering music artists, with a line-up that included Jamie xx, Quayola, Friendly Fires, and Ghostpoet.\n\nAs Producer, Kimber delivered the live programme. Direct event reach grew 600% year on year, reaching half a million people, and PR reach exceeded 16.5 million."
+    "body": "Rizlab, Experiments in Music, was a brand platform funding the creative visions of pioneering music artists, with a line-up that included Jamie xx, Quayola, Friendly Fires, and Ghostpoet.\n\nAs Producer, Kimber delivered the live programme. Direct event reach grew 600% year on year, reaching half a million people, and PR reach exceeded 16.5 million.",
+    "summary": "Producer for Exposure on Rizlab, Experiments in Music, Rizla's music platform, in London, 2011.",
+    "brief": "Rizlab, Experiments in Music, was a brand platform funding the creative visions of pioneering music artists, with a line-up that included Jamie xx, Quayola, Friendly Fires and Ghostpoet.",
+    "responsibilities": [
+      "Producer for the agency, Exposure",
+      "Delivered the live programme"
+    ],
+    "outcome": "Direct event reach grew 600% year on year, reaching half a million people, and PR reach exceeded 16.5 million.",
+    "updated": "2026-10-01",
+    "scale": [
+      "The launch event, Structures, with Jamie xx and Quayola at the Classic Car Club, Old Street, London, in September 2011"
+    ]
   },
   {
     "slug": "aqua-rugby",
@@ -487,21 +934,46 @@
     "gallery": [
       "/images/work/aqua-rugby/01.jpg"
     ],
-    "body": "Aqua Rugby Australia is full-contact rugby union played on a 30x30m floating pitch in Darling Harbour, Sydney.\n\nAs Executive Producer, Kimber led event curation and delivery, developing revenue strategies, designing the on-water and shoreside infrastructure, and ensuring safety for both players and spectators."
+    "body": "Aqua Rugby Australia is full-contact rugby union played on a 30x30m floating pitch in Darling Harbour, Sydney.\n\nAs Executive Producer, Kimber led event curation and delivery, developing revenue strategies, designing the on-water and shoreside infrastructure, and ensuring safety for both players and spectators.",
+    "summary": "Executive Producer for the BSc Energy Aqua Rugby Festival, a floating rugby tournament in Darling Harbour, Sydney, 11 to 13 April 2024.",
+    "brief": "Aqua Rugby Australia is full-contact rugby union played on a floating pitch in Darling Harbour, Sydney.",
+    "scale": [
+      "Three days, 11 to 13 April 2024",
+      "A 30 x 30 m floating pitch",
+      "Men's and women's divisions of former and current professionals and emerging talent",
+      "Free viewing from the shoreline, plus VIP hospitality, food, music and family zones"
+    ],
+    "responsibilities": [
+      "Executive Producer (independent)",
+      "Event curation and delivery",
+      "Developed revenue strategies",
+      "Designed the on-water and shoreside infrastructure",
+      "Ensured safety for players and spectators"
+    ],
+    "updated": "2026-10-01"
   },
   {
     "slug": "gunpowder-plot",
     "client": "Gunpowder Plot",
     "project": "Immersive Theatre Experience",
-    "agency": "Independent",
+    "agency": "dotdotdot",
     "role": "Executive Producer",
-    "year": 2020,
+    "year": 2022,
     "location": "London, UK",
     "sector": "Consumer",
     "heroImage": "/images/work/gunpowder-plot/hero.jpg",
     "gallery": [
       "/images/work/gunpowder-plot/01.jpg"
     ],
-    "body": "The Gunpowder Plot is a permanent immersive theatre experience set beneath the Tower of London.\n\nAs Executive Producer, Kimber managed storyline design and development as well as the physical UX design of each room, collaborating closely with the director and the head of technical."
+    "body": "The Gunpowder Plot is a permanent immersive theatre experience at the Tower Vaults, next to the Tower of London.\n\nAs Executive Producer, Kimber managed storyline design and development as well as the physical UX design of each room, collaborating closely with the director and the head of technical.",
+    "summary": "Executive Producer for dotdotdot on The Gunpowder Plot, an immersive theatre experience at the Tower Vaults beside the Tower of London, opened 2022.",
+    "brief": "The Gunpowder Plot is a permanent immersive theatre experience at the Tower Vaults, next to the Tower of London.",
+    "responsibilities": [
+      "Executive Producer for dotdotdot",
+      "Storyline design and development",
+      "Physical UX design of each room",
+      "Worked closely with the director and the head of technical"
+    ],
+    "updated": "2026-10-01"
   }
 ]

@@ -5,6 +5,7 @@ import { ProjectCard, ProjectCardCaption } from "@/components/ProjectCard";
 import { Container, Section } from "@/components/layout";
 import { getFeaturedProjects, mapCountries } from "@/lib/data";
 import { CLIENT_COUNT } from "@/lib/marquee";
+import { IDENTITY } from "@/lib/identity";
 import { HOME_DESCRIPTION, HOME_TITLE, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -14,7 +15,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 const stats = [
-  { value: "23", label: "Years Experience" },
+  { value: String(IDENTITY.yearsExperience), label: "Years Experience" },
   { value: String(CLIENT_COUNT), label: "Clients" },
   { value: String(mapCountries.length), label: "Countries" },
 ];
@@ -48,21 +49,17 @@ export default function HomePage() {
           </picture>
         </div>
         <Container>
-          <h1 className="font-display max-w-4xl text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            Freelance
+          {/* One heading, same look as before: the role lines are part of the H1 (not aria-hidden). */}
+          <h1 className="font-display max-w-4xl text-balance font-bold leading-tight tracking-tight">
+            <span className="block text-4xl sm:text-5xl lg:text-6xl">Freelance</span>{" "}
+            <span className="mt-4 block text-3xl text-[var(--color-muted)] sm:text-4xl lg:text-5xl">
+              <span className="block">Producer.</span>{" "}
+              <span className="block">Production.</span>{" "}
+              <span className="block">Technical.</span>
+            </span>
           </h1>
-          <p
-            className="font-display mt-4 max-w-4xl text-balance text-3xl font-bold leading-tight tracking-tight text-[var(--color-muted)] sm:text-4xl lg:text-5xl"
-            aria-hidden="true"
-          >
-            <span className="block">Producer.</span>
-            <span className="block">Production.</span>
-            <span className="block">Technical.</span>
-          </p>
           <p className="mt-6 max-w-2xl text-lg text-[var(--color-muted)] sm:text-xl">
-            Events professional specialising in large-scale event production, experiential event delivery and creative
-            design across the UK, Europe, Middle East, Asia-Pacific, Africa and the Americas. Widely networked worldwide and known for
-            strategic, hands-on leadership.
+            {IDENTITY.oneLiner}
           </p>
           <Link
             href="/work"
@@ -130,15 +127,31 @@ export default function HomePage() {
           </h2>
           <div className="mt-6 space-y-4 text-[var(--color-muted)] leading-relaxed">
             <p>
-              Kimber Sykes is a freelance Executive Producer, Production Manager, and Technical Director with 23 years
-              leading large-scale corporate conferences, summits, product launches, and experiential brand activations.
+              Kimber Sykes is a freelance {IDENTITY.rolesLine} with {IDENTITY.yearsExperience} years leading
+              large-scale corporate conferences, summits, product launches, experiential brand activations and sports
+              sponsorship programmes.
             </p>
             <p>
-              Services include executive production and project leadership, on-site production management, technical
-              direction, vendor sourcing, and budget oversight for seven-figure programmes.
+              Services include{" "}
+              <Link href="/about#executive-production" className="text-[var(--color-accent)] hover:underline">
+                executive production
+              </Link>{" "}
+              and project leadership,{" "}
+              <Link href="/about#production-management" className="text-[var(--color-accent)] hover:underline">
+                on-site production management
+              </Link>
+              ,{" "}
+              <Link href="/about#technical-direction" className="text-[var(--color-accent)] hover:underline">
+                technical direction
+              </Link>
+              , vendor sourcing, and budget oversight for seven-figure programmes.
             </p>
             <p>
-              Based in London and available for contract work across Europe and globally. Contact via{" "}
+              Based in London and available for contract work across Europe and globally.{" "}
+              <Link href="/about" className="text-[var(--color-accent)] hover:underline">
+                More about Kimber
+              </Link>
+              , or get in touch via{" "}
               <Link href="/contact" className="text-[var(--color-accent)] hover:underline">
                 email or phone
               </Link>

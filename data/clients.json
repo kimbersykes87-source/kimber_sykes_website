@@ -136,10 +136,10 @@
   },
   {
     "id": "ea-sports",
-    "name": "EA Sports",
+    "name": "Electronic Arts",
     "file": "/images/logos/clients/ea-sports.svg",
-    "alt": "EA Sports",
-    "url": "https://www.ea.com/sports",
+    "alt": "Electronic Arts",
+    "url": "https://www.ea.com",
     "displayScale": 0.95
   },
   {

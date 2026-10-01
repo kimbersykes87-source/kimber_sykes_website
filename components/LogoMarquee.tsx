@@ -27,6 +27,7 @@ export function LogoMarquee({ strip }: LogoMarqueeProps) {
               height={logo.height}
               style={logo.style}
               loading="eager"
+              fetchPriority="low"
               decoding="async"
               className={logo.className}
             />

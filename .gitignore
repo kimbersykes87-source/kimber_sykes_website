@@ -23,3 +23,9 @@ home.html
 
 # Wrangler local state (root)
 .wrangler/
+
+# Generated responsive WebP variants (scripts/optimize-images.mjs)
+public/images/_opt/
+
+# Scratch folder for files to delete (never commit)
+_to_delete/

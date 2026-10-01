@@ -12,6 +12,5 @@ export default function robots(): MetadataRoute.Robots {
       ...AI_CRAWLER_USER_AGENTS.map((userAgent) => ({ userAgent, allow: "/" as const })),
     ],
     sitemap: `${base}/sitemap.xml`,
-    host: base.replace(/^https?:\/\//, ""),
   };
 }

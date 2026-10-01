@@ -125,7 +125,7 @@ function getKimberWallClock(
 }
 
 function isWorkingHours(hour: number, day: number): boolean {
-  const isWeekday = day >= 1 && day <= 5; // Mon–Fri
+  const isWeekday = day >= 1 && day <= 5; // Mon to Fri
   return isWeekday && hour >= WORKING_START_HOUR && hour <= WORKING_END_HOUR;
 }
 
@@ -295,11 +295,11 @@ export function KimberRightNow() {
                   }
                 >
                   {view.bothOnline
-                    ? "We are both online — good time to chat."
+                    ? "We are both online, so now is a good time to chat."
                     : view.kimberOnline
                       ? "Kimber is within working hours but you are outside yours."
                       : view.visitorOnline
-                        ? "You are within working hours but Kimber is outside hers."
+                        ? "You are within working hours but Kimber is outside his."
                         : "Neither of us is currently within working hours."}
                 </p>
               </div>

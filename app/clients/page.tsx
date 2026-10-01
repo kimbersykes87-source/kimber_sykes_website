@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { agencies, clients } from "@/lib/data";
 import { logoFit } from "@/lib/logoDisplay";
 import { Container, Section } from "@/components/layout";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, pageTitle } from "@/lib/seo";
 import type { ReactNode } from "react";
 import type { LogoEntry } from "@/lib/types";
 
@@ -29,9 +29,9 @@ function LogoTile({ entry, children }: { entry: LogoEntry; children: ReactNode }
 }
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Clients & Agencies — Global Brands",
+  title: pageTitle("Clients and Agencies"),
   description:
-    "Brands and agencies Kimber Sykes has partnered with as Executive Producer, Production Manager, or Technical Director, including Google, Netflix, Mastercard, and Emirates.",
+    "Brands and agencies Kimber Sykes has worked with as Executive Producer, Production Manager or Technical Director, including Google, Netflix and Emirates.",
   path: "/clients",
 });
 

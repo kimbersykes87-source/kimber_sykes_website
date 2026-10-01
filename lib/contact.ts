@@ -1,9 +1,9 @@
-export const LINKEDIN_URL = "https://uk.linkedin.com/in/kimber-sykes-33400326";
+import { IDENTITY } from "@/lib/identity";
+
+export const LINKEDIN_URL = IDENTITY.sameAs.find((u) => u.includes("linkedin.com")) ?? "";
 
 export const CONTACT = {
-  email: "kimber@kimbersykes.com",
-  phoneUk: "+447553673133",
-  phoneUs: "+13235362611",
+  email: IDENTITY.contact.email,
+  phoneUk: IDENTITY.contact.phoneUk,
+  phoneUs: IDENTITY.contact.phoneUs,
 } as const;
-
-export const COMPANY_NAME = "Kimber Sykes Limited";

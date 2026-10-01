@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { JsonLd } from "@/components/JsonLd";
 import { Container, Section } from "@/components/layout";
 import { CONTACT, LINKEDIN_URL } from "@/lib/contact";
-import { buildContactPageSchema, buildHomePersonSchema } from "@/lib/json-ld";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, pageTitle } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Contact — Freelance Event Production",
+  title: pageTitle("Contact and Availability"),
   description:
     "Contact Kimber Sykes for freelance Executive Producer, Production Manager, or Technical Director contracts. Based in London, available worldwide.",
   path: "/contact",
@@ -16,7 +14,6 @@ export const metadata: Metadata = buildPageMetadata({
 export default function ContactPage() {
   return (
     <>
-      <JsonLd data={[buildContactPageSchema(), buildHomePersonSchema()]} />
       <Section>
       <Container className="max-w-2xl">
         <h1 className="font-display text-3xl font-bold sm:text-4xl">How to contact me</h1>
