@@ -20,10 +20,10 @@ export default function WherePage() {
         <div className="mt-8">
           <KimberRightNow />
         </div>
-        <DeliveryLocationsList />
         <div className="mt-10">
           <WorldMap />
         </div>
+        <DeliveryLocationsList />
       </Container>
     </Section>
   );
