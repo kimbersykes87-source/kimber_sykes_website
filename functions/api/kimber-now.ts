@@ -44,6 +44,23 @@ interface NominatimAddress {
   country_code?: string;
 }
 
+/**
+ * Manual location override. While this is set, GPS is switched off: the
+ * GPS worker is not called and the site shows this place instead.
+ * Set to null to switch live GPS back on.
+ */
+const MANUAL_LOCATION: {
+  state: string;
+  country: string;
+  countryCode: string;
+  timeZone: string;
+} | null = {
+  state: "Tuscany",
+  country: "Italy",
+  countryCode: "IT",
+  timeZone: "Europe/Rome",
+};
+
 const DEFAULT_WORKER_URL = "https://gps-tracker.kimbersykes87.workers.dev";
 const DEFAULT_USER_ID = "device_26a4f9dd";
 const NOMINATIM_BASE = "https://nominatim.openstreetmap.org/reverse";
@@ -174,6 +191,14 @@ async function fetchLatestAvailableDay(
 }
 
 export const onRequestGet = async ({ env }: PagesFunctionContext): Promise<Response> => {
+  if (MANUAL_LOCATION) {
+    return jsonResponse(
+      { ...MANUAL_LOCATION, tsUtc: new Date().toISOString(), tsLocal: null },
+      200,
+      60,
+    );
+  }
+
   const workerUrl = (env.KIMBER_GPS_WORKER_URL ?? DEFAULT_WORKER_URL).replace(/\/$/, "");
   const userId = env.KIMBER_GPS_USER_ID ?? DEFAULT_USER_ID;
 
